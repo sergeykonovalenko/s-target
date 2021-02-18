@@ -1,0 +1,27 @@
+/* ==========================================================================
+   VENDORS
+   ========================================================================== */
+@import "~normalize.css/normalize.css";
+@import "~@fancyapps/fancybox/dist/jquery.fancybox.min.css";
+
+/* ==========================================================================
+   SPECIFICATION
+   ========================================================================== */
+@import "spec/fonts";
+@import "spec/variables";
+@import "spec/mixins";
+@import "spec/global";
+@import "spec/visually-hidden";
+@import "spec/animation";
+
+/* ==========================================================================
+   HOME PAGE
+   ========================================================================== */
+@import "modules/header";
+@import "modules/container";
+@import "modules/button";
+@import "modules/focus-visible";
+@import "modules/content";
+@import "modules/main";
+
+@import "modules/footer";
