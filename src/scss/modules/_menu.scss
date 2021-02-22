@@ -1,3 +1,153 @@
 .menu {
+    display: flex;
+}
 
+.menu__list {
+    @include reset-list;
+
+    &--main {
+        display: flex;
+    }
+
+    &--lvl2 {
+        display: none;
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.menu__item {
+    position: relative;
+    display: flex;
+
+    &:hover,
+    &:focus-within {
+        .menu__link {
+            color: $color-main;
+
+            &::after {
+                background-image: url("img/bg/angle-down--main.svg");
+            }
+        }
+
+        .sub-menu {
+            margin-top: 0;
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+.menu__actions {
+    display: flex;
+    margin: 0;
+}
+
+.menu__link {
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    .menu-item-has-children & {
+
+        &::after {
+            content: "";
+            display: block;
+            width: 24px;
+            height: 24px;
+            background: url("img/bg/angle-down--gray-3.svg") no-repeat;
+            background-size: contain;
+        }
+    }
+
+    .menu &:active {
+        color: $color-main--dark;
+
+        &::after {
+            background-image: url("img/bg/angle-down--main--dark.svg");
+        }
+    }
+
+    .current-menu-item &,
+    .current-menu-parent & {
+        font-weight: 700;
+        color: $color-main;
+
+        &::after {
+            background-image: url("img/bg/angle-down--main.svg");
+        }
+    }
+}
+
+.menu__trigger {
+    display: none;
+    padding: 0;
+    background: 0 0;
+    border: none;
+
+    svg {
+        transition: all .15s ease-out;
+    }
+}
+
+/*sub-menu*/
+.menu .sub-menu {
+    position: absolute;
+    top: 100%;
+    z-index: 5;
+    width: 300px;
+    margin: 10px 0 0 0;
+    padding: 15px 0;
+    list-style: none;
+    background-color: #fff;
+    box-shadow: 4px 4px 17px rgba(38, 52, 27, 0.22);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .2s ease-in,
+                visibility .2s ease-in,
+                margin .2s ease-in;
+}
+
+.menu .sub-menu li {
+
+}
+
+.menu .sub-menu a {
+    @include hover-supported {
+        color: #fff;
+        background-color: $color-main;
+    }
+
+    &:active {
+        background-color: $color-main--dark;
+    }
+
+    position: relative;
+    display: block;
+    padding: 10px 25px;
+    line-height: 1.5;
+    transition: none;
+}
+
+.menu .sub-menu .current-menu-item > a {
+    font-weight: 600;
+    color: $color-main;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 4px;
+        top: 0;
+        left: 0;
+        height: 100%;
+        background-color: $color-main;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+    }
+
+    &:hover,
+    &:focus {
+        background-color: transparent;
+    }
 }

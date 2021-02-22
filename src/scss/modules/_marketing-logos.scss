@@ -1,0 +1,17 @@
+.marketing-logos {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    list-style: none;
+}
+
+.marketing-logos__item {
+    display: flex;
+    align-items: center;
+    margin-top: 22px;
+    margin-right: 22px;
+}
+
+.marketing-logos__img {
+    max-height: 150px;
+}

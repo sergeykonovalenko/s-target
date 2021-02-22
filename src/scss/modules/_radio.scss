@@ -1,0 +1,32 @@
+.radio {
+    display: flex;
+    padding: 0;
+    background-color: #fff;
+    list-style: none;
+    border-radius: 50px;
+}
+
+.radio__item {
+
+    &:nth-child(n + 2) {
+        margin-left: -12px;
+    }
+}
+
+.radio__field {
+    
+}
+
+.radio__label {
+    display: block;
+    padding: 10px 24px;
+    border-radius: 50px;
+    color: $gray-3;
+    cursor: pointer;
+
+    .radio__field:checked ~ & {
+        font-weight: 600;
+        color: #fff;
+        background-color: $color-main;
+    }
+}

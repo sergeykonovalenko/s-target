@@ -1,0 +1,79 @@
+.field-box {
+    position: relative;
+}
+
+.field-box__field {
+    height: 53px;
+    padding: 12px;
+
+    .field-box--extra & {
+        padding-top: 20px;
+        padding-bottom: 5px;
+    }
+
+    &--textarea {
+        height: 150px;
+    }
+
+    &--entered {
+
+        & ~ .field-box__label {
+            color: $gray-1;
+        }
+    }
+
+    &[type="number"] {
+        -moz-appearance: textfield !important;
+
+        &::-webkit-inner-spin-button,
+        &::-webkit-outer-spin-button {
+            -webkit-appearance: none ;
+            margin: 0;
+        }
+    }
+
+    &[disabled] {
+
+        & ~ .field-box__label {
+            color: $gray-4;
+        }
+    }
+
+    &.error {
+        border-color: $color-error;
+    }
+}
+
+.field-box__label {
+    position: absolute;
+    top: 13px;
+    left: 9px; // 13 - 4 = 9
+    padding: 0 4px;
+    max-width: calc(100% - 18px); // (13*2 - 4*2) = 18
+    color: $gray-3;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    background-color: #fff;
+    overflow: hidden;
+    pointer-events: none;
+    transition: all .125s ease-in;
+
+    .field-box--extra & {
+        background-color: transparent;
+    }
+
+    .field-box__field--entered ~ &,
+    .field-box__field:focus ~ &,
+    .field-box__field[placeholder] & {
+        top: -9px;
+        font-size: 12px;
+
+        .field-box--extra & {
+            top: 7px;
+        }
+    }
+
+    .field-box__field.error ~ & {
+        color: $color-error;
+    }
+}

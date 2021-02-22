@@ -1,3 +1,47 @@
 .header {
     grid-area: header;
 }
+
+.header__wr {
+
+}
+
+.header__wr .container {
+    display: flex;
+    min-height: 110px;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    margin-right: 30px;
+}
+
+.header__phone {
+    @include hover-supported {
+        color: $color-main;
+    }
+
+    flex-shrink: 0;
+    align-self: center;
+    margin-left: auto;
+    margin-right: 10px;
+    font-weight: 500;
+
+    &:active {
+        color: $color-main--dark;
+    }
+}
+
+.header__social-links {
+    flex-shrink: 0;
+    align-self: center;
+    margin: 0 30px 0 0;
+}
+
+.header__button {
+    flex-shrink: 0;
+    align-self: center;
+    padding: 14px 10px;
+}

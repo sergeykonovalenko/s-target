@@ -1,12 +1,17 @@
 // Colors
-$color-main--lightest: #b7b7b7;
-$color-main--lighten:  #8f8f8f;
-$color-main--light:    #5e5e5e;
-$color-main:           #404040;
-$color-main--dark:     #2C2C2C;
-$color-main--darken:   #1F1F1F;
-$color-main--darkest:  #0D0D0D;
+$color-main--light:   #DBF1C1;
+$color-main:          #649E32;
+$color-main--dark:    #50822E;
+$color-main--darken:  #436c27;
 
-$color-secondary:      #1a66a1;
-$color-accent:         #54CC80;
-$color-warning:        #fb5258;
+$color-accent--light: #FFE1B4;
+$color-accent:        #FAA14F;
+
+$color-error:         #fb5258;
+
+$gray-1:              #282828;
+$gray-2:              #404040;
+$gray-3:              #606464;
+$gray-4:              #AEAEAE;
+$gray-5:              #EAEAEA;
+$gray-6:              #FAFAFA;

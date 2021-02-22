@@ -29,53 +29,151 @@
     <script src="js/modernizr.custom.bundle.js"></script>
     <!-- Styles -->
     <link rel="stylesheet" href="style.css">
+    <style>
+        .no-js .offer,
+        .no-webp .offer {
+            background-image: url("img/bg/offer.jpg");
+        }
+
+        .webp .offer {
+            background-image: url("img/bg/offer.webp");
+        }
+    </style>
 </head>
 <body class="page__body">
 
     <header class="header">
-        <div class="container">
-            <a class="header__logo">
-                <img src="img/base/logo.svg" width="105" height="81" alt="S-TARGET">
-            </a>
-        </div>
-        <nav class="menu">
-            <ul class="menu__list">
-                <li class="menu__item">
-                    <p class="menu__actions">
-                        <a class="menu__link" href="">Услуги</a>
-                        <button class="menu__trigger" type="button">
-                            <svg class="" width="24" height="24" fill="#606464">
-                                <use href="#icon-angle-down-light"></use>
-                             </svg>
-                        </button>
-                    </p>
-                    <ul class="menu__list menu__list--lvl2">
-                        <li class="menu__item">
-                            <a class="menu__link" href="#">Название услуги один</a>
+        <div class="header__wr">
+            <div class="container">
+                <a class="header__logo">
+                    <img src="img/base/logo.svg" width="105" height="81" alt="S-TARGET">
+                </a>
+                <nav class="menu">
+                    <ul class="menu__list menu__list--main">
+                        <li class="menu__item menu-item-has-children">
+                            <p class="menu__actions">
+                                <a class="menu__link" href="#">Услуги</a>
+                                <button class="menu__trigger" type="button">
+                                    <svg class="" width="24" height="24" fill="#606464">
+                                        <use href="#icon-angle-down-light"></use>
+                                    </svg>
+                                </button>
+                            </p>
+                            <ul class="sub-menu">
+                                <li><a href="#">Название услуги один</a></li>
+                                <li><a href="#">Название услуги длинным названием в две строки</a></li>
+                                <li class="current-menu-item"><a href="#">Создание Landing Page</a></li>
+                                <li><a href="#">Название услуги один</a></li>
+                                <li><a href="#">Название услуги один</a></li>
+                                <li><a href="#">Название услуги один</a></li>
+                            </ul>
                         </li>
                         <li class="menu__item">
-                            <a class="menu__link" href="#">Название услуги длинным названием в две строки</a>
+                            <p class="menu__actions">
+                                <a class="menu__link" href="#">Обучение</a>
+                            </p>
                         </li>
                         <li class="menu__item">
-                            <a class="menu__link" href="#">Создание Landing Page</a>
+                            <p class="menu__actions">
+                                <a class="menu__link" href="#">Блог</a>
+                            </p>
                         </li>
                         <li class="menu__item">
-                            <a class="menu__link" href="#">Название услуги один</a>
+                            <p class="menu__actions">
+                                <a class="menu__link" href="#">О нас</a>
+                            </p>
                         </li>
                         <li class="menu__item">
-                            <a class="menu__link" href="#">Название услуги один</a>
+                            <p class="menu__actions">
+                                <a class="menu__link" href="#">Контакты</a>
+                            </p>
                         </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="#">Название услуги один</a>
+                        <li class="menu__item menu-item-has-children">
+                            <p class="menu__actions">
+                                <a class="menu__link" href="#">Личный кабинет</a>
+                                <button class="menu__trigger" type="button">
+                                    <svg class="" width="24" height="24" fill="#606464">
+                                        <use href="#icon-angle-down-light"></use>
+                                    </svg>
+                                </button>
+                            </p>
+                            <ul class="sub-menu">
+                                <li><a href="#" data-quantity="99">Мои занятия</a></li>
+                                <li><a href="#">Настройки профиля</a></li>
+                                <li><a href="#">Выход</a></li>
+                            </ul>
                         </li>
                     </ul>
-                </li>
-            </ul>
-        </nav><!-- / .menu -->
+                </nav><!-- / .menu -->
+                <a class="header__phone" href="tel:+78462339044">+7 (846) 233-90-44</a>
+                <ul class="header__social-links social-links">
+                    <li class="social-links__item">
+                        <a class="social-links__link" href="#" rel="noopener nofollow" target="_blank" title="Наш WhatsApp">
+                            <span class="visually-hidden">Наш WhatsApp</span>
+                            <svg width="20" height="20" fill="#649E32">
+                                <use href="#icon-whatsapp"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social-links__item">
+                        <a class="social-links__link" href="#" rel="noopener nofollow" target="_blank" title="Наш Телеграм">
+                            <span class="visually-hidden">Наш канал в Telegram</span>
+                            <svg width="20" height="20" fill="#039BE5">
+                                <use href="#icon-telegram"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul><!-- / .social-links -->
+                <a class="header__button button button--stroke" href="#">Заказать звонок</a>
+            </div>
+        </div>
     </header><!-- / .header -->
     
     <main class="main">
-
+        <section class="offer">
+            <div class="container">
+                <h1 class="offer__title">Путь вашего бизнеса<br> к росту продаж</h1>
+                <div class="offer__row">
+                    <form class="offer__form form" action="#" method="get">
+                        <div class="form__choice-option choice-option">
+                            <p class="choice-option__title">Получите бесплатный аудит</p>
+                            <ul class="choice-option__radio radio">
+                                <li class="radio__item">
+                                    <input class="radio__field visually-hidden" id="audit-site" type="radio" value="audit-site" name="audit" checked>
+                                    <label class="radio__label" for="audit-site">сайта</label>
+                                </li>
+                                <li class="radio__item">
+                                    <input class="radio__field visually-hidden" id="audit-instagram" type="radio" value="audit-instagram" name="audit">
+                                    <label class="radio__label" for="audit-instagram">инстаграма</label>
+                                </li>
+                            </ul><!-- / .radio -->
+                        </div><!-- / .choice-option -->
+                        <ul class="form__list fields-list">
+                            <li class="fields-list__item fields-list__item--half field-box field-box--extra">
+                                <input class="field-box__field" id="offer-form-name" type="text" name="name" required>
+                                <label class="field-box__label" for="offer-form-name">Ваше имя</label>
+                            </li><!-- / .field-box -->
+                            <li class="fields-list__item fields-list__item--half field-box field-box--extra">
+                                <input class="field-box__field" id="offer-form-phone" type="tel" name="phone" inputmode="tel" required>
+                                <label class="field-box__label" for="offer-form-phone">Ваш номер телефона</label>
+                            </li><!-- / .field-box -->
+                        </ul><!-- / .fields-list -->
+                        <button class="form__button button">Получить бесплатный аудит</button>
+                    </form><!-- / .form -->
+                    <ul class="offer__logos marketing-logos">
+                        <li class="marketing-logos__item">
+                            <img class="marketing-logos__img" src="img/base/marketing-logo-1.svg" width="138" height="150" alt="">
+                        </li>
+                        <li class="marketing-logos__item">
+                            <img class="marketing-logos__img" src="img/base/marketing-logo-2.png" width="138" height="150" alt="">
+                        </li>
+                        <li class="marketing-logos__item">
+                            <img class="marketing-logos__img" src="img/base/marketing-logo-3.svg" width="138" height="150" alt="">
+                        </li>
+                    </ul><!-- / .marketing-logos -->
+                </div>
+            </div>
+        </section><!-- / .offer -->
     </main><!-- / .main -->
 
     <footer class="footer">

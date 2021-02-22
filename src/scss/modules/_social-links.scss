@@ -1,0 +1,23 @@
+.social-links {
+    display: flex;
+    padding: 0;
+    list-style: none;
+}
+
+.social-links__item {
+    margin-right: 10px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.social-links__link {
+    @include hover-supported {
+        svg {
+            animation: .6s shake-custom;
+        }
+    }
+
+    display: block;
+}

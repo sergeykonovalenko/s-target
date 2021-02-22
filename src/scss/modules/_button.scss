@@ -1,14 +1,44 @@
 .button {
+    @include hover-supported {
+        background-color: $color-main--dark;
+    }
+
     position: relative;
     display: inline-block;
     max-width: 100%;
+    padding: 15px 24px;
     user-select: none;
     touch-action: manipulation;
     vertical-align: middle;
+    font-weight: 600;
     line-height: 1.25;
     text-align: center;
     white-space: normal;
     word-wrap: normal;
-    color: $color-main;
+    color: #fff;
+    background-color: $color-main;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
+    
+    &:active {
+        background-color: $color-main--darken;
+    }
+
+    &--stroke {
+        @include hover-supported {
+            color: #fff;
+            background-color: $color-main;
+        }
+        
+        color: $color-main;
+        background-color: transparent;
+        border: 1px solid $color-main;
+        overflow: hidden;
+
+
+        &:active {
+            background-color: $color-main--dark;
+        }
+    }
 }

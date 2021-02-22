@@ -21,6 +21,7 @@ Object.keys(ifaces).forEach(function (ifname) {
 module.exports = (env, argv) => {
 
     return merge(common(argv.mode), {
+        target: 'web',
         devtool: 'eval-cheap-module-source-map',
         devServer: {
             // contentBase: './dist',

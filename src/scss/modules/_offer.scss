@@ -1,0 +1,29 @@
+.offer {
+    padding: 120px 0;
+    background-color: #677f47;
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: cover;
+}
+
+.offer__title {
+    margin-top: 0;
+    margin-bottom: 62px;
+    font-size: 50px;
+    color: #fff;
+}
+
+.offer__row {
+    display: flex;
+}
+
+.offer__form {
+    width: 590px;
+    flex-shrink: 0;
+    margin-right: 60px;
+}
+
+.offer__logos {
+    align-self: flex-end;
+    margin: -22px -22px 0 auto;
+}
