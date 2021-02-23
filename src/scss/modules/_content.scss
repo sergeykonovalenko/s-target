@@ -6,6 +6,15 @@
     margin-bottom: 0;
 }
 
+p,
+ul,
+ol {
+
+    .content & {
+        margin: 1em 0;
+    }
+}
+
 .content a {
     @include hover-supported {
         color: $color-main--dark;

@@ -23,7 +23,7 @@ body {
     font-size: 16px;
     line-height: 1.65;
     font-family: "Raleway", Tahoma, sans-serif;
-    color: $gray-1;
+    color: $gray-2;
     overflow-wrap: break-word;
     background-color: #fff;
 }
@@ -130,6 +130,7 @@ h6,
 .h6 {
     font-weight: 600;
     //line-height: 1.2;
+    color: $gray-1;
 }
 
 h1,

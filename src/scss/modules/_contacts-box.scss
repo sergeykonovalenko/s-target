@@ -1,0 +1,40 @@
+.contacts-box {
+    position: relative;
+    z-index: 2;
+    padding: 60px 30px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(88, 88, 88, .07);
+    border-radius: 5px;
+}
+
+.contacts-box__txt {
+    margin-bottom: 30px;
+
+    &:last-child > * {
+        margin-bottom: 0;
+    }
+}
+
+.contacts-box__head {
+    margin-bottom: 30px;
+    font-size: 18px;
+
+    p {
+        margin: 10px 0;
+    }
+}
+
+.contacts-box__phone a {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 1.35;
+    color: $gray-1;
+    border: none;
+}
+
+.contacts-box__email a {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 1.4;
+    border: none;
+}

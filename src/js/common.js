@@ -1,6 +1,7 @@
 import '@fancyapps/fancybox/dist/jquery.fancybox.min';
 import 'focus-visible';
 import Inputmask from "inputmask";
+import './google-maps';
 import './svg-sprite';
 
 $(document).ready(function () {
