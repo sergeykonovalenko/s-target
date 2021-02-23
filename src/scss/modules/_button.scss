@@ -36,9 +36,16 @@
         border: 1px solid $color-main;
         overflow: hidden;
 
-
         &:active {
             background-color: $color-main--dark;
+        }
+
+        &--extra {
+            padding-top: 18px;
+            padding-bottom: 18px;
+            width: 100%;
+            font-size: 18px;
+            color: $gray-1;
         }
     }
 }

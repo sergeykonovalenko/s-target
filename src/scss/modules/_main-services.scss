@@ -1,0 +1,30 @@
+.main-services {
+    padding: 80px 0;
+    background-color: $gray-6;
+}
+
+.main-services__head {
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.main-services__lead {
+    width: calc(50% - 30px);
+    margin: 0 60px 0 0;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 1.4;
+}
+
+.main-services__title {
+    width: calc(50% - 30px);
+    margin: 0;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.main-services__list {
+    margin: 0 0 60px 0;
+}

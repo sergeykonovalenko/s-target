@@ -1,0 +1,67 @@
+.control-button {
+    @include hover-supported {
+        color: $color-main--dark;
+
+        .control-button__icon {
+            fill: $color-main--dark;
+        }
+    }
+
+    position: relative;
+    display: flex;
+    width: fit-content;
+    padding: 0 0 0 34px;
+    font-weight: 600;
+    text-align: left;
+    color: $color-main;
+    background: 0 0;
+    border: none;
+
+    &:active {
+        color: $color-main--darken;
+
+        .control-button__icon {
+            fill: $color-main--darken;
+        }
+    }
+
+    &--invert {
+        padding: 0 34px 0 0;
+    }
+
+    &--no-txt {
+        min-height: auto;
+        padding-left: 0;
+    }
+
+    //&--close {
+    //    opacity: .5;
+    //
+    //    &:hover,
+    //    &.focus-visible {
+    //        opacity: 1;
+    //
+    //        .control-button__icon {
+    //            fill: $gray-1;
+    //        }
+    //    }
+    //}
+}
+
+.control-button__icon {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transition: all .15s ease-out;
+    transform: translateY(-50%);
+
+    .control-button--invert & {
+        left: auto;
+        right: 0;
+    }
+
+    .control-button--no-txt & {
+        position: static;
+        transform: none;
+    }
+}

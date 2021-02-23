@@ -1,0 +1,12 @@
+.main-services-list {
+    padding: 0;
+    list-style: none;
+}
+
+.main-services-list__item {
+    margin-bottom: 60px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
