@@ -28,6 +28,7 @@
     margin-left: auto;
     margin-right: 10px;
     font-weight: 500;
+    color: $gray-1;
 
     &:active {
         color: $color-main--dark;
@@ -37,7 +38,7 @@
 .header__social-links {
     flex-shrink: 0;
     align-self: center;
-    margin: 0 30px 0 0;
+    margin: -10px 30px 0 -10px;
 }
 
 .header__button {

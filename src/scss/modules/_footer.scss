@@ -1,3 +1,45 @@
 .footer {
     grid-area: footer;
+    padding: 60px 0;
+    font-size: 14px;
+    color: $gray-1;
 }
+
+.footer .container {
+    & > *:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.footer__top {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.footer__nav {
+    flex-grow: 1;
+    margin: 0 60px 0 0;
+}
+
+.footer__contacts {
+    width: 250px;
+    margin-left: auto;
+}
+
+.footer__author {
+    display: block;
+    font-size: 12px;
+    text-align: center;
+
+    a {
+        @include hover-supported {
+            color: #a00813;
+            border-color: #a00813;
+        }
+
+        font-weight: 600;
+        color: #c20815;
+        border-bottom: 1px solid transparent;
+    }
+}
+

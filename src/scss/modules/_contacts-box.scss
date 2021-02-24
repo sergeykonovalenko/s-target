@@ -10,7 +10,7 @@
 .contacts-box__txt {
     margin-bottom: 30px;
 
-    &:last-child > * {
+    & > *:last-child {
         margin-bottom: 0;
     }
 }
@@ -24,12 +24,23 @@
     }
 }
 
-.contacts-box__phone a {
-    font-weight: 600;
-    font-size: 40px;
-    line-height: 1.35;
-    color: $gray-1;
-    border: none;
+.contacts-box__phone {
+
+    a {
+        @include hover-supported {
+            color: $color-main;
+        }
+
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 1.35;
+        color: $gray-1;
+        border: none;
+
+        &:active {
+            color: $color-main--dark;
+        }
+    }
 }
 
 .contacts-box__email a {

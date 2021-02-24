@@ -1,0 +1,33 @@
+.footer-contacts {
+
+}
+
+.footer-contacts__txt {
+    margin-bottom: 15px;
+
+    p {
+        margin: 9px 0;
+    }
+}
+
+.footer-contacts__phone {
+
+    a {
+        @include hover-supported {
+            color: $color-main;
+        }
+
+        font-weight: 600;
+        font-size: 20px;
+        color: $gray-1;
+        border: none;
+
+        &:active {
+            color: $color-main--dark;
+        }
+    }
+}
+
+.footer-contacts__social-links {
+    margin: -10px 0 0 -10px;
+}

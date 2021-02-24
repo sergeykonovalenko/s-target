@@ -1,0 +1,17 @@
+.tag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    list-style: none;
+}
+
+.tag-cloud li {
+    margin-top: 20px;
+    margin-right: 8px;
+    padding: 4.5px 10px;
+    font-weight: 700;
+    font-size: 14px;
+    color: #fff;
+    background-color: $color-accent;
+    border-radius: 15px;
+}
