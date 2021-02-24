@@ -388,7 +388,7 @@ function initMap() {
 
         let InfoWindow = new google.maps.InfoWindow({
             content: `<div class="info-window">
-                          <img class="info-window__img" src="../img/base/logo.svg" width="92" height="71" alt="S-TARGET">
+                          <img class="info-window__img" src="img/base/logo.svg" width="92" height="71" alt="S-TARGET">
                       </div>`
         });
 

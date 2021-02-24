@@ -1,0 +1,9 @@
+.reviews-list {
+    display: grid;
+    //grid-template-columns: repeat(auto-fill, minmax(570px, 1fr));
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 60px;
+    padding: 0;
+    list-style: none;
+}
