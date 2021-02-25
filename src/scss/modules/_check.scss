@@ -1,0 +1,62 @@
+.check {
+
+}
+
+.check__field {
+
+}
+
+.check__label {
+    @include hover-supported {
+        &::before {
+            border-color: $gray-1;
+        }
+    }
+
+    position: relative;
+    display: block;
+    width: fit-content;
+    padding-left: 26px;
+    font-size: 12px;
+    line-height: 1.5;
+    cursor: pointer;
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        top: 1px;
+        left: 0;
+        width: 16px;
+        height: 16px;
+        border-radius: 2px;
+    }
+
+    &::before {
+        border: 1px solid $gray-5;
+        transition: all .15s ease-out;
+
+        .check__field:checked ~ & {
+            background-color: $color-main;
+            border-color: $color-main;
+        }
+    }
+
+    &::after {
+        background: url("../img/bg/check--white.svg") no-repeat;
+        background-size: cover;
+    }
+
+    .check__field:checked ~ & {
+
+        &:hover::before {
+            background-color: $color-main--dark;
+            border-color: $color-main--dark;
+        }
+
+        &:active::before {
+            background-color: $color-main--darken;
+            border-color: $color-main--darken;
+        }
+    }
+}

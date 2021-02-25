@@ -69,6 +69,13 @@ textarea {
     transition: border-color .15s ease-in-out,
                 box-shadow .15s ease-in-out;
 
+    &:hover {
+        border-color: $gray-1;
+
+        &::placeholder {
+            color: $gray-1;
+        }
+    }
 
     &:focus {
         border-color: $color-main;

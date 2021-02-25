@@ -1,5 +1,9 @@
 .form {
 
+    &--line {
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
 
 .form__choice-option {
@@ -8,9 +12,26 @@
 
 .form__list {
     margin: -30px -20px 30px 0;
+
+    .form--line & {
+        flex-grow: 1;
+        margin: 0 20px 0 0;
+    }
+}
+
+.form__check {
+
+    .form--line & {
+        width: 100%;
+    }
 }
 
 .form__button {
     display: block;
     width: 100%;
+
+    .form--line & {
+        width: 36.3636363636%;
+        box-shadow: 0 5px 10px rgba(118, 184, 52, .5);
+    }
 }

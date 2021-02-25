@@ -30,6 +30,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="style.css">
     <style>
+        /*offer*/
         .no-js .offer,
         .no-webp .offer {
             background-image: url("img/bg/offer.jpg");
@@ -37,6 +38,16 @@
 
         .webp .offer {
             background-image: url("img/bg/offer.webp");
+        }
+
+        /*help-form*/
+        .no-js .help-form,
+        .no-webp .help-form {
+            background-image: url("img/bg/help-form.jpg");
+        }
+
+        .webp .help-form {
+            background-image: url("img/bg/help-form.webp");
         }
     </style>
 </head>
@@ -413,6 +424,31 @@
                 <a class="posts__button button button--stroke button--stroke--extra" href="courses.html">Посмотреть все курсы</a>
             </div>
         </section><!-- / .posts -->
+
+        <section class="help-form">
+            <div class="container">
+                <div class="help-form__box">
+                    <h2 class="help-form__title">Вы готовы значительно увеличить Ваши продажи?<br> Свяжитесь с нами для обсуждения проекта</h2>
+                    <form class="help-form__form form form--line" action="#" method="get">
+                        <ul class="form__list fields-list fields-list--line">
+                            <li class="fields-list__item field-box">
+                                <input class="field-box__field" id="help-form-name" type="text" name="name" required=>
+                                <label class="field-box__label" for="help-form-name">Ваше имя</label>
+                            </li><!-- / .field-box -->
+                            <li class="fields-list__item field-box">
+                                <input class="field-box__field" id="help-form-phone" type="tel" name="phone" inputmode="tel" required>
+                                <label class="field-box__label" for="help-form-phone">Ваш телефон</label>
+                            </li><!-- / .field-box -->
+                        </ul><!-- / .fields-list -->
+                        <button class="form__button button">Связаться с нами</button>
+                        <p class="form__check check">
+                            <input class="check__field visually-hidden" id="help-form-agreement" type="checkbox" name="agreement" required>
+                            <label class="check__label" for="help-form-agreement">Даю согласие на обработку персональных данных</label>
+                        </p><!-- / .check -->
+                    </form>
+                </div>
+            </div>
+        </section><!-- / .help-form -->
 
         <section class="reviews section">
             <div class="container">
