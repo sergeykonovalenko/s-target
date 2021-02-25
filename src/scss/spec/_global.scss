@@ -81,6 +81,10 @@ textarea {
         border-color: $color-main;
         box-shadow: $color-main--light 0 0 0 3px;
         outline: none;
+
+        &.error {
+            box-shadow: $color-error--light 0 0 0 3px !important;
+        }
     }
 
     &[disabled] {
@@ -90,6 +94,10 @@ textarea {
         &::placeholder {
             color: $gray-4;
         }
+    }
+
+    &.error {
+        border-color: $color-error !important;
     }
 }
 

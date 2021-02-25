@@ -121,15 +121,15 @@
         background-color: $color-main;
     }
 
-    &:active {
-        background-color: $color-main--dark;
-    }
-
     position: relative;
     display: block;
     padding: 10px 25px;
     line-height: 1.5;
     transition: none;
+
+    &:active {
+        background-color: $color-main--dark;
+    }
 }
 
 .menu .sub-menu .current-menu-item > a {

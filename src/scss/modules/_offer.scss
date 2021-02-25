@@ -23,6 +23,15 @@
     margin-right: 60px;
 }
 
+.offer__form .form__button {
+    padding-top: 17.5px;
+    padding-bottom: 17.5px;
+}
+
+.offer__form label.error {
+    display: none !important;
+}
+
 .offer__logos {
     align-self: flex-end;
     margin: -22px -22px 0 auto;

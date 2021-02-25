@@ -59,4 +59,8 @@
             border-color: $color-main--darken;
         }
     }
+
+    .check__field.error ~ &::before {
+        border-color: $color-error;
+    }
 }

@@ -3,6 +3,7 @@
     &--line {
         display: flex;
         flex-wrap: wrap;
+        align-items: flex-start;
     }
 }
 
@@ -14,7 +15,7 @@
     margin: -30px -20px 30px 0;
 
     .form--line & {
-        flex-grow: 1;
+        width: calc(63.64% - 20px);
         margin: 0 20px 0 0;
     }
 }
@@ -31,7 +32,9 @@
     width: 100%;
 
     .form--line & {
-        width: 36.3636363636%;
+        width: 36.36%;
+        padding-top: 16.5px;
+        padding-bottom: 16.5px;
         box-shadow: 0 5px 10px rgba(118, 184, 52, .5);
     }
 }
