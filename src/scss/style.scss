@@ -35,6 +35,7 @@
 @import "modules/error";
 @import "modules/marketing-logos";
 @import "modules/main-services";
+@import "modules/section-head";
 @import "modules/main-services-list";
 @import "modules/item-main-services-list";
 @import "modules/control-button";
@@ -53,3 +54,10 @@
 @import "modules/footer";
 @import "modules/footer-nav";
 @import "modules/footer-contacts";
+
+/* ==========================================================================
+   SERVICES PAGE
+   ========================================================================== */
+@import "modules/breadcrumbs-box";
+@import "modules/breadcrumbs";
+@import "modules/services";

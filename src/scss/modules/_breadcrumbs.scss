@@ -1,0 +1,27 @@
+.breadcrumbs {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.breadcrumbs__link {
+    @include hover-supported {
+        color: $color-main;
+        border-color: $color-main;
+    }
+
+    margin-right: 10px;
+    border-bottom: 1px solid transparent;
+
+    &:active {
+        color: $color-main--dark;
+        border-color: $color-main--dark;
+    }
+}
+
+.breadcrumbs__separator {
+    margin-right: 10px;
+}
+
+.breadcrumbs__current {
+    color: $gray-4;
+}

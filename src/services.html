@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html class="page no-js" lang="ru">
+<head>
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <!-- SEO -->
+    <title>Услуги | S-TARGET</title>
+    <meta name="description" content="Описание сайта для поисковиков, рекомендуемый размер от 70 до 140 символов">
+    <meta name="keywords" content="ключевые, слова, через, запятую (рекомендованное количество слов в данном теге — 5-10)">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#00a300">
+    <meta name="theme-color" content="#ffffff">
+    <!-- OG -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Услуги">
+    <meta property="og:description" content="Описание, до 200 символов">
+    <meta property="og:image" content="img/og/poster.jpg">
+    <meta property="og:url" content="ссылка на текущую страницу (http://www.site-name.com/current-page)">
+    <meta property="og:site_name" content="Webpack">
+    <!-- Modernizr -->
+    <script src="js/modernizr.custom.bundle.js"></script>
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /*help-form*/
+        .no-js .help-form,
+        .no-webp .help-form {
+            background-image: url("img/bg/help-form.jpg");
+        }
+
+        .webp .help-form {
+            background-image: url("img/bg/help-form.webp");
+        }
+    </style>
+</head>
+<body class="page__body">
+
+    <header class="header">
+        <div class="header__wr">
+            <div class="container">
+                <a class="header__logo" href="index.html">
+                    <img src="img/base/logo.svg" width="105" height="81" alt="S-TARGET">
+                </a>
+                <nav class="menu">
+                    <ul class="menu__list menu__list--main">
+                        <li class="menu__item menu-item-has-children current-menu-item">
+                            <p class="menu__actions">
+                                <a class="menu__link" href="services.html">Услуги</a>
+                                <button class="menu__trigger" type="button">
+                                    <svg class="" width="24" height="24" fill="#606464">
+                                        <use href="#icon-angle-down-light"></use>
+                                    </svg>
+                                </button>
+                            </p>
+                            <ul class="sub-menu">
+                                <li><a href="single-services.html">Название услуги один</a></li>
+                                <li><a href="single-services.html">Название услуги длинным названием в две строки</a></li>
+                                <li><a href="single-services.html">Создание Landing Page</a></li>
+                                <li><a href="single-services.html">Название услуги один</a></li>
+                                <li><a href="single-services.html">Название услуги один</a></li>
+                                <li><a href="single-services.html">Название услуги один</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu__item">
+                            <p class="menu__actions">
+                                <a class="menu__link" href="#">Обучение</a>
+                            </p>
+                        </li>
+                        <li class="menu__item">
+                            <p class="menu__actions">
+                                <a class="menu__link" href="#">Блог</a>
+                            </p>
+                        </li>
+                        <li class="menu__item">
+                            <p class="menu__actions">
+                                <a class="menu__link" href="#">О нас</a>
+                            </p>
+                        </li>
+                        <li class="menu__item">
+                            <p class="menu__actions">
+                                <a class="menu__link" href="#">Контакты</a>
+                            </p>
+                        </li>
+                        <li class="menu__item menu-item-has-children">
+                            <p class="menu__actions">
+                                <a class="menu__link" href="#">Личный кабинет</a>
+                                <button class="menu__trigger" type="button">
+                                    <svg class="" width="24" height="24" fill="#606464">
+                                        <use href="#icon-angle-down-light"></use>
+                                    </svg>
+                                </button>
+                            </p>
+                            <ul class="sub-menu">
+                                <li><a href="#" data-quantity="99">Мои занятия</a></li>
+                                <li><a href="#">Настройки профиля</a></li>
+                                <li><a href="#">Выход</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav><!-- / .menu -->
+                <a class="header__phone" href="tel:+78462339044">+7 (846) 233-90-44</a>
+                <ul class="header__social-links social-links">
+                    <li class="social-links__item">
+                        <a class="social-links__link" href="#" rel="noopener nofollow" target="_blank" title="Наш WhatsApp">
+                            <span class="visually-hidden">Наш WhatsApp</span>
+                            <svg width="20" height="20" fill="#649E32">
+                                <use href="#icon-whatsapp"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social-links__item">
+                        <a class="social-links__link" href="#" rel="noopener nofollow" target="_blank" title="Наш Телеграм">
+                            <span class="visually-hidden">Наш канал в Telegram</span>
+                            <svg width="20" height="20" fill="#039BE5">
+                                <use href="#icon-telegram"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul><!-- / .social-links -->
+                <a class="header__button button button--stroke" href="#">Заказать звонок</a>
+            </div>
+        </div>
+    </header><!-- / .header -->
+    
+    <main class="main">
+        <div class="breadcrumbs-box breadcrumbs-box--bg--gray">
+            <div class="container">
+                <div class="breadcrumbs">
+                    <a class="breadcrumbs__link" href="index.html">Главная</a>
+                    <span class="breadcrumbs__separator">|</span>
+                    <span class="breadcrumbs__current">Услуги</span>
+                </div><!-- / .breadcrumbs -->
+            </div>
+        </div><!-- / .breadcrumbs-box -->
+
+        <section class="services section">
+            <div class="container">
+                <div class="services__head section-head">
+                    <h1 class="section-head__title">Услуги<br> для вашего бизнеса</h1>
+                    <p class="section-head__txt">Наши услуги это эффективные решения для Вашего бизнеса.</p>
+                </div><!-- / .section-head -->
+                <ul class="services__list posts-list">
+                    <li class="posts-list__item post-item post-item--extra">
+                        <a class="post-item__thumbnail" href="single-services.html">
+                            <picture>
+                                <source srcset="img/base/service-1.webp" type="image/webp">
+                                <img class="post-item__img" src="img/base/service-1.jpg" alt="">
+                            </picture>
+                        </a>
+                        <div class="post-item__body">
+                            <div class="post-item__excerpt content">
+                                <h3><a href="single-services.html">Контекстная реклама</a></h3>
+                                <p>
+                                    Продвижение сайта в ТОП 3 поисковых систем Bing, Google и Яндекс. Для роста посещаемости
+                                    сайта. Запускаем рекламу в Инстаграм и Фэйсбук для привлечения клиентов.
+                                </p>
+                            </div>
+                            <a class="post-item__button button button--stroke" href="#">Подробнее</a>
+                        </div>
+                    </li><!-- / .post-item -->
+                    <li class="posts-list__item post-item post-item--extra">
+                        <a class="post-item__thumbnail" href="single-services.html">
+                            <picture>
+                                <source srcset="img/base/service-2.webp" type="image/webp">
+                                <img class="post-item__img" src="img/base/service-2.jpg" alt="">
+                            </picture>
+                        </a>
+                        <div class="post-item__body">
+                            <div class="post-item__excerpt content">
+                                <h3><a href="single-services.html">SEO продвижение</a></h3>
+                                <p>
+                                    Продвижение сайта в ТОП 3 поисковых систем Bing, Google и Яндекс. Для роста посещаемости
+                                    сайта. Запускаем рекламу в Инстаграм и Фэйсбук для привлечения клиентов.
+                                </p>
+                            </div>
+                            <a class="post-item__button button button--stroke" href="#">Подробнее</a>
+                        </div>
+                    </li><!-- / .post-item -->
+                    <li class="posts-list__item post-item post-item--extra">
+                        <a class="post-item__thumbnail" href="single-services.html">
+                            <picture>
+                                <source srcset="img/base/service-3.webp" type="image/webp">
+                                <img class="post-item__img" src="img/base/service-3.jpg" alt="">
+                            </picture>
+                        </a>
+                        <div class="post-item__body">
+                            <div class="post-item__excerpt content">
+                                <h3><a href="single-services.html">Контекстная реклама</a></h3>
+                                <p>Запускаем рекламув Инстаграм и Фэйсбу к для привлечения клиентов.</p>
+                            </div>
+                            <a class="post-item__button button button--stroke" href="#">Подробнее</a>
+                        </div>
+                    </li><!-- / .post-item -->
+                    <li class="posts-list__item post-item post-item--extra">
+                        <a class="post-item__thumbnail" href="single-services.html">
+                            <picture>
+                                <source srcset="img/base/service-4.webp" type="image/webp">
+                                <img class="post-item__img" src="img/base/service-4.jpg" alt="">
+                            </picture>
+                        </a>
+                        <div class="post-item__body">
+                            <div class="post-item__excerpt content">
+                                <h3><a href="single-services.html">Репутация в интернете</a></h3>
+                                <p>Создаем правильное восприятие Вашей кампании. Управляем репутацией для создания имиджа.</p>
+                            </div>
+                            <a class="post-item__button button button--stroke" href="#">Подробнее</a>
+                        </div>
+                    </li><!-- / .post-item -->
+                    <li class="posts-list__item post-item post-item--extra">
+                        <a class="post-item__thumbnail" href="single-services.html">
+                            <picture>
+                                <source srcset="img/base/service-5.webp" type="image/webp">
+                                <img class="post-item__img" src="img/base/service-5.jpg" alt="">
+                            </picture>
+                        </a>
+                        <div class="post-item__body">
+                            <div class="post-item__excerpt content">
+                                <h3><a href="single-services.html">Обучение</a></h3>
+                                <p>
+                                    Лучшая теория и наглядная практика. Для изучения особенностей рекламы. Каждого
+                                    ученика поддерживаем лично.
+                                </p>
+                            </div>
+                            <a class="post-item__button button button--stroke" href="#">Подробнее</a>
+                        </div>
+                    </li><!-- / .post-item -->
+                    <li class="posts-list__item post-item post-item--extra">
+                        <a class="post-item__thumbnail" href="single-services.html">
+                            <picture>
+                                <source srcset="img/base/service-6.webp" type="image/webp">
+                                <img class="post-item__img" src="img/base/service-6.jpg" alt="">
+                            </picture>
+                        </a>
+                        <div class="post-item__body">
+                            <div class="post-item__excerpt content">
+                                <h3><a href="single-services.html">Копирайтинг</a></h3>
+                                <p>Пишем уникальные тексты и статьи. Просто излагаем о сложном. Для Инстаграм и сайтов.</p>
+                            </div>
+                            <a class="post-item__button button button--stroke" href="#">Подробнее</a>
+                        </div>
+                    </li><!-- / .post-item -->
+                    <li class="posts-list__item post-item post-item--extra">
+                        <a class="post-item__thumbnail" href="single-services.html">
+                            <picture>
+                                <source srcset="img/base/service-7.webp" type="image/webp">
+                                <img class="post-item__img" src="img/base/service-7.jpg" alt="">
+                            </picture>
+                        </a>
+                        <div class="post-item__body">
+                            <div class="post-item__excerpt content">
+                                <h3><a href="single-services.html">Создание сайтов</a></h3>
+                                <p>Веб-разработка под ключ. Интернет магазин или Landing. Создаем сайты для продаж.</p>
+                            </div>
+                            <a class="post-item__button button button--stroke" href="#">Подробнее</a>
+                        </div>
+                    </li><!-- / .post-item -->
+                    <li class="posts-list__item post-item post-item--extra">
+                        <a class="post-item__thumbnail" href="single-services.html">
+                            <picture>
+                                <source srcset="img/base/service-8.webp" type="image/webp">
+                                <img class="post-item__img" src="img/base/service-8.jpg" alt="">
+                            </picture>
+                        </a>
+                        <div class="post-item__body">
+                            <div class="post-item__excerpt content">
+                                <h3><a href="single-services.html">Медийная реклама</a></h3>
+                                <p>Размещаем баннеры и видео для рекламы на тематических сайтах для узнаваемости бренда.</p>
+                            </div>
+                            <a class="post-item__button button button--stroke" href="#">Подробнее</a>
+                        </div>
+                    </li><!-- / .post-item -->
+                    <li class="posts-list__item post-item post-item--extra">
+                        <a class="post-item__thumbnail" href="single-services.html">
+                            <picture>
+                                <source srcset="img/base/service-9.webp" type="image/webp">
+                                <img class="post-item__img" src="img/base/service-9.jpg" alt="">
+                            </picture>
+                        </a>
+                        <div class="post-item__body">
+                            <div class="post-item__excerpt content">
+                                <h3><a href="single-services.html">Аудит</a></h3>
+                                <p>Проводим экспертный анализ рекламных кампаний и сайтов для уверенности.</p>
+                            </div>
+                            <a class="post-item__button button button--stroke" href="#">Подробнее</a>
+                        </div>
+                    </li><!-- / .post-item -->
+                </ul>
+            </div>
+        </section><!-- / .services -->
+
+        <section class="help-form">
+            <div class="container">
+                <div class="help-form__box">
+                    <h2 class="help-form__title">Вы готовы значительно увеличить Ваши продажи?<br> Свяжитесь с нами для обсуждения проекта</h2>
+                    <form class="help-form__form form form--line" action="#" method="post">
+                        <ul class="form__list fields-list fields-list--line">
+                            <li class="fields-list__item field-box">
+                                <input class="field-box__field" id="help-form-name" type="text" name="name" required>
+                                <label class="field-box__label" for="help-form-name">Ваше имя</label>
+                            </li><!-- / .field-box -->
+                            <li class="fields-list__item field-box">
+                                <input class="field-box__field" id="help-form-phone" type="tel" name="phone" inputmode="tel" required>
+                                <label class="field-box__label" for="help-form-phone">Ваш телефон</label>
+                            </li><!-- / .field-box -->
+                        </ul><!-- / .fields-list -->
+                        <button class="form__button button">Связаться с нами</button>
+                        <p class="form__check check">
+                            <input class="check__field visually-hidden" id="help-form-agreement" type="checkbox" name="agreement" required>
+                            <label class="check__label" for="help-form-agreement">Даю согласие на обработку персональных данных</label>
+                        </p><!-- / .check -->
+                    </form>
+                </div>
+            </div>
+        </section><!-- / .help-form -->
+
+        <section class="reviews section">
+            <div class="container">
+                <h2 class="reviews__title section__title">Наши партнёры расскажут о нашем опыте</h2>
+                <ul class="reviews__list reviews-list">
+                    <li class="reviews-list__item review-item">
+                        <div class="review-item__txt content">
+                            <p>
+                                Спасибо S-target за оказанную помощь в продвижении нашего сайта. Только благодаря ним мы
+                                смогли поднять конверсию наших мобильных устройств на 60% за один месяц работы. Ребята
+                                настоящие специалисты своего дела!
+                            </p>
+                        </div>
+                        <div class="review-item__author">
+                            <picture>
+                                <source srcset="img/base/review-1.webp" type="image/webp">
+                                <img class="review-item__avatar" src="img/base/review-1.jpg" alt="">
+                            </picture>
+                            <p class="review-item__name">Ирина</p>
+                            <p class="review-item__position">Huawei Chief Marketing Officer</p>
+                        </div>
+                    </li><!-- / .review-item -->
+                    <li class="reviews-list__item review-item">
+                        <div class="review-item__txt content">
+                            <p>
+                                Спасибо S-target за оказанную помощь в продвижении нашего сайта. Только благодаря ним мы
+                                смогли поднять конверсию наших мобильных устройств на 60% за один месяц работы. Ребята
+                                настоящие специалисты своего дела!
+                            </p>
+                        </div>
+                        <div class="review-item__author">
+                            <picture>
+                                <source srcset="img/base/review-2.webp" type="image/webp">
+                                <img class="review-item__avatar" src="img/base/review-2.jpg" alt="">
+                            </picture>
+                            <p class="review-item__name">Дмитрий</p>
+                            <p class="review-item__position">Huawei Chief Marketing Officer</p>
+                        </div>
+                    </li><!-- / .review-item -->
+                    <li class="reviews-list__item review-item">
+                        <div class="review-item__txt content">
+                            <p>
+                                Спасибо S-target за оказанную помощь в продвижении нашего сайта. Только благодаря ним мы
+                                смогли поднять конверсию наших мобильных устройств на 60% за один месяц работы. Ребята
+                                настоящие специалисты своего дела!
+                            </p>
+                        </div>
+                        <div class="review-item__author">
+                            <picture>
+                                <source srcset="img/base/review-3.webp" type="image/webp">
+                                <img class="review-item__avatar" src="img/base/review-3.jpg" alt="">
+                            </picture>
+                            <p class="review-item__name">Ирина</p>
+                            <p class="review-item__position">Huawei Chief Marketing Officer</p>
+                        </div>
+                    </li><!-- / .review-item -->
+                    <li class="reviews-list__item review-item">
+                        <div class="review-item__txt content">
+                            <p>
+                                Спасибо S-target за оказанную помощь в продвижении нашего сайта. Только благодаря ним мы
+                                смогли поднять конверсию наших мобильных устройств на 60% за один месяц работы. Ребята
+                                настоящие специалисты своего дела!
+                            </p>
+                        </div>
+                        <div class="review-item__author">
+                            <picture>
+                                <source srcset="img/base/review-4.webp" type="image/webp">
+                                <img class="review-item__avatar" src="img/base/review-4.jpg" alt="">
+                            </picture>
+                            <p class="review-item__name">Ирина</p>
+                            <p class="review-item__position">Huawei Chief Marketing Officer</p>
+                        </div>
+                    </li><!-- / .review-item -->
+                </ul>
+                <a class="reviews__button button button--stroke button--stroke--extra" href="#">Добавить свой отзыв</a>
+            </div>
+        </section><!-- / .reviews -->
+    </main><!-- / .main -->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top">
+                <ul class="footer__nav footer-nav">
+                    <li class="footer-nav__column">
+                        <a href="services.html">Услуги</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Создание Landing Page</a></li>
+                            <li><a href="#">Создание Landing Page</a></li>
+                            <li><a href="#">Создание Landing Page</a></li>
+                            <li><a href="#">Создание Landing Page</a></li>
+                            <li><a href="#">Создание Landing Page</a></li>
+                            <li><a href="#">Создание Landing Page</a></li>
+                            <li><a href="#">Создание Landing Page</a></li>
+                        </ul>
+                    </li>
+                    <li class="footer-nav__column">
+                        <a href="#">Обучение</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Обучение Таргетолог от А до Я</a></li>
+                            <li><a href="#">Обучение Таргетолог от А до Я</a></li>
+                            <li><a href="#">Обучение Таргетолог от А до Я</a></li>
+                            <li><a href="#">Обучение Таргетолог от А до Я</a></li>
+                            <li><a href="#">Обучение Таргетолог от А до Я</a></li>
+                            <li><a href="#">Обучение Таргетолог от А до Я</a></li>
+                            <li><a href="#">Обучение Таргетолог от А до Я</a></li>
+                        </ul>
+                    </li>
+                    <li class="footer-nav__column">
+                        <a href="#">Блоги и кейсы</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Кейсы наших учеников</a></li>
+                            <li><a href="#">Кейсы наших учеников</a></li>
+                            <li><a href="#">Кейсы наших учеников</a></li>
+                            <li><a href="#">Кейсы наших учеников</a></li>
+                            <li><a href="#">Кейсы наших учеников</a></li>
+                            <li><a href="#">Кейсы наших учеников</a></li>
+                            <li><a href="#">Кейсы наших учеников</a></li>
+                        </ul>
+                    </li>
+                </ul><!-- / .footer-nav-->
+                <div class="footer__contacts footer-contacts">
+                    <div class="footer-contacts__txt content">
+                        <p class="footer-contacts__phone">
+                            <a href="tel:+78462339044">+7 (846) 233-90-44</a>
+                        </p>
+                        <p>ООО «S-Target» ИП Кирилл</p>
+                        <p>ОГРН: 1157746400008</p>
+                        <p>ИНН: 7726338307</p>
+                        <p>ОГРНИП 320774600377737</p>
+                        <p>443080 Московское шоссе, 36 Б </p>
+                        <p>© 2012-2021 S-Target</p>
+                    </div>
+                    <ul class="footer-contacts__social-links social-links">
+                        <li class="social-links__item">
+                            <a class="social-links__link" href="#" rel="noopener nofollow" target="_blank" title="Наш WhatsApp">
+                                <span class="visually-hidden">Наш WhatsApp</span>
+                                <svg width="20" height="20">
+                                    <use href="#icon-whatsapp"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social-links__item">
+                            <a class="social-links__link" href="#" rel="noopener nofollow" target="_blank" title="Наш Телеграм">
+                                <span class="visually-hidden">Наш канал в Telegram</span>
+                                <svg width="20" height="20">
+                                    <use href="#icon-telegram"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div><!-- / .footer-contacts -->
+            </div>
+            <cite class="footer__author">S-TARGET 2021 | Разработка сайта — <a href="https://one-pix.ru" target="_blank">One-Pix</a></cite>
+        </div>
+    </footer><!-- / .footer -->
+
+    <script src="js/app.bundle.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1MIYMrv0deQB1gLkED9d3EnwacqsFleg&callback=initMap"></script>
+</body>
+</html>

@@ -21,7 +21,7 @@
     width: 20px;
     height: 20px;
 
-    svg {
+    svg:not([fill]) {
         width: 100%;
         height: 100%;
         fill: $gray-3;
