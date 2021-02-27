@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="format-detection" content="telephone=no">
     <!-- SEO -->
-    <title>Услуги для вашего бизнеса | S-TARGET</title>
+    <title>Landing Page для вашего бизнеса | S-TARGET</title>
     <meta name="description" content="Описание сайта для поисковиков, рекомендуемый размер от 70 до 140 символов">
     <meta name="keywords" content="ключевые, слова, через, запятую (рекомендованное количество слов в данном теге — 5-10)">
     <!-- Favicon -->
@@ -20,7 +20,7 @@
     <meta name="theme-color" content="#ffffff">
     <!-- OG -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Услуги">
+    <meta property="og:title" content="Landing Page для вашего бизнеса">
     <meta property="og:description" content="Описание, до 200 символов">
     <meta property="og:image" content="img/og/poster.jpg">
     <meta property="og:url" content="http://www.site-name.com/current-page">
@@ -38,6 +38,16 @@
 
         .webp .help-form {
             background-image: url("img/bg/help-form.webp");
+        }
+
+        /*service-offer*/
+        .no-js .service-offer,
+        .no-webp .service-offer {
+            background-image: url("img/bg/service-offer.jpg");
+        }
+
+        .webp .service-offer {
+            background-image: url("img/bg/service-offer.webp");
         }
     </style>
 </head>
@@ -131,175 +141,91 @@
     </header><!-- / .header -->
     
     <main class="main">
-        <div class="breadcrumbs-box breadcrumbs-box--bg--gray">
+        <section class="service-offer">
             <div class="container">
-                <div class="breadcrumbs">
-                    <a class="breadcrumbs__link" href="index.html">Главная</a>
-                    <span class="breadcrumbs__separator">|</span>
-                    <span class="breadcrumbs__current">Услуги</span>
-                </div><!-- / .breadcrumbs -->
+                <div class="service-offer__col">
+                    <div class="service-offer__breadcrumbs breadcrumbs breadcrumbs--white">
+                        <a class="breadcrumbs__link" href="index.html">Главная</a>
+                        <span class="breadcrumbs__separator">|</span>
+                        <span class="breadcrumbs__current">Услуги</span>
+                    </div><!-- / .breadcrumbs -->
+                    <div class="service-offer__txt content">
+                        <h1>Landing Page для<br> вашего бизнеса</h1>
+                        <p>Больше клиентов за меньшую<br> стоимость</p>
+                    </div>
+                </div>
+                <div class="service-offer__col">
+                    <div class="service-offer__data-form data-form data">
+                        <div class="data__head content">
+                            <h2>Хотите заказать Landing Page</h2>
+                        </div>
+                        <form class="data__form form" action="#" method="post" novalidate="novalidate">
+                            <ul class="form__list fields-list">
+                                <li class="fields-list__item field-box">
+                                    <input class="field-box__field" id="service-offer-form-name" type="text" name="name" required>
+                                    <label class="field-box__label" for="service-offer-form-name">Ваше имя (обязательно)</label>
+                                </li><!-- / .field-box -->
+                                <li class="fields-list__item field-box">
+                                    <input class="field-box__field" id="service-offer-form-phone" type="tel" name="phone" inputmode="tel" required>
+                                    <label class="field-box__label" for="service-offer-form-phone">Ваш E-mail (обязательно)</label>
+                                </li><!-- / .field-box -->
+                                <li class="fields-list__item field-box">
+                                    <input class="field-box__field" id="promo-code" type="text" name="promo-code">
+                                    <label class="field-box__label" for="promo-code">Ваш промокод (если есть)</label>
+                                </li><!-- / .field-box -->
+                            </ul><!-- / .fields-list -->
+                            <button class="form__button button button--large">Заказать</button>
+                        </form><!-- / .form -->
+                    </div><!-- / .data-form .data -->
+                </div>
             </div>
-        </div><!-- / .breadcrumbs-box -->
+        </section><!-- / .service-offer -->
 
-        <section class="services section section--bg--gray">
+        <section class="advantages section section--bg--gray">
             <div class="container">
-                <div class="services__head section__head section-head">
-                    <h1 class="section-head__title">Услуги<br> для вашего бизнеса</h1>
-                    <p class="section-head__txt">Наши услуги это эффективные решения для Вашего бизнеса.</p>
+                <div class="advantages__head section__head section-head">
+                    <h2 class="section-head__title">Преимущества разработки с нашей командой</h2>
+                    <p class="section-head__txt">
+                        Хотите качественный инструмент стабильной прибыли в интернете?
+                        Мы умеем это делать в короткие сроки.
+                    </p>
                 </div><!-- / .section-head -->
-                <ul class="services__list posts-list">
-                    <li class="posts-list__item post-item post-item--extra">
-                        <a class="post-item__thumbnail" href="single-services.html">
-                            <picture>
-                                <source srcset="img/base/service-1.webp" type="image/webp">
-                                <img class="post-item__img" src="img/base/service-1.jpg" alt="">
-                            </picture>
-                        </a>
-                        <div class="post-item__body">
-                            <div class="post-item__excerpt content">
-                                <h3><a href="single-services.html">Контекстная реклама</a></h3>
-                                <p>
-                                    Продвижение сайта в ТОП 3 поисковых систем Bing, Google и Яндекс. Для роста посещаемости
-                                    сайта. Запускаем рекламу в Инстаграм и Фэйсбук для привлечения клиентов.
-                                </p>
+                <div class="advantages-slider swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="advantages-slider__item item-advantages-slider swiper-slide">
+                            <img class="item-advantages-slider__icon" src="img/base/advantages-icon-1.svg" width="60" height="60" alt="">
+                            <div class="item-advantages-slider__txt content">
+                                <p>Предлагаем выгодные и понятные решения для бизнеса. С нами легко.</p>
                             </div>
-                            <a class="post-item__button button button--stroke" href="#">Подробнее</a>
-                        </div>
-                    </li><!-- / .post-item -->
-                    <li class="posts-list__item post-item post-item--extra">
-                        <a class="post-item__thumbnail" href="single-services.html">
-                            <picture>
-                                <source srcset="img/base/service-2.webp" type="image/webp">
-                                <img class="post-item__img" src="img/base/service-2.jpg" alt="">
-                            </picture>
-                        </a>
-                        <div class="post-item__body">
-                            <div class="post-item__excerpt content">
-                                <h3><a href="single-services.html">SEO продвижение</a></h3>
-                                <p>
-                                    Продвижение сайта в ТОП 3 поисковых систем Bing, Google и Яндекс. Для роста посещаемости
-                                    сайта. Запускаем рекламу в Инстаграм и Фэйсбук для привлечения клиентов.
-                                </p>
+                        </div><!-- / .item-advantages-slider -->
+                        <div class="advantages-slider__item item-advantages-slider swiper-slide">
+                            <img class="item-advantages-slider__icon" src="img/base/advantages-icon-2.svg" width="60" height="60" alt="">
+                            <div class="item-advantages-slider__txt content">
+                                <p>Разрабатываем сайты любой сложности от Landing Page до интернет магазина.</p>
                             </div>
-                            <a class="post-item__button button button--stroke" href="#">Подробнее</a>
-                        </div>
-                    </li><!-- / .post-item -->
-                    <li class="posts-list__item post-item post-item--extra">
-                        <a class="post-item__thumbnail" href="single-services.html">
-                            <picture>
-                                <source srcset="img/base/service-3.webp" type="image/webp">
-                                <img class="post-item__img" src="img/base/service-3.jpg" alt="">
-                            </picture>
-                        </a>
-                        <div class="post-item__body">
-                            <div class="post-item__excerpt content">
-                                <h3><a href="single-services.html">Контекстная реклама</a></h3>
-                                <p>Запускаем рекламув Инстаграм и Фэйсбу к для привлечения клиентов.</p>
+                        </div><!-- / .item-advantages-slider -->
+                        <div class="advantages-slider__item item-advantages-slider swiper-slide">
+                            <img class="item-advantages-slider__icon" src="img/base/advantages-icon-3.svg" width="60" height="60" alt="">
+                            <div class="item-advantages-slider__txt content">
+                                <p>Создаем красивый дизайн и дополняем Ваш сайт уникальным контентом.</p>
                             </div>
-                            <a class="post-item__button button button--stroke" href="#">Подробнее</a>
-                        </div>
-                    </li><!-- / .post-item -->
-                    <li class="posts-list__item post-item post-item--extra">
-                        <a class="post-item__thumbnail" href="single-services.html">
-                            <picture>
-                                <source srcset="img/base/service-4.webp" type="image/webp">
-                                <img class="post-item__img" src="img/base/service-4.jpg" alt="">
-                            </picture>
-                        </a>
-                        <div class="post-item__body">
-                            <div class="post-item__excerpt content">
-                                <h3><a href="single-services.html">Репутация в интернете</a></h3>
-                                <p>Создаем правильное восприятие Вашей кампании. Управляем репутацией для создания имиджа.</p>
+                        </div><!-- / .item-advantages-slider -->
+                        <div class="advantages-slider__item item-advantages-slider swiper-slide">
+                            <img class="item-advantages-slider__icon" src="img/base/advantages-icon-4.svg" width="60" height="60" alt="">
+                            <div class="item-advantages-slider__txt content">
+                                <p>Внедряем современные технические решения для комфортной работы с сайтом.</p>
                             </div>
-                            <a class="post-item__button button button--stroke" href="#">Подробнее</a>
-                        </div>
-                    </li><!-- / .post-item -->
-                    <li class="posts-list__item post-item post-item--extra">
-                        <a class="post-item__thumbnail" href="single-services.html">
-                            <picture>
-                                <source srcset="img/base/service-5.webp" type="image/webp">
-                                <img class="post-item__img" src="img/base/service-5.jpg" alt="">
-                            </picture>
-                        </a>
-                        <div class="post-item__body">
-                            <div class="post-item__excerpt content">
-                                <h3><a href="single-services.html">Обучение</a></h3>
-                                <p>
-                                    Лучшая теория и наглядная практика. Для изучения особенностей рекламы. Каждого
-                                    ученика поддерживаем лично.
-                                </p>
-                            </div>
-                            <a class="post-item__button button button--stroke" href="#">Подробнее</a>
-                        </div>
-                    </li><!-- / .post-item -->
-                    <li class="posts-list__item post-item post-item--extra">
-                        <a class="post-item__thumbnail" href="single-services.html">
-                            <picture>
-                                <source srcset="img/base/service-6.webp" type="image/webp">
-                                <img class="post-item__img" src="img/base/service-6.jpg" alt="">
-                            </picture>
-                        </a>
-                        <div class="post-item__body">
-                            <div class="post-item__excerpt content">
-                                <h3><a href="single-services.html">Копирайтинг</a></h3>
-                                <p>Пишем уникальные тексты и статьи. Просто излагаем о сложном. Для Инстаграм и сайтов.</p>
-                            </div>
-                            <a class="post-item__button button button--stroke" href="#">Подробнее</a>
-                        </div>
-                    </li><!-- / .post-item -->
-                    <li class="posts-list__item post-item post-item--extra">
-                        <a class="post-item__thumbnail" href="single-services.html">
-                            <picture>
-                                <source srcset="img/base/service-7.webp" type="image/webp">
-                                <img class="post-item__img" src="img/base/service-7.jpg" alt="">
-                            </picture>
-                        </a>
-                        <div class="post-item__body">
-                            <div class="post-item__excerpt content">
-                                <h3><a href="single-services.html">Создание сайтов</a></h3>
-                                <p>Веб-разработка под ключ. Интернет магазин или Landing. Создаем сайты для продаж.</p>
-                            </div>
-                            <a class="post-item__button button button--stroke" href="#">Подробнее</a>
-                        </div>
-                    </li><!-- / .post-item -->
-                    <li class="posts-list__item post-item post-item--extra">
-                        <a class="post-item__thumbnail" href="single-services.html">
-                            <picture>
-                                <source srcset="img/base/service-8.webp" type="image/webp">
-                                <img class="post-item__img" src="img/base/service-8.jpg" alt="">
-                            </picture>
-                        </a>
-                        <div class="post-item__body">
-                            <div class="post-item__excerpt content">
-                                <h3><a href="single-services.html">Медийная реклама</a></h3>
-                                <p>Размещаем баннеры и видео для рекламы на тематических сайтах для узнаваемости бренда.</p>
-                            </div>
-                            <a class="post-item__button button button--stroke" href="#">Подробнее</a>
-                        </div>
-                    </li><!-- / .post-item -->
-                    <li class="posts-list__item post-item post-item--extra">
-                        <a class="post-item__thumbnail" href="single-services.html">
-                            <picture>
-                                <source srcset="img/base/service-9.webp" type="image/webp">
-                                <img class="post-item__img" src="img/base/service-9.jpg" alt="">
-                            </picture>
-                        </a>
-                        <div class="post-item__body">
-                            <div class="post-item__excerpt content">
-                                <h3><a href="single-services.html">Аудит</a></h3>
-                                <p>Проводим экспертный анализ рекламных кампаний и сайтов для уверенности.</p>
-                            </div>
-                            <a class="post-item__button button button--stroke" href="#">Подробнее</a>
-                        </div>
-                    </li><!-- / .post-item -->
-                </ul>
+                        </div><!-- / .item-advantages-slider -->
+                    </div>
+                    <div class="advantages-slider__pagination slider-pagination"></div>
+                </div><!-- / .advantages-slider -->
             </div>
-        </section><!-- / .services -->
+        </section><!-- / .advantages -->
 
         <section class="help-form">
             <div class="container">
                 <div class="help-form__box">
-                    <h2 class="help-form__title">Вы готовы значительно увеличить Ваши продажи?<br> Свяжитесь с нами для обсуждения проекта</h2>
+                    <h2 class="help-form__title">Давайте обсудим Ваш проект</h2>
                     <form class="help-form__form form form--line" action="#" method="post">
                         <ul class="form__list fields-list fields-list--line">
                             <li class="fields-list__item field-box">

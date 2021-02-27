@@ -3,6 +3,7 @@
    ========================================================================== */
 @import "~normalize.css/normalize.css";
 @import "~@fancyapps/fancybox/dist/jquery.fancybox.min.css";
+@import "~swiper/swiper-bundle.min.css";
 
 /* ==========================================================================
    SPECIFICATION
@@ -61,3 +62,14 @@
 @import "modules/breadcrumbs-box";
 @import "modules/breadcrumbs";
 @import "modules/services";
+
+/* ==========================================================================
+   SERVICE PAGE
+   ========================================================================== */
+@import "modules/service-offer";
+@import "modules/data-form";
+@import "modules/data";
+@import "modules/advantages";
+@import "modules/advantages-slider";
+@import "modules/item-advantages-slider";
+@import "modules/slider-pagination";

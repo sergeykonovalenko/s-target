@@ -1,20 +1,37 @@
 .breadcrumbs {
     font-size: 14px;
     line-height: 1.5;
+
+    &--white {
+        color: #fff;
+    }
 }
 
 .breadcrumbs__link {
     @include hover-supported {
         color: $color-main;
         border-color: $color-main;
+
+        .breadcrumbs--white & {
+            border-color: #fff;
+        }
     }
 
     margin-right: 10px;
     border-bottom: 1px solid transparent;
 
+    .breadcrumbs--white & {
+        color: #fff;
+    }
+
     &:active {
         color: $color-main--dark;
         border-color: $color-main--dark;
+
+        .breadcrumbs--white & {
+            color: #fff;
+            border-color: #fff;
+        }
     }
 }
 
@@ -24,4 +41,9 @@
 
 .breadcrumbs__current {
     color: $gray-4;
+
+    .breadcrumbs--white & {
+        color: #fff;
+        opacity: .7;
+    }
 }

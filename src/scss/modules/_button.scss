@@ -25,6 +25,11 @@
         background-color: $color-main--darken;
     }
 
+    &--large {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
     &--stroke {
         @include hover-supported {
             color: #fff;

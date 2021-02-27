@@ -20,9 +20,9 @@
   "author": "Sergey Konovalenko",
   "license": "MIT",
   "devDependencies": {
-    "@babel/core": "^7.13.1",
-    "@babel/plugin-transform-runtime": "^7.13.7",
-    "@babel/preset-env": "^7.13.5",
+    "@babel/core": "^7.13.8",
+    "@babel/plugin-transform-runtime": "^7.13.8",
+    "@babel/preset-env": "^7.13.8",
     "autoprefixer": "^10.2.4",
     "babel-loader": "^8.2.2",
     "clean-webpack-plugin": "^3.0.0",
@@ -51,13 +51,14 @@
     "webpack-visualizer-plugin": "^0.1.11"
   },
   "dependencies": {
-    "@babel/runtime": "^7.13.7",
+    "@babel/runtime": "^7.13.8",
     "@fancyapps/fancybox": "^3.5.7",
     "focus-visible": "^5.2.0",
     "inputmask": "^5.0.5",
     "jquery": "^3.5.1",
     "jquery-validation": "^1.19.3",
     "normalize.css": "^8.0.1",
+    "swiper": "^6.4.15",
     "waypoints": "^4.0.1"
   }
 }

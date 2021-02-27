@@ -5,6 +5,7 @@ import 'focus-visible';
 import './google-maps';
 import './svg-sprite';
 import Inputmask from 'inputmask';
+import Swiper, { Navigation, Pagination, Thumbs, Autoplay } from 'swiper/core';
 
 $(document).ready(function () {
     'use strict';
@@ -63,6 +64,24 @@ $(document).ready(function () {
         scrollPos = document.body.getBoundingClientRect().top;
     }, {passive: true});
     // END STICKY HEADER
+    ////////////////////////////////////////////////////////////////////////////
+
+    // START INIT SWIPER
+    ////////////////////////////////////////////////////////////////////////////
+    Swiper.use([Navigation, Pagination, Thumbs, Autoplay]);
+
+    // advantages slider
+    let advantagesSlider = new Swiper('.advantages-slider', {
+        slidesPerView: 4,
+        spaceBetween: 30,
+        speed: 1000,
+        watchOverflow: true,
+        pagination: {
+            el: '.advantages-slider__pagination',
+            clickable: true,
+        },
+    });
+    // END INIT SWIPER
     ////////////////////////////////////////////////////////////////////////////
 
     // START DETERMINING FIELD STATUS
