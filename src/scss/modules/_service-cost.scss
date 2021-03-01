@@ -1,0 +1,34 @@
+.service-cost {
+
+}
+
+.service-cost__item {
+    min-height: 350px;
+
+    &--call {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: $color-main;
+    }
+
+    strong {
+        display: block;
+        font-size: 20px;
+        line-height: 1.35;
+    }
+}
+
+.service-cost__item--call-txt {
+    margin-bottom: 15px;
+    color: #fff;
+
+    strong {
+        font-size: 30px;
+        line-height: 1.4;
+    }
+}
+
+.service-cost__item--call-button {
+    width: 100%;
+}

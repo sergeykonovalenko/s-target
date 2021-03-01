@@ -185,6 +185,27 @@ $(document).ready(function () {
     // END FORM VALIDATION
     ////////////////////////////////////////////////////////////////////////////
 
+    // START ACCORDION
+    ////////////////////////////////////////////////////////////////////////////
+    let accordionHeaders = document.querySelectorAll('.accordion__head');
+
+    accordionHeaders.forEach((accordionHeader) => {
+        accordionHeader.addEventListener('click', function () {
+            let accordionItem = this.closest('.accordion__item');
+            let accordionBody = accordionItem.querySelector('.accordion__body');
+
+            if (accordionItem.classList.contains('accordion__item--open')) {
+                accordionItem.classList.remove('accordion__item--open');
+            } else {
+                accordionItem.classList.add('accordion__item--open');
+            }
+
+            $(accordionBody).slideToggle(300);
+        }, {passive: true});
+    });
+    // END ACCORDION
+    ////////////////////////////////////////////////////////////////////////////
+
     // init tabs
     // $('.js-service-tabs').tabs();
 }); // end ready
