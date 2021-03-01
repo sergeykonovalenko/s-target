@@ -1,0 +1,7 @@
+.list-info-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
+    gap: 30px;
+    padding: 0;
+    list-style: none;
+}

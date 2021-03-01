@@ -56,4 +56,20 @@
             background-color: #fff;
         }
     }
+
+    &--bg {
+
+        &--white {
+            @include hover-supported {
+                background-color: $color-main--lighten;
+            }
+
+            color: $gray-1;
+            background-color: #fff;
+
+            &:active {
+                background-color: $color-main--light;
+            }
+        }
+    }
 }

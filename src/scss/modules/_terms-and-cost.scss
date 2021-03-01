@@ -1,0 +1,43 @@
+.terms-and-cost {
+    padding: 30px;
+    border-radius: 5px;
+    background-color: $color-main;
+}
+
+.terms-and-cost__txt {
+    margin-bottom: 30px;
+    font-size: 14px;
+
+    ul {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        column-gap: 60px;
+        row-gap: 30px;
+
+        li {
+            margin-bottom: 0;
+            padding-left: 0;
+
+            &::before {
+                display: none;
+            }
+
+            h3 {
+                margin-bottom: .5em; // 15px
+                font-size: 30px;
+            }
+
+            & > *:first-child {
+                margin-top: 0;
+            }
+
+            & > *:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.terms-and-cost__button {
+    width: 100%;
+}

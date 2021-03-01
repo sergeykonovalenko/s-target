@@ -1,0 +1,17 @@
+.service-tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.service-tabs__nav {
+    display: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    line-height: 1.333;
+}
+
+.service-tabs__body {
+
+}

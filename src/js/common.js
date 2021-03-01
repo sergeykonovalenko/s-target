@@ -1,11 +1,12 @@
 import '@fancyapps/fancybox/dist/jquery.fancybox.min';
 import 'waypoints/lib/noframework.waypoints.min';
+import 'jquery-ui/ui/widgets/tabs';
 import 'jquery-validation';
 import 'focus-visible';
 import './google-maps';
 import './svg-sprite';
-import Inputmask from 'inputmask';
 import Swiper, { Navigation, Pagination, Thumbs, Autoplay } from 'swiper/core';
+import Inputmask from 'inputmask';
 
 $(document).ready(function () {
     'use strict';
@@ -183,4 +184,7 @@ $(document).ready(function () {
     } );
     // END FORM VALIDATION
     ////////////////////////////////////////////////////////////////////////////
+
+    // init tabs
+    // $('.js-service-tabs').tabs();
 }); // end ready

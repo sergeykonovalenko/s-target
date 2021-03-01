@@ -1,10 +1,34 @@
-.content > *:first-child {
-    margin-top: 0;
+.content {
+
+    .page &--bg {
+
+        &--main {
+            color: #fff;
+            background-color: $color-main;
+        }
+    }
+
+    & > *:first-child {
+        margin-top: 0;
+    }
+
+    & > *:last-child {
+        margin-bottom: 0;
+    }
 }
 
-.content > *:last-child {
-    margin-bottom: 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+    .content--bg--main & {
+        color: #fff;
+    }
 }
+
 
 p,
 ul,
@@ -13,6 +37,36 @@ ol {
     .content & {
         margin: 1em 0;
     }
+}
+
+.content ul {
+    padding: 0;
+    list-style: none;
+}
+
+.content ul li {
+    position: relative;
+    margin-bottom: 1.25em;
+    padding-left: 34px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 8px;
+        left: 7px;
+        width: 10px;
+        height: 10px;
+        background-color: $color-main;
+        border-radius: 50%;
+    }
+}
+
+.content--bg--main ul li::before {
+    background-color: #fff;
 }
 
 .content a {

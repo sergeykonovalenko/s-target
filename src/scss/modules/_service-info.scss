@@ -1,0 +1,10 @@
+.service-info {
+
+    & > *:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.service-info__tabs {
+    margin-bottom: 30px;
+}

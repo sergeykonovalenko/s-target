@@ -1,0 +1,9 @@
+.body-service-tabs {
+    & > *:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.body-service-tabs__service-card {
+    margin-bottom: 30px;
+}

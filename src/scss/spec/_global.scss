@@ -79,7 +79,7 @@ textarea {
 
     &:focus {
         border-color: $color-main;
-        box-shadow: $color-main--light 0 0 0 3px;
+        box-shadow: $color-main--lighten 0 0 0 3px;
         outline: none;
 
         &.error {
