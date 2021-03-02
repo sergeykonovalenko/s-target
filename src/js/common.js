@@ -6,6 +6,7 @@ import 'focus-visible';
 import './google-maps';
 import './svg-sprite';
 import Swiper, { Navigation, Pagination, Thumbs, Autoplay } from 'swiper/core';
+import PerfectScrollbar from 'perfect-scrollbar';
 import Inputmask from 'inputmask';
 
 $(document).ready(function () {
@@ -83,6 +84,27 @@ $(document).ready(function () {
         },
     });
     // END INIT SWIPER
+    ////////////////////////////////////////////////////////////////////////////
+
+    // START INIT PERFECT SCROLLBAR
+    ////////////////////////////////////////////////////////////////////////////
+    let perfectScrollbarsContainers = document.querySelectorAll('.js-perfect-scrollbar');
+    let arrayPerfectScrollbars = [];
+
+    perfectScrollbarsContainers.forEach(perfectScrollbar => {
+        let perfectScrollbars = new PerfectScrollbar(perfectScrollbar, {
+            // wheelPropagation: false,
+            // minScrollbarLength: 20,
+        });
+        arrayPerfectScrollbars.push(perfectScrollbars);
+    });
+
+    // update perfect scrollbar
+    function updatePerfectScrollbar() {
+        arrayPerfectScrollbars.forEach(scrollbar => scrollbar.update());
+    }
+
+    // END INIT PERFECT SCROLLBAR
     ////////////////////////////////////////////////////////////////////////////
 
     // START DETERMINING FIELD STATUS

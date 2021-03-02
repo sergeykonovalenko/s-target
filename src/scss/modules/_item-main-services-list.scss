@@ -2,8 +2,12 @@
     padding: 30px;
     font-size: 18px;
     background-color: #fff;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, .1);
     border-radius: 5px;
+    transition: all .15s ease-out;
+
+    &:hover {
+        box-shadow: 0 4px 20px rgba(0, 0, 0, .1);
+    }
 }
 
 .item-main-services-list__thumbnail {

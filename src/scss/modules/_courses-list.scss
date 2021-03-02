@@ -1,0 +1,12 @@
+.courses-list {
+    padding: 0;
+    list-style: none;
+}
+
+.courses-list__item {
+    margin-bottom: 30px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}

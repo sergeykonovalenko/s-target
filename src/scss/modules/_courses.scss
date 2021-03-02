@@ -1,0 +1,18 @@
+.courses {
+
+    &--bg {
+
+        &--gray {
+            background-color: $gray-6;
+        }
+    }
+}
+
+.courses__head {
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.courses__list {
+    margin: 0;
+}
