@@ -1,0 +1,28 @@
+.sections-posts {
+    padding: 80px 0;
+
+    &--bg {
+
+        &--gray {
+            background-color: $gray-6;
+        }
+    }
+}
+
+.sections-posts__item {
+    padding: 60px 0;
+    border-bottom: 1px solid $gray-4;
+
+    &:first-child {
+        padding-top: 0;
+    }
+
+    &:last-child {
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+}
+
+.sections-posts__item .section__title {
+    margin-bottom: 40px;
+}

@@ -1,7 +1,13 @@
 .posts {
-
+    & > *:last-child {
+        margin-bottom: 0;
+    }
 }
 
 .posts__list {
     margin: 0 0 60px 0;
+}
+
+.posts__more {
+
 }
