@@ -62,11 +62,20 @@
 .item-main-services-list h3 {
     margin-bottom: 15px;
     font-size: 30px;
-}
 
-.item-main-services-list h3 a {
-    color: $gray-1;
-    border: none;
+    a {
+        @include hover-supported {
+            color: $color-main;
+        }
+
+        display: block;
+        color: $gray-1;
+        border-bottom: none;
+
+        &:active {
+            color: $color-main--dark;
+        }
+    }
 }
 
 .item-main-services-list__more {

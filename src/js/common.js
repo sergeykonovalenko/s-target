@@ -103,7 +103,6 @@ $(document).ready(function () {
     function updatePerfectScrollbar() {
         arrayPerfectScrollbars.forEach(scrollbar => scrollbar.update());
     }
-
     // END INIT PERFECT SCROLLBAR
     ////////////////////////////////////////////////////////////////////////////
 

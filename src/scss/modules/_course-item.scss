@@ -24,8 +24,9 @@
 
 .course-item__counter {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
 }
 
 .course-item__img-link {
@@ -39,6 +40,7 @@
     display: block;
     height: 0;
     padding-bottom: 92.5925925925%;
+    background-color: $gray-5;
     overflow: hidden;
 }
 
@@ -71,7 +73,6 @@
             }
 
             display: block;
-            width: fit-content;
             color: $gray-1;
             border-bottom: none;
 

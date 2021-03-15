@@ -1,0 +1,96 @@
+.lesson-item {
+    @include hover-supported {
+        box-shadow: 0 4px 20px rgba(0, 0, 0, .1);
+    }
+
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 5px;
+    transition: all .15s ease-out;
+}
+
+.lesson-item__thumbnail {
+    position: relative;
+    float: left;
+    width: 130px;
+    margin-right: 30px;
+}
+
+.lesson-item__img-link {
+    @include hover-supported {
+        .lesson-item__img {
+            transform: scale(1.1);
+        }
+    }
+
+    position: relative;
+    display: block;
+    height: 0;
+    padding-bottom: 100%;
+    border-radius: 5px;
+    background-color: $gray-5;
+    overflow: hidden;
+    /*Add on element with overflow*/
+    /*Safari border-radius + overflow: hidden + CSS transform fix*/
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+}
+
+.lesson-item__counter {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+}
+
+.lesson-item__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .3s ease-out;
+}
+
+.lesson-item__excerpt {
+    margin-bottom: 15px;
+}
+
+.lesson-item__excerpt {
+
+    h3 {
+        margin-bottom: .5em;
+        font-size: 30px;
+
+        a {
+            @include hover-supported {
+                color: $color-main;
+            }
+
+            display: block;
+            color: $gray-1;
+            border-bottom: none;
+
+            &:active {
+                color: $color-main--dark;
+            }
+        }
+    }
+}
+
+.lesson-item__info {
+    display: flex;
+    flex-wrap: wrap;
+
+    & > *:last-child {
+        margin-right: 0;
+    }
+
+    p {
+        margin: 0 30px 0 0;
+    }
+
+    strong {
+        font-weight: 700;
+    }
+}

@@ -1,0 +1,12 @@
+.lessons-list {
+    padding: 0;
+    list-style: none;
+}
+
+.lessons-list__item {
+    margin-bottom: 30px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}

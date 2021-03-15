@@ -31,8 +31,9 @@ module.exports = mode => {
                         {
                             loader: 'svg-sprite-loader',
                             options: {
-
-                            },
+                                extract: true,
+                                spriteFilename: 'img/sprites/general.svg'
+                            }
                         },
                         'svgo-loader',
                     ]
@@ -64,6 +65,9 @@ module.exports = mode => {
                         from: 'img/**/*',
                         context: 'src',
                         force: true,
+                        globOptions: {
+                            ignore: ['**/svg-sprite/**',]
+                        }
                     },
                     {
                         from: 'fonts/**/*',
