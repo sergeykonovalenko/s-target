@@ -1,0 +1,30 @@
+.message-item {
+    display: flex;
+
+    &--sent {
+        align-items: flex-end;
+    }
+}
+
+.message-item__body {
+
+    .message-item--sent & {
+        margin-right: 10px;
+    }
+}
+
+.messages__item > picture {
+    flex-shrink: 0;
+}
+
+.messages-item__avatar {
+    flex-shrink: 0;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    object-fit: cover;
+
+    .message-item--replies & {
+        margin-right: 10px;
+    }
+}

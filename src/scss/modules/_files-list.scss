@@ -1,0 +1,50 @@
+.files-list {
+    padding: 0;
+    list-style: none;
+}
+
+.files-list__item {
+    margin-bottom: 15px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.files-list__link {
+    @include hover-supported {
+        color: $color-main;
+
+        &::before {
+            background-color: $gray-5;
+        }
+    }
+
+    position: relative;
+    display: block;
+    width: fit-content;
+    padding-left: 34px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: $gray-3;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: -8px;
+        width: 32px;
+        height: 32px;
+        background-image: url("img/bg/download.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 24px;
+        border-radius: 50%;
+        transition: all .15s ease-out;
+        transform: translateY(-50%);
+    }
+
+    &:active {
+        color: $color-main--dark;
+    }
+}

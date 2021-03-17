@@ -1,0 +1,26 @@
+.attachments {
+
+}
+
+.attachments__files {
+    margin: 0 0 20px 0;
+}
+
+.attachments__dropzone {
+    @include hover-supported {
+        border-color: $gray-1;
+    }
+
+    padding: 11px 15px;
+    border: 1px dashed $gray-4;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .15s ease-out;
+}
+
+.attachments__title {
+    margin: 0;
+    text-align: center;
+    color: $gray-3;
+    pointer-events: none;
+}

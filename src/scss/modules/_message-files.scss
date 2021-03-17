@@ -1,0 +1,28 @@
+.message-files {
+    padding: 0;
+    list-style: none;
+}
+
+.message-files__item {
+    margin-bottom: 15px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.message-files__link {
+    @include hover-supported {
+        color: $color-main;
+        border-color: $color-main;
+    }
+
+    font-weight: 600;
+    color: $gray-3;
+    border-bottom: 1.5px solid transparent;
+
+    &:active {
+        color: $color-main--dark;
+        border-color: $color-main--dark;
+    }
+}

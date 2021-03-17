@@ -1,0 +1,13 @@
+.attachments-files {
+    padding: 0;
+    list-style: none;
+}
+
+.attachments-files__item {
+    padding: 11px 15px;
+    font-weight: 600;
+    color: $gray-3;
+    text-align: center;
+    border: 1px dashed $gray-4;
+    border-radius: 5px;
+}

@@ -1,0 +1,42 @@
+.lesson {
+
+}
+
+.lesson__head {
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.lesson__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: start;
+    margin-bottom: 30px;
+}
+
+.lesson__col {
+    position: sticky;
+    top: 15px;
+    transition: top .15s ease-out;
+
+    .header-show & {
+        top: calc(var(--header-wr-height) + 15px);
+    }
+
+    & > *:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.lesson__video-list {
+    margin: 0;
+}
+
+.lesson__files {
+    margin: 0 0 30px 0;
+}
+
+.lesson__chat {
+
+}

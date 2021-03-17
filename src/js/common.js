@@ -12,6 +12,8 @@ import Inputmask from 'inputmask';
 $(document).ready(function () {
     'use strict';
 
+    const page = document.documentElement;
+
     // START STICKY HEADER
     ////////////////////////////////////////////////////////////////////////////
     let header = document.querySelector('.header');
@@ -53,12 +55,14 @@ $(document).ready(function () {
             // SCROLL UP
             if (headerWr.classList.contains('header__wr--start-sticky')) {
                 headerWr.classList.add('header__wr--show');
+                page.classList.add('header-show');
             }
             headerWr.classList.remove('header__wr--hide');
         } else {
             // SCROLL DOWN
             if (headerWr.classList.contains('header__wr--start-sticky')) {
                 headerWr.classList.add('header__wr--hide');
+                page.classList.remove('header-show');
             }
             headerWr.classList.remove('header__wr--show');
         }
@@ -225,6 +229,12 @@ $(document).ready(function () {
         }, {passive: true});
     });
     // END ACCORDION
+    ////////////////////////////////////////////////////////////////////////////
+
+    // PASSING DATA TO CSS
+    ////////////////////////////////////////////////////////////////////////////
+    if (headerWr) page.style.setProperty('--header-wr-height', `${headerWr.clientHeight}px`);
+    // END DATA TO CSS
     ////////////////////////////////////////////////////////////////////////////
 
     // init tabs

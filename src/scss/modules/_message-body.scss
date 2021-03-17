@@ -1,0 +1,26 @@
+.message-body {
+    padding: 15px;
+
+    .message-item--sent & {
+        border-radius: 10px 10px 0 10px;
+        background-color: $color-main--lighten;
+    }
+
+    .message-item--replies & {
+        border-radius: 0 10px 10px 10px;
+        background-color: $color-accent--light;
+    }
+}
+
+.message-body__files {
+    margin-bottom: 20px;
+}
+
+.message-body__txt {
+    margin-bottom: 20px;
+}
+
+.message-body__time {
+    display: block;
+    font-size: 14px;
+}
