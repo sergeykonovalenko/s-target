@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="format-detection" content="telephone=no">
     <!-- SEO -->
-    <title>Личная информация | S-TARGET</title>
+    <title>Контакты | S-TARGET</title>
     <meta name="description" content="Описание сайта для поисковиков, рекомендуемый размер от 70 до 140 символов">
     <meta name="keywords" content="ключевые, слова, через, запятую (рекомендованное количество слов в данном теге — 5-10)">
     <!-- Favicon -->
@@ -20,7 +20,7 @@
     <meta name="theme-color" content="#ffffff">
     <!-- OG -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Личная информация">
+    <meta property="og:title" content="Контакты">
     <meta property="og:description" content="Описание, до 200 символов">
     <meta property="og:image" content="img/og/poster.jpg">
     <meta property="og:url" content="http://www.site-name.com/current-page">
@@ -73,7 +73,7 @@
                                 <a class="menu__link" href="#">О нас</a>
                             </p>
                         </li>
-                        <li class="menu__item">
+                        <li class="menu__item current-menu-item">
                             <p class="menu__actions">
                                 <a class="menu__link" href="contacts.html">Контакты</a>
                             </p>
@@ -120,35 +120,26 @@
     </header><!-- / .header -->
 
     <main class="main">
-        <section class="personal-info section section--bg--gray">
+        <section class="contacts">
             <div class="container">
-                <h1 class="personal-info__head section-head-2">Личная информация</h1>
-                <form class="personal-info__form form-2" action="#" method="post">
-                    <div class="form-2__body">
-                        <ul class="form-2__list fields-list">
-                            <li class="fields-list__item fields-list__item--third field-box">
-                                <input class="field-box__field" id="personal-info-phone" type="tel" name="phone" inputmode="tel" value="+7 (999) 000-00-00" required>
-                                <label class="field-box__label" for="personal-info-phone">Телефон</label>
-                            </li><!-- / .field-box -->
-                            <li class="fields-list__item fields-list__item--third field-box">
-                                <input class="field-box__field" id="personal-info-email" type="email" name="email" inputmode="email" value="info@s-target.ru" required>
-                                <label class="field-box__label" for="personal-info-email">E-mail</label>
-                            </li><!-- / .field-box -->
-                            <li class="fields-list__item fields-list__item--third field-box">
-                                <input class="field-box__field field-box__field--has-icon" id="personal-info-password" type="password" name="password" value="eSNIHieRU4" disabled required>
-                                <label class="field-box__label" for="personal-info-password">Пароль</label>
-                                <a class="field-box__button button-icon btn-modal" href="#" data-tippy-content="Изменить пароль">
-                                    <svg class="button-icon__icon" width="24" height="24">
-                                        <use href="img/sprites/general.svg#icon-edit"></use>
-                                     </svg>
-                                </a>
-                            </li><!-- / .field-box -->
-                        </ul><!-- / .fields-list -->
+                <div class="contacts__box contacts-box">
+                    <div class="contacts-box__txt content">
+                        <div class="contacts-box__head content">
+                            <p>Ответим на все ваши вопросы по телефону или почте ежедневно с 9 до 19 </p>
+                            <p class="contacts-box__phone"><a href="tel:+74952293170">+7 (495) 229-31-70</a></p>
+                            <p class="contacts-box__email"><a href="mailto:info@s-target.ru">info@s-target.ru</a></p>
+                            <p>443080 Московское шоссе, 36 Б</p>
+                        </div>
+                        <div class="contacts-box__other content">
+                            <p>Мы работаем только онлайн и не принимаем клиентов по данному адресу</p>
+                            <p>Скоро наш новый офис будет введен в эксплуатацию и вы сможете прийти к нам в гости</p>
+                        </div>
                     </div>
-                    <button class="form-2__button button button--stroke button--stroke--extra">Сохранить изменения</button>
-                </form><!-- / .form-2 -->
+                    <a class="contacts-box__button button button--stroke button--stroke--extra" href="#">Связаться с нами</a>
+                </div><!-- / .contacts-box -->
             </div>
-        </section><!-- / .personal-info -->
+            <div class="contacts__map"></div>
+        </section><!-- / .contacts -->
     </main><!-- / .main -->
 
     <footer class="footer">
