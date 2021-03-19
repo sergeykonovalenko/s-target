@@ -28,24 +28,6 @@
     &--invert {
         padding: 0 34px 0 0;
     }
-
-    &--no-txt {
-        min-height: auto;
-        padding-left: 0;
-    }
-
-    //&--close {
-    //    opacity: .5;
-    //
-    //    &:hover,
-    //    &.focus-visible {
-    //        opacity: 1;
-    //
-    //        .control-button__icon {
-    //            fill: $gray-1;
-    //        }
-    //    }
-    //}
 }
 
 .control-button__icon {

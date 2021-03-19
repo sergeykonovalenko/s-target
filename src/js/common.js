@@ -1,13 +1,15 @@
+import Swiper, { Navigation, Pagination, Thumbs, Autoplay } from 'swiper/core';
 import '@fancyapps/fancybox/dist/jquery.fancybox.min';
+import PerfectScrollbar from 'perfect-scrollbar';
 import 'waypoints/lib/noframework.waypoints.min';
 import 'jquery-ui/ui/widgets/tabs';
+import Inputmask from 'inputmask';
+import tippy from 'tippy.js';
 import 'jquery-validation';
 import 'focus-visible';
 import './google-maps';
 import './svg-sprite';
-import Swiper, { Navigation, Pagination, Thumbs, Autoplay } from 'swiper/core';
-import PerfectScrollbar from 'perfect-scrollbar';
-import Inputmask from 'inputmask';
+
 
 $(document).ready(function () {
     'use strict';
@@ -70,6 +72,20 @@ $(document).ready(function () {
         scrollPos = document.body.getBoundingClientRect().top;
     }, {passive: true});
     // END STICKY HEADER
+    ////////////////////////////////////////////////////////////////////////////
+
+    // START INIT TIPPY.JS
+    ////////////////////////////////////////////////////////////////////////////
+    tippy('[data-tippy-content]', {
+        animation: 'shift-toward',
+        interactive: true,
+        // appendTo: 'parent',
+        // theme: 'light',
+        // hideOnClick: false,
+        // trigger: 'click',
+        // placement: 'right',
+    });
+    // END INIT TIPPY.JS
     ////////////////////////////////////////////////////////////////////////////
 
     // START INIT SWIPER

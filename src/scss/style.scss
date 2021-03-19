@@ -5,6 +5,8 @@
 @import "~@fancyapps/fancybox/dist/jquery.fancybox.min.css";
 @import "~swiper/swiper-bundle.min.css";
 @import "~perfect-scrollbar/css/perfect-scrollbar.css";
+@import "~tippy.js/dist/tippy.css";
+@import "~tippy.js/animations/shift-toward.css";
 
 /* ==========================================================================
    SPECIFICATION
@@ -20,6 +22,7 @@
    HOME PAGE
    ========================================================================== */
 @import "modules/button";
+@import "modules/button-icon";
 @import "modules/focus-visible";
 @import "modules/content";
 @import "modules/clearfix";
@@ -124,3 +127,11 @@
 @import "modules/message-files";
 @import "modules/attachments";
 @import "modules/attachments-files";
+
+/* ==========================================================================
+   PERSONAL INFORMATION
+   ========================================================================== */
+@import "modules/personal-info";
+@import "modules/form-2";
+@import "modules/tippy-box";
+

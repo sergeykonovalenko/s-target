@@ -11,6 +11,10 @@
         padding-bottom: 5px;
     }
 
+    &--has-icon {
+        padding-right: 64px;
+    }
+
     &--textarea {
         height: 150px;
     }
@@ -71,5 +75,29 @@
 
     .field-box__field.error ~ & {
         color: $color-error;
+    }
+}
+
+.field-box__button {
+    @include hover-supported {
+        background-color: transparent;
+
+        .button-icon__icon {
+            fill: $color-main;
+        }
+    }
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 64px;
+    height: 100%;
+
+    &:active {
+        background-color: transparent;
+
+        .button-icon__icon {
+            fill: $color-main--dark;
+        }
     }
 }

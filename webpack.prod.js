@@ -72,7 +72,7 @@ module.exports = (env, argv) => {
                 // filename: 'css/[name][hash].css',
                 filename: 'style.css',
             }),
-            new BundleAnalyzerPlugin(),
+            // new BundleAnalyzerPlugin(),
         ],
     });
 };

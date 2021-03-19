@@ -90,6 +90,7 @@ textarea {
 
     &[disabled] {
         color: $gray-4;
+        border-color: $gray-4;
         cursor: not-allowed;
 
         &::placeholder {
@@ -98,7 +99,12 @@ textarea {
     }
 
     &.error {
+        caret-color: $color-error !important;
         border-color: $color-error !important;
+
+        &:focus {
+            border-color: $color-error !important;
+        }
     }
 }
 

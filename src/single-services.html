@@ -166,15 +166,15 @@
                                     <label class="field-box__label" for="service-offer-form-name">Ваше имя (обязательно)</label>
                                 </li><!-- / .field-box -->
                                 <li class="fields-list__item field-box">
-                                    <input class="field-box__field" id="service-offer-form-phone" type="tel" name="phone" inputmode="tel" required>
-                                    <label class="field-box__label" for="service-offer-form-phone">Ваш E-mail (обязательно)</label>
+                                    <input class="field-box__field" id="service-offer-form-email" type="email" name="email" inputmode="email" required>
+                                    <label class="field-box__label" for="service-offer-form-email">Ваш E-mail (обязательно)</label>
                                 </li><!-- / .field-box -->
                                 <li class="fields-list__item field-box">
                                     <input class="field-box__field" id="promo-code" type="text" name="promo-code">
                                     <label class="field-box__label" for="promo-code">Ваш промокод (если есть)</label>
                                 </li><!-- / .field-box -->
                             </ul><!-- / .fields-list -->
-                            <button class="form__button button button--large">Заказать</button>
+                            <button class="form__button button button--large" type="submit">Заказать</button>
                         </form><!-- / .form -->
                     </div><!-- / .data-form .data -->
                 </div>
@@ -393,17 +393,17 @@
                 <div class="help-form__box">
                     <h2 class="help-form__title">Давайте обсудим Ваш проект</h2>
                     <form class="help-form__form form form--line" action="#" method="post">
-                        <ul class="form__list fields-list fields-list--line">
-                            <li class="fields-list__item field-box">
+                        <ul class="form__list fields-list">
+                            <li class="fields-list__item fields-list__item--half field-box">
                                 <input class="field-box__field" id="help-form-name" type="text" name="name" required>
                                 <label class="field-box__label" for="help-form-name">Ваше имя</label>
                             </li><!-- / .field-box -->
-                            <li class="fields-list__item field-box">
+                            <li class="fields-list__item fields-list__item--half field-box">
                                 <input class="field-box__field" id="help-form-phone" type="tel" name="phone" inputmode="tel" required>
                                 <label class="field-box__label" for="help-form-phone">Ваш телефон</label>
                             </li><!-- / .field-box -->
                         </ul><!-- / .fields-list -->
-                        <button class="form__button button">Связаться с нами</button>
+                        <button class="form__button button" type="submit">Связаться с нами</button>
                         <p class="form__check check">
                             <input class="check__field visually-hidden" id="help-form-agreement" type="checkbox" name="agreement" required>
                             <label class="check__label" for="help-form-agreement">Даю согласие на обработку персональных данных</label>

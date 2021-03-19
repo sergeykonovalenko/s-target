@@ -1,0 +1,24 @@
+.button-icon {
+    @include hover-supported {
+        background-color: rgba(0, 0, 0, .04);
+    }
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    padding: 4px;
+    background: 0 0;
+    border: none;
+    border-radius: 50%;
+
+    &:active {
+        background-color: rgba(0, 0, 0, .12);
+    }
+}
+
+.button-icon__icon {
+    fill: $gray-3;
+    transition: all .15s ease-out;
+}
