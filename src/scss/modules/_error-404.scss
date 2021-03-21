@@ -1,0 +1,42 @@
+.error-404 {
+    padding: 123px 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    .no-js &,
+    .no-webp & {
+        background-image: url("img/bg/404.jpg");
+    }
+
+    .webp & {
+        background-image: url("img/bg/404.webp");
+    }
+}
+
+.error-404__body {
+    max-width: 390px;
+    margin: 0 auto;
+    padding: 60px 30px;
+    background-color: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, .1);
+    border-radius: 5px;
+}
+
+.error-404__title {
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 80px;
+    text-align: center;
+}
+
+.error-404__txt {
+    margin-top: 0;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.error-404__button {
+    display: block;
+}
