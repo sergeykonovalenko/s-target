@@ -129,9 +129,15 @@
 @import "modules/attachments-files";
 
 /* ==========================================================================
-   PERSONAL INFORMATION
+   PERSONAL INFORMATION PAGE
    ========================================================================== */
 @import "modules/personal-info";
 @import "modules/form-2";
 @import "modules/tippy-box";
+
+/* ==========================================================================
+   BLOG PAGE
+   ========================================================================== */
+@import "modules/page-content";
+@import "modules/blog";
 

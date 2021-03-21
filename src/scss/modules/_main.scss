@@ -1,3 +1,9 @@
 .main {
     grid-area: main;
+
+    &--bg {
+        &--gray {
+            background-color: $gray-6;
+        }
+    }
 }

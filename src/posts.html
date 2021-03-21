@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="format-detection" content="telephone=no">
     <!-- SEO -->
-    <title>Курсы | S-TARGET</title>
+    <title>Блог | S-TARGET</title>
     <meta name="description" content="Описание сайта для поисковиков, рекомендуемый размер от 70 до 140 символов">
     <meta name="keywords" content="ключевые, слова, через, запятую (рекомендованное количество слов в данном теге — 5-10)">
     <!-- Favicon -->
@@ -20,7 +20,7 @@
     <meta name="theme-color" content="#ffffff">
     <!-- OG -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Курсы">
+    <meta property="og:title" content="Блог">
     <meta property="og:description" content="Описание, до 200 символов">
     <meta property="og:image" content="img/og/poster.jpg">
     <meta property="og:url" content="http://www.site-name.com/current-page">
@@ -63,7 +63,7 @@
                                 <a class="menu__link" href="training.html">Обучение</a>
                             </p>
                         </li>
-                        <li class="menu__item">
+                        <li class="menu__item current-menu-item">
                             <p class="menu__actions">
                                 <a class="menu__link" href="posts.html">Блог</a>
                             </p>
@@ -119,124 +119,144 @@
         </div>
     </header><!-- / .header -->
 
-    <main class="main">
-        <section class="courses section section--bg--gray">
+    <main class="main main--bg--gray">
+        <div class="breadcrumbs-box">
             <div class="container">
-                <h1 class="courses__head section-head-2">Мои курсы</h1>
-                <ul class="courses__list courses-list">
-                    <li class="courses-list__item course-item">
-                        <div class="course-item__thumbnail">
-                            <a class="course-item__img-link" href="single-courses.html">
-                                <span class="course-item__counter counter">55</span>
-                                <picture>
-                                    <source srcset="img/base/course-1.webp" type="image/webp">
-                                    <img class="course-item__img" src="img/base/course-1.jpg" alt="">
-                                </picture>
-                            </a>
-                        </div>
-                        <div class="course-item__excerpt">
-                            <div class="course-item__excerpt-wr content js-perfect-scrollbar">
-                                <h3><a href="single-courses.html">Таргетолог «от А до Я»</a></h3>
-                                <p>
-                                    Полный онлайн курс обучения и новые дополнения к нему на бессрочной основе. Дополнительный
-                                    практикумс тестированием. Личная пожизненная поддержка и ответы на вопросы. Дополнительные
-                                    материалы. Юридические вопросы и особенности профессии таргетолог.
-                                </p>
-                            </div>
-                        </div>
-                    </li><!-- / .course-item -->
-                    <li class="courses-list__item course-item">
-                        <div class="course-item__thumbnail">
-                            <a class="course-item__img-link" href="single-courses.html">
-                                <span class="course-item__counter counter">55</span>
-                                <picture>
-                                    <source srcset="img/base/course-2.webp" type="image/webp">
-                                    <img class="course-item__img" src="img/base/course-2.jpg" alt="">
-                                </picture>
-                            </a>
-                        </div>
-                        <div class="course-item__excerpt">
-                            <div class="course-item__excerpt-wr content js-perfect-scrollbar">
-                                <h3><a href="single-courses.html">Таргетолог «для дохода»</a></h3>
-                                <p>
-                                    Полный онлайн курс обучения и новые дополнения к нему на бессрочной основе. Дополнительный
-                                    практикумс тестированием. Личная пожизненная поддержка и ответы на вопросы. Дополнительные
-                                    материалы. Юридические вопросы и особенности профессии таргетолог.
-                                </p>
-                            </div>
-                        </div>
-                    </li><!-- / .course-item -->
-                </ul><!-- / .courses-list -->
+                <div class="breadcrumbs">
+                    <a class="breadcrumbs__link" href="index.html">Главная</a>
+                    <span class="breadcrumbs__separator">|</span>
+                    <span class="breadcrumbs__current">Блог</span>
+                </div><!-- / .breadcrumbs -->
             </div>
-        </section><!-- / .courses -->
+        </div><!-- / .breadcrumbs-box -->
 
-        <section class="courses section section--bg--gray">
+        <section class="page-content blog">
             <div class="container">
-                <h2 class="courses__head section-head-2">Доступные к приобретению курсы</h2>
-                <ul class="courses__list courses-list">
-                    <li class="courses-list__item course-item">
-                        <div class="course-item__thumbnail">
-                            <a class="course-item__img-link" href="single-courses.html">
+                <h1 class="page-content__title">Блог</h1>
+                <ul class="blog__list posts-list posts-list--columns--2">
+                    <li class="posts-list__item">
+                        <a class="post-item post-item--extra post-item--blog" href="single-posts.html">
+                            <figure class="post-item__thumbnail">
                                 <picture>
-                                    <source srcset="img/base/course-3.webp" type="image/webp">
-                                    <img class="course-item__img" src="img/base/course-3.jpg" alt="">
+                                    <source srcset="img/base/blog-post-1.webp" type="image/webp">
+                                    <img class="post-item__img" src="img/base/blog-post-1.jpg" alt="">
                                 </picture>
-                            </a>
-                        </div>
-                        <div class="course-item__excerpt">
-                            <div class="course-item__excerpt-wr content js-perfect-scrollbar">
-                                <h3><a href="single-courses.html">Таргетолог «для себя»</a></h3>
-                                <p>
-                                    Краткий онлайн курс обучения и новые дополнения к нему. Краткий практикум с
-                                    тестированием. Личная поддержка и ответы на вопросы в течении 2х месяцев.
-                                    Дополнительные материалы.
-                                </p>
+                            </figure>
+                            <div class="post-item__body">
+                                <div class="post-item__excerpt content">
+                                    <h3>Динамический заголовок статьи</h3>
+                                    <p>
+                                        Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько
+                                        абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору
+                                        отточить навык публичных выступлений в домашних условиях.
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                    </li><!-- / .course-item -->
-                    <li class="courses-list__item course-item">
-                        <div class="course-item__thumbnail">
-                            <a class="course-item__img-link" href="single-courses.html">
+                        </a><!-- / .post-item -->
+                    </li>
+                    <li class="posts-list__item">
+                        <a class="post-item post-item--extra post-item--blog" href="single-posts.html">
+                            <figure class="post-item__thumbnail">
                                 <picture>
-                                    <source srcset="img/base/course-4.webp" type="image/webp">
-                                    <img class="course-item__img" src="img/base/course-4.jpg" alt="">
+                                    <source srcset="img/base/blog-post-2.webp" type="image/webp">
+                                    <img class="post-item__img" src="img/base/blog-post-2.jpg" alt="">
                                 </picture>
-                            </a>
-                        </div>
-                        <div class="course-item__excerpt">
-                            <div class="course-item__excerpt-wr content js-perfect-scrollbar">
-                                <h3><a href="single-courses.html">Таргетолог «для себя»</a></h3>
-                                <p>
-                                    Краткий онлайн курс обучения и новые дополнения к нему. Краткий практикум с
-                                    тестированием. Личная поддержка и ответы на вопросы в течении 2х месяцев.
-                                    Дополнительные материалы.
-                                </p>
+                            </figure>
+                            <div class="post-item__body">
+                                <div class="post-item__excerpt content">
+                                    <h3>Динамический заголовок статьи</h3>
+                                    <p>
+                                        Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько
+                                        абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору
+                                        отточить навык публичных выступлений в домашних условиях.
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                    </li><!-- / .course-item -->
-                    <li class="courses-list__item course-item">
-                        <div class="course-item__thumbnail">
-                            <a class="course-item__img-link" href="single-courses.html">
+                        </a><!-- / .post-item -->
+                    </li>
+                    <li class="posts-list__item">
+                        <a class="post-item post-item--extra post-item--blog" href="single-posts.html">
+                            <figure class="post-item__thumbnail">
                                 <picture>
-                                    <source srcset="img/base/course-5.webp" type="image/webp">
-                                    <img class="course-item__img" src="img/base/course-5.jpg" alt="">
+                                    <source srcset="img/base/blog-post-3.webp" type="image/webp">
+                                    <img class="post-item__img" src="img/base/blog-post-3.jpg" alt="">
                                 </picture>
-                            </a>
-                        </div>
-                        <div class="course-item__excerpt">
-                            <div class="course-item__excerpt-wr content js-perfect-scrollbar">
-                                <h3><a href="single-courses.html">Таргетолог «для себя»</a></h3>
-                                <p>
-                                    Краткий онлайн курс обучения и новые дополнения к нему. Краткий практикум с
-                                    тестированием. Личная поддержка и ответы на вопросы в течении 2х месяцев.
-                                    Дополнительные материалы.
-                                </p>
+                            </figure>
+                            <div class="post-item__body">
+                                <div class="post-item__excerpt content">
+                                    <h3>Динамический заголовок статьи</h3>
+                                    <p>
+                                        Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько
+                                        абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору
+                                        отточить навык публичных выступлений в домашних условиях.
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                    </li><!-- / .course-item -->
-                </ul><!-- / .courses-list -->
+                        </a><!-- / .post-item -->
+                    </li>
+                    <li class="posts-list__item">
+                        <a class="post-item post-item--extra post-item--blog" href="single-posts.html">
+                            <figure class="post-item__thumbnail">
+                                <picture>
+                                    <source srcset="img/base/blog-post-4.webp" type="image/webp">
+                                    <img class="post-item__img" src="img/base/blog-post-4.jpg" alt="">
+                                </picture>
+                            </figure>
+                            <div class="post-item__body">
+                                <div class="post-item__excerpt content">
+                                    <h3>Динамический заголовок статьи</h3>
+                                    <p>
+                                        Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько
+                                        абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору
+                                        отточить навык публичных выступлений в домашних условиях.
+                                    </p>
+                                </div>
+                            </div>
+                        </a><!-- / .post-item -->
+                    </li>
+                    <li class="posts-list__item">
+                        <a class="post-item post-item--extra post-item--blog" href="single-posts.html">
+                            <figure class="post-item__thumbnail">
+                                <picture>
+                                    <source srcset="img/base/blog-post-5.webp" type="image/webp">
+                                    <img class="post-item__img" src="img/base/blog-post-5.jpg" alt="">
+                                </picture>
+                            </figure>
+                            <div class="post-item__body">
+                                <div class="post-item__excerpt content">
+                                    <h3>Динамический заголовок статьи</h3>
+                                    <p>
+                                        Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько
+                                        абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору
+                                        отточить навык публичных выступлений в домашних условиях.
+                                    </p>
+                                </div>
+                            </div>
+                        </a><!-- / .post-item -->
+                    </li>
+                    <li class="posts-list__item">
+                        <a class="post-item post-item--extra post-item--blog" href="single-posts.html">
+                            <figure class="post-item__thumbnail">
+                                <picture>
+                                    <source srcset="img/base/blog-post-6.webp" type="image/webp">
+                                    <img class="post-item__img" src="img/base/blog-post-6.jpg" alt="">
+                                </picture>
+                            </figure>
+                            <div class="post-item__body">
+                                <div class="post-item__excerpt content">
+                                    <h3>Динамический заголовок статьи</h3>
+                                    <p>
+                                        Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько
+                                        абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору
+                                        отточить навык публичных выступлений в домашних условиях.
+                                    </p>
+                                </div>
+                            </div>
+                        </a><!-- / .post-item -->
+                    </li>
+                </ul><!-- / .posts-list -->
             </div>
-        </section><!-- / .courses -->
+        </section><!-- / .page-content .blog -->
     </main><!-- / .main -->
 
     <footer class="footer">

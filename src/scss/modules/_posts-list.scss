@@ -1,8 +1,17 @@
 .posts-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
-    //grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     padding: 0;
     list-style: none;
+
+    &--columns {
+        &--2 {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        &--3 {
+            grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
+            //grid-template-columns: repeat(3, 1fr);
+        }
+    }
 }
