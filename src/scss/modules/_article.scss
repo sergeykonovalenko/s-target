@@ -1,0 +1,17 @@
+.article {
+
+}
+
+.article .container {
+    & > *:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.article__content {
+    margin-bottom: 40px;
+}
+
+.article__button {
+    display: block;
+}

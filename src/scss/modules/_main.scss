@@ -6,4 +6,17 @@
             background-color: $gray-6;
         }
     }
+
+    &--article {
+        padding-top: 40px;
+        padding-bottom: 60px;
+    }
+}
+
+.main--article .container {
+    max-width: 800px;
+}
+
+.main--article .breadcrumbs-box {
+    padding-top: 0;
 }

@@ -8,11 +8,11 @@
         }
     }
 
-    & > *:first-child {
+    .page & > *:first-child {
         margin-top: 0;
     }
 
-    & > *:last-child {
+    .page & > *:last-child {
         margin-bottom: 0;
     }
 }
@@ -28,7 +28,6 @@ h6 {
         color: #fff;
     }
 }
-
 
 p,
 ul,
@@ -90,4 +89,12 @@ ol {
 
 .content strong {
     font-weight: 600;
+}
+
+.content .wp-block-image {
+    margin: 40px 0;
+}
+
+.content img {
+    border-radius: 5px;
 }
