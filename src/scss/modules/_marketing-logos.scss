@@ -10,8 +10,17 @@
     align-items: center;
     margin-top: 22px;
     margin-right: 22px;
+
+    .marketing-logos--small & {
+        margin-top: 11px;
+        margin-right: 11px;
+    }
 }
 
 .marketing-logos__img {
     max-height: 150px;
+
+    .marketing-logos--small & {
+        max-height: 85px;
+    }
 }
