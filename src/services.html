@@ -476,6 +476,33 @@
         </div>
     </footer><!-- / .footer -->
 
+    <!-- Modal login -->
+    <div class="modal-login modal data" id="js-modal-login">
+        <div class="data__head content">
+            <h3>Вход в личный кабинет</h3>
+        </div>
+        <form class="data__form form" action="#" method="post">
+            <ul class="form__list fields-list">
+                <li class="fields-list__item field-box">
+                    <input class="field-box__field" id="modal-login-name" type="text" name="name" required>
+                    <label class="field-box__label" for="modal-login-name">Логин</label>
+                </li><!-- / .field-box -->
+                <li class="fields-list__item field-box">
+                    <input class="field-box__field field-box__field--has-icon" id="modal-login-password" type="password" name="password" required>
+                    <label class="field-box__label" for="modal-login-password">Пароль</label>
+                    <button class="field-box__button button-icon switcher-password" type="button">
+                        <svg class="button-icon__icon field-box__icon" width="24" height="24">
+                            <use class="switcher-password__eye" href="img/sprites/general.svg#icon-eye"></use>
+                            <use class="switcher-password__eye-slash" href="img/sprites/general.svg#icon-eye-slash"></use>
+                        </svg>
+                    </button><!-- / .switcher-password -->
+                </li><!-- / .field-box -->
+            </ul><!-- / .fields-list -->
+            <button class="form__button button button--large" type="submit">Подтвердить</button>
+            <a class="form__button-link button-link button-link--large" href="#"><span>Забыли пароль?</span></a>
+        </form><!-- / .form -->
+    </div><!-- / .modal-login .modal .data -->
+
     <script src="js/app.bundle.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1MIYMrv0deQB1gLkED9d3EnwacqsFleg&callback=initMap"></script>
 </body>

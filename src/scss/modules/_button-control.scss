@@ -1,8 +1,8 @@
-.control-button {
+.button-control {
     @include hover-supported {
         color: $color-main--dark;
 
-        .control-button__icon {
+        .button-control__icon {
             fill: $color-main--dark;
         }
     }
@@ -20,7 +20,7 @@
     &:active {
         color: $color-main--darken;
 
-        .control-button__icon {
+        .button-control__icon {
             fill: $color-main--darken;
         }
     }
@@ -30,19 +30,19 @@
     }
 }
 
-.control-button__icon {
+.button-control__icon {
     position: absolute;
     top: 50%;
     left: 0;
     transition: all .15s ease-out;
     transform: translateY(-50%);
 
-    .control-button--invert & {
+    .button-control--invert & {
         left: auto;
         right: 0;
     }
 
-    .control-button--no-txt & {
+    .button-control--no-txt & {
         position: static;
         transform: none;
     }

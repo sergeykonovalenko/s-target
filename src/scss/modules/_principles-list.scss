@@ -1,6 +1,7 @@
 .principles-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    //grid-template-columns: repeat(auto-fill, minmax(249px, 1fr));
     column-gap: 30px;
     row-gap: 100px;
     padding: 0;

@@ -1,0 +1,34 @@
+.button-link {
+    @include hover-supported {
+        color: $color-main;
+
+        > span {
+            border-color: $color-main;
+        }
+    }
+
+    display: block;
+    width: 100%;
+    padding: 15px 24px;
+    text-align: center;
+    background: 0 0;
+    border: none;
+
+    &--large {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    > span {
+        border-bottom: 1px solid transparent;
+        transition: all .15s ease-out;
+    }
+
+    &:active {
+        color: $color-main--dark;
+
+        > span {
+            border-color: $color-main--dark;
+        }
+    }
+}

@@ -80,7 +80,7 @@
 
 .item-main-services-list__more {
     @include hover-supported {
-        .control-button__icon {
+        .button-control__icon {
             transform: translate(5px, -50%);
         }
     }

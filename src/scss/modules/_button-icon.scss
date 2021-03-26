@@ -1,6 +1,10 @@
 .button-icon {
     @include hover-supported {
         background-color: rgba(0, 0, 0, .04);
+
+        .button-icon__icon {
+            fill: $gray-1;
+        }
     }
 
     display: flex;

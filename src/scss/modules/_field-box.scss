@@ -81,23 +81,22 @@
 .field-box__button {
     @include hover-supported {
         background-color: transparent;
-
-        .button-icon__icon {
-            fill: $color-main;
-        }
     }
 
     position: absolute;
     top: 0;
     right: 0;
     width: 64px;
-    height: 100%;
+    height: 53px;
+    padding: 0;
+    background: 0 0;
+    border: none;
 
     &:active {
         background-color: transparent;
+    }
 
-        .button-icon__icon {
-            fill: $color-main--dark;
-        }
+    .field-box__field.error ~ & .button-icon__icon {
+        fill: $color-error;
     }
 }

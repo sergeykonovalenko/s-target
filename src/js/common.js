@@ -10,11 +10,32 @@ import 'focus-visible';
 import './google-maps';
 import './svg-sprite';
 
-
 $(document).ready(function () {
     'use strict';
 
     const page = document.documentElement;
+
+    // START INIT FANCY-BOX
+    ////////////////////////////////////////////////////////////////////////////
+    $(document).on('afterShow.fb', function(e, instance, slide) {
+        // enable autofocus if there is a field
+        let modal = instance.current.$content[0];
+        if (modal.querySelector('input' && !$.fancybox.isMobile)) instance.focus();
+    });
+
+    $('.btn-modal').fancybox({
+        touch : false,
+        backFocus : false,
+        autoFocus: false,
+        btnTpl: {
+            smallBtn: `
+                    <button class="modal__close fancybox-button fancybox-close-small" type="button" data-fancybox-close title="Close">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#252728" xmlns="http://www.w3.org/2000/svg"><path d="M16.192 6.344l-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242-1.414-1.414z"/></svg>
+                    </button>`
+        },
+    });
+    // END INIT FANCY-BOX
+    ////////////////////////////////////////////////////////////////////////////
 
     // START STICKY HEADER
     ////////////////////////////////////////////////////////////////////////////
@@ -22,55 +43,57 @@ $(document).ready(function () {
     let headerWr = document.querySelector('.header__wr');
     let waypointOffset = 0;
 
-    // start sticky header
-    let waypoint = new Waypoint({
-        element: header,
-        handler: function (direction) {
-            if (direction === 'down') {
-                header.style.height = `${headerWr.offsetHeight}px`;
-                headerWr.classList.add('header__wr--start-sticky');
-                headerWr.classList.remove('header__wr--end-sticky');
+    if (header) {
+        // start sticky header
+        let waypoint = new Waypoint({
+            element: header,
+            handler: function (direction) {
+                if (direction === 'down') {
+                    header.style.height = `${headerWr.offsetHeight}px`;
+                    headerWr.classList.add('header__wr--start-sticky');
+                    headerWr.classList.remove('header__wr--end-sticky');
+                }
+            },
+            offset: function() {
+                return -(this.element.clientHeight + waypointOffset);
             }
-        },
-        offset: function() {
-            return -(this.element.clientHeight + waypointOffset);
-        }
-    });
+        });
 
-    // end sticky header
-    let waypointMainNavTop = new Waypoint({
-        element: header,
-        handler: function (direction) {
-            if (direction === 'up') {
-                header.style.height = 'auto';
-                headerWr.classList.remove('header__wr--start-sticky');
+        // end sticky header
+        let waypointMainNavTop = new Waypoint({
+            element: header,
+            handler: function (direction) {
+                if (direction === 'up') {
+                    header.style.height = 'auto';
+                    headerWr.classList.remove('header__wr--start-sticky');
+                }
+            },
+            offset: -1,
+        });
+
+        // show/hide header when scrolling
+        let scrollPos = 0;
+
+        window.addEventListener('scroll', () => {
+            if (document.body.getBoundingClientRect().top > scrollPos) {
+                // SCROLL UP
+                if (headerWr.classList.contains('header__wr--start-sticky')) {
+                    headerWr.classList.add('header__wr--show');
+                    page.classList.add('header-show');
+                }
+                headerWr.classList.remove('header__wr--hide');
+            } else {
+                // SCROLL DOWN
+                if (headerWr.classList.contains('header__wr--start-sticky')) {
+                    headerWr.classList.add('header__wr--hide');
+                    page.classList.remove('header-show');
+                }
+                headerWr.classList.remove('header__wr--show');
             }
-        },
-        offset: -1,
-    });
 
-    // show/hide header when scrolling
-    let scrollPos = 0;
-
-    window.addEventListener('scroll', () => {
-        if (document.body.getBoundingClientRect().top > scrollPos) {
-            // SCROLL UP
-            if (headerWr.classList.contains('header__wr--start-sticky')) {
-                headerWr.classList.add('header__wr--show');
-                page.classList.add('header-show');
-            }
-            headerWr.classList.remove('header__wr--hide');
-        } else {
-            // SCROLL DOWN
-            if (headerWr.classList.contains('header__wr--start-sticky')) {
-                headerWr.classList.add('header__wr--hide');
-                page.classList.remove('header-show');
-            }
-            headerWr.classList.remove('header__wr--show');
-        }
-
-        scrollPos = document.body.getBoundingClientRect().top;
-    }, {passive: true});
+            scrollPos = document.body.getBoundingClientRect().top;
+        }, {passive: true});
+    }
     // END STICKY HEADER
     ////////////////////////////////////////////////////////////////////////////
 
@@ -126,6 +149,41 @@ $(document).ready(function () {
     // END INIT PERFECT SCROLLBAR
     ////////////////////////////////////////////////////////////////////////////
 
+    // START SHOW/HIDE PASSWORD
+    ////////////////////////////////////////////////////////////////////////////
+    let passwordSwitches = document.querySelectorAll('.switcher-password');
+
+    passwordSwitches.forEach(passwordSwitch => {
+        tippy(passwordSwitch, {content: 'Показать пароль'});
+
+        passwordSwitch.addEventListener('click', function() {
+            let fieldBox = this.closest('.field-box');
+            let field = fieldBox.querySelector('.field-box__field');
+            let fieldType = field.getAttribute('type');
+
+            field.focus();
+
+            if (fieldType === 'password') {
+                field.setAttribute('type', 'text');
+                this._tippy.setContent('Скрыть пароль');
+            } else {
+                field.setAttribute('type', 'password');
+                this._tippy.setContent('Показать пароль');
+            }
+
+            this.classList.toggle('switcher-password--show');
+
+            // if (this._tippy.popper.innerText === 'Показать пароль') {
+            //     this._tippy.setContent('Скрыть пароль');
+            // } else {
+            //     this._tippy.setContent('Показать пароль');
+            // }
+
+        }, {passive: true});
+    });
+    // END SHOW/HIDE PASSWORD
+    ////////////////////////////////////////////////////////////////////////////
+
     // START DETERMINING FIELD STATUS
     ////////////////////////////////////////////////////////////////////////////
     let fields = document.querySelectorAll('.field-box__field');
@@ -136,6 +194,7 @@ $(document).ready(function () {
         field.addEventListener('input', function () {
             settingFieldStatus(this);
         }, {passive: true});
+
         field.addEventListener('paste', function () {
             settingFieldStatus(this);
         } , {passive: true});
@@ -179,6 +238,7 @@ $(document).ready(function () {
         );
 
         let validator = $(form).validate({
+            errorElement: 'p',
             errorPlacement: function(label, elem) {
                 let parent = elem.parent();
                 parent.append(label);
