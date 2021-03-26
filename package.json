@@ -54,6 +54,7 @@
   "dependencies": {
     "@babel/runtime": "^7.13.10",
     "@fancyapps/fancybox": "^3.5.7",
+    "autosize": "^4.0.2",
     "focus-visible": "^5.2.0",
     "inputmask": "^5.0.5",
     "jquery": "^3.6.0",

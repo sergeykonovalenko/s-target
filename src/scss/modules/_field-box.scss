@@ -58,6 +58,10 @@
     pointer-events: none;
     transition: all .125s ease-in;
 
+    .field-box__field--textarea ~ & {
+        white-space: normal;
+    }
+
     .field-box--extra & {
         background-color: transparent;
     }
@@ -67,6 +71,7 @@
     .field-box__field[placeholder] & {
         top: -9px;
         font-size: 12px;
+        white-space: nowrap;
 
         .field-box--extra & {
             top: 7px;

@@ -397,7 +397,7 @@
                         </div>
                     </li><!-- / .review-item -->
                 </ul>
-                <a class="reviews__button button button--stroke button--stroke--extra" href="#">Добавить свой отзыв</a>
+                <a class="reviews__button button button--stroke button--stroke--extra btn-modal" href="#js-modal-send-comment">Добавить свой отзыв</a>
             </div>
         </section><!-- / .reviews -->
 
@@ -533,6 +533,47 @@
             <a class="form__button-link button-link button-link--large" href="#"><span>Забыли пароль?</span></a>
         </form><!-- / .form -->
     </div><!-- / .modal-login .modal .data -->
+
+    <!-- Modal send comment -->
+    <div class="modal-send-comment send-comment modal" id="js-modal-send-comment">
+        <div class="send-comment__head head-send-comment">
+            <div class="head-send-comment__txt content">
+                <h3>Все наши отзывы проходят проверку</h3>
+                <p>Так мы проверяем подлинность отзыва вне зависимости от того, хороший это был отзыв или нет</p>
+            </div>
+            <picture>
+                <source srcset="img/bg/send-comment-head.webp" type="image/webp">
+                <img class="head-send-comment__bg" src="img/bg/send-comment-head.jpg" width="1280" height="460" alt="">
+            </picture>
+        </div><!-- / .head-send-comment -->
+        <form class="send-comment__form form" action="#" method="post">
+            <ul class="form__list fields-list">
+                <li class="fields-list__item fields-list__item--half field-box">
+                    <input class="field-box__field" id="modal-send-comment-name" type="text" name="name" required>
+                    <label class="field-box__label" for="modal-send-comment-name">Ваше имя (обязательно)</label>
+                </li><!-- / .field-box -->
+                <li class="fields-list__item fields-list__item--half field-box">
+                    <input class="field-box__field" id="modal-send-comment-company" type="text" name="company" required>
+                    <label class="field-box__label" for="modal-send-comment-company">Ваше компания (обязательно)</label>
+                </li><!-- / .field-box -->
+                <li class="fields-list__item fields-list__item--half attachments">
+                    <div class="attachments__dropzone">
+                        <p class="attachments__title">Прикрепите вашу фотографию</p>
+                    </div>
+                </li><!-- / .attachments -->
+                <li class="fields-list__item fields-list__item--half attachments">
+                    <div class="attachments__dropzone">
+                        <p class="attachments__title">И логотип вашей компании</p>
+                    </div>
+                </li><!-- / .attachments -->
+                <li class="fields-list__item field-box">
+                    <textarea class="field-box__field field-box__field--textarea js-auto-size" id="modal-send-comment-message" name="message" required></textarea>
+                    <label class="field-box__label" for="modal-send-comment-message">Расскажите подробно, как происходило взаимодействие и удовлетворены ли вы результатами? (обязательно)</label>
+                </li><!-- / .field-box -->
+            </ul><!-- / .fields-list -->
+            <button class="form__button button button--stroke button--stroke--extra" type="submit">Отправить отзыв</button>
+        </form><!-- / .form -->
+    </div><!-- / .modal-send-comment .send-comment .modal -->
 
     <script src="js/app.bundle.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1MIYMrv0deQB1gLkED9d3EnwacqsFleg&callback=initMap"></script>

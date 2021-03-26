@@ -1,5 +1,6 @@
 import Swiper, { Navigation, Pagination, Thumbs, Autoplay } from 'swiper/core';
 import '@fancyapps/fancybox/dist/jquery.fancybox.min';
+import autosize from 'autosize/dist/autosize.min';
 import PerfectScrollbar from 'perfect-scrollbar';
 import 'waypoints/lib/noframework.waypoints.min';
 import 'jquery-ui/ui/widgets/tabs';
@@ -149,6 +150,9 @@ $(document).ready(function () {
     // END INIT PERFECT SCROLLBAR
     ////////////////////////////////////////////////////////////////////////////
 
+    // init Autosize
+    autosize($('.js-auto-size'));
+
     // START SHOW/HIDE PASSWORD
     ////////////////////////////////////////////////////////////////////////////
     let passwordSwitches = document.querySelectorAll('.switcher-password');
@@ -172,12 +176,6 @@ $(document).ready(function () {
             }
 
             this.classList.toggle('switcher-password--show');
-
-            // if (this._tippy.popper.innerText === 'Показать пароль') {
-            //     this._tippy.setContent('Скрыть пароль');
-            // } else {
-            //     this._tippy.setContent('Показать пароль');
-            // }
 
         }, {passive: true});
     });

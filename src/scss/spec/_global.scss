@@ -102,6 +102,10 @@ textarea {
         caret-color: $color-error !important;
         border-color: $color-error !important;
 
+        &::placeholder {
+            color: $color-error;
+        }
+
         &:focus {
             border-color: $color-error !important;
         }
@@ -125,6 +129,7 @@ select {
 
 textarea {
     resize: none;
+    height: 150px;
 }
 
 button {
