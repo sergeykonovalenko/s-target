@@ -17,4 +17,8 @@
     &--third {
         width: calc((100% / 3) - 20px);
     }
+
+    .form--line &.check {
+        margin-top: 20px;
+    }
 }

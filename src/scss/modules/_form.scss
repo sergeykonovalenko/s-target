@@ -2,8 +2,11 @@
 
     &--line {
         display: flex;
-        flex-wrap: wrap;
         align-items: flex-start;
+    }
+
+    & > *:last-child {
+        margin-bottom: 0;
     }
 }
 
@@ -16,13 +19,6 @@
 
     .form--line & {
         width: calc(61.04% + 20px);
-    }
-}
-
-.form__check {
-
-    .form--line & {
-        width: 100%;
     }
 }
 
