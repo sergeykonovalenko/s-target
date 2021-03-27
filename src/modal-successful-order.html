@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html class="page no-js" lang="ru">
+<head>
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <!-- SEO -->
+    <title>Попап / Поздравляем с приобретением! | S-TARGET</title>
+    <meta name="description" content="Описание сайта для поисковиков, рекомендуемый размер от 70 до 140 символов">
+    <meta name="keywords" content="ключевые, слова, через, запятую (рекомендованное количество слов в данном теге — 5-10)">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#00a300">
+    <meta name="theme-color" content="#ffffff">
+    <!-- OG -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Попап / Поздравляем с приобретением!">
+    <meta property="og:description" content="Описание, до 200 символов">
+    <meta property="og:image" content="img/og/poster.jpg">
+    <meta property="og:url" content="http://www.site-name.com/current-page">
+    <meta property="og:site_name" content="S-TARGET">
+    <!-- Modernizr -->
+    <script src="js/modernizr.custom.bundle.js"></script>
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page__body">
+
+    <!-- Modal feedback -->
+    <div class="modal-feedback modal data" id="js-modal-feedback">
+        <div class="data__head content">
+            <h3>Поздравляем с приобретением!</h3>
+            <p>
+                На вашу почту будут отправлены данные для входа в личный кабинет.
+                После входа вы сразу сможете перейти к обучению!
+            </p>
+        </div>
+        <button class="data__button button button--large" type="button" data-fancybox-close>Круто!</button>
+    </div><!-- / .modal-login .modal .data -->
+
+    <!-- FOR DEMONSTRATION ONLY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(document).on('afterShow.fb', function(e, instance, slide) {
+                // enable autofocus if there is a field
+                let modal = instance.current.$content[0];
+                if (modal.querySelector('input') && !$.fancybox.isMobile) instance.focus();
+            });
+
+            $.fancybox.open({
+                src  : '#js-modal-feedback',
+                type : 'inline',
+                touch : false,
+                backFocus : false,
+                autoFocus: false,
+                btnTpl: {
+                    smallBtn: `
+                        <button class="modal__close fancybox-button fancybox-close-small" type="button" data-fancybox-close title="Закрыть">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="#252728" xmlns="http://www.w3.org/2000/svg"><path d="M16.192 6.344l-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242-1.414-1.414z"/></svg>
+                        </button>`
+                },
+            });
+        });
+    </script>
+
+    <script src="js/app.bundle.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1MIYMrv0deQB1gLkED9d3EnwacqsFleg&callback=initMap"></script>
+</body>
+</html>
