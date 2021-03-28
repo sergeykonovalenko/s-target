@@ -114,7 +114,7 @@
                         </a>
                     </li>
                 </ul><!-- / .social-links -->
-                <a class="header__button button button--stroke" href="#">Заказать звонок</a>
+                <a class="header__button button button--stroke btn-modal" href="#js-modal-feedback">Заказать звонок</a>
             </div>
         </div>
     </header><!-- / .header -->
@@ -379,6 +379,39 @@
             <cite class="footer__author">S-TARGET 2021 | Разработка сайта — <a href="https://one-pix.ru" target="_blank">One-Pix</a></cite>
         </div>
     </footer><!-- / .footer -->
+
+    <!-- Modal feedback -->
+    <div class="modal-feedback modal data" id="js-modal-feedback">
+        <div class="data__head content">
+            <h3>Свяжитесь с нами</h3>
+            <p>Мы хотим делать крутые продукты для наших клиентов и с удовольствием поможем вам!</p>
+        </div>
+        <form class="data__form form" action="#" method="post">
+            <ul class="form__list fields-list">
+                <li class="fields-list__item field-box">
+                    <input class="field-box__field" id="modal-feedback-name" type="text" name="name" required>
+                    <label class="field-box__label" for="modal-feedback-name">Имя (обязательно)</label>
+                </li><!-- / .field-box -->
+                <li class="fields-list__item field-box">
+                    <input class="field-box__field" id="modal-feedback-phone" type="tel" name="phone" inputmode="tel" required>
+                    <label class="field-box__label" for="modal-feedback-phone">Номер телефона (обязательно)</label>
+                </li><!-- / .field-box -->
+                <li class="fields-list__item field-box">
+                    <input class="field-box__field" id="modal-feedback-email" type="email" name="email" inputmode="email" required>
+                    <label class="field-box__label" for="modal-feedback-email">Ваш E-mail (обязательно)</label>
+                </li><!-- / .field-box -->
+                <li class="fields-list__item field-box">
+                    <textarea class="field-box__field field-box__field--textarea js-auto-size" id="modal-feedback-message" name="message"></textarea>
+                    <label class="field-box__label" for="modal-feedback-message">Введите текст сообщения</label>
+                </li><!-- / .field-box -->
+                <li class="fields-list__item check">
+                    <input class="check__field visually-hidden" id="modal-feedback-agreement" type="checkbox" name="agreement" required>
+                    <label class="check__label" for="modal-feedback-agreement">Даю согласие на обработку персональных данных</label>
+                </li><!-- / .check -->
+            </ul><!-- / .fields-list -->
+            <button class="form__button button button--large" type="submit">Заказать звонок</button>
+        </form><!-- / .form -->
+    </div><!-- / .modal-feedback .modal .data -->
 
     <!-- Modal login -->
     <div class="modal-login modal data" id="js-modal-login">

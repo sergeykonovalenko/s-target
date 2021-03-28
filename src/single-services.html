@@ -135,7 +135,7 @@
                         </a>
                     </li>
                 </ul><!-- / .social-links -->
-                <a class="header__button button button--stroke" href="#">Заказать звонок</a>
+                <a class="header__button button button--stroke btn-modal" href="#js-modal-feedback">Заказать звонок</a>
             </div>
         </div>
     </header><!-- / .header -->
@@ -339,7 +339,7 @@
                             </li>
                         </ul>
                     </div>
-                    <a class="terms-and-cost__button button button--large button--bg--white" href="#">Поторгуемся?</a>
+                    <a class="terms-and-cost__button button button--large button--bg--white btn-modal" href="#js-modal-chat">Поторгуемся?</a>
                 </div><!-- / .terms-and-cost -->
             </div>
         </section><!-- / .service-info -->
@@ -431,7 +431,7 @@
                             <p><strong>Хочешь дешевле?</strong></p>
                             <p>Ну давай поторгуемся</p>
                         </div>
-                        <a class="service-cost__item--call-button button button--large button--bg--white" href="#">Вперёд!</a>
+                        <a class="service-cost__item--call-button button button--large button--bg--white btn-modal" href="#js-modal-chat">Вперёд!</a>
                     </li><!-- / .info-card -->
                 </ul><!-- / .list-info-cards .service-cost -->
             </div>
@@ -724,6 +724,39 @@
         </div>
     </footer><!-- / .footer -->
 
+    <!-- Modal feedback -->
+    <div class="modal-feedback modal data" id="js-modal-feedback">
+        <div class="data__head content">
+            <h3>Свяжитесь с нами</h3>
+            <p>Мы хотим делать крутые продукты для наших клиентов и с удовольствием поможем вам!</p>
+        </div>
+        <form class="data__form form" action="#" method="post">
+            <ul class="form__list fields-list">
+                <li class="fields-list__item field-box">
+                    <input class="field-box__field" id="modal-feedback-name" type="text" name="name" required>
+                    <label class="field-box__label" for="modal-feedback-name">Имя (обязательно)</label>
+                </li><!-- / .field-box -->
+                <li class="fields-list__item field-box">
+                    <input class="field-box__field" id="modal-feedback-phone" type="tel" name="phone" inputmode="tel" required>
+                    <label class="field-box__label" for="modal-feedback-phone">Номер телефона (обязательно)</label>
+                </li><!-- / .field-box -->
+                <li class="fields-list__item field-box">
+                    <input class="field-box__field" id="modal-feedback-email" type="email" name="email" inputmode="email" required>
+                    <label class="field-box__label" for="modal-feedback-email">Ваш E-mail (обязательно)</label>
+                </li><!-- / .field-box -->
+                <li class="fields-list__item field-box">
+                    <textarea class="field-box__field field-box__field--textarea js-auto-size" id="modal-feedback-message" name="message"></textarea>
+                    <label class="field-box__label" for="modal-feedback-message">Введите текст сообщения</label>
+                </li><!-- / .field-box -->
+                <li class="fields-list__item check">
+                    <input class="check__field visually-hidden" id="modal-feedback-agreement" type="checkbox" name="agreement" required>
+                    <label class="check__label" for="modal-feedback-agreement">Даю согласие на обработку персональных данных</label>
+                </li><!-- / .check -->
+            </ul><!-- / .fields-list -->
+            <button class="form__button button button--large" type="submit">Заказать звонок</button>
+        </form><!-- / .form -->
+    </div><!-- / .modal-feedback .modal .data -->
+
     <!-- Modal login -->
     <div class="modal-login modal data" id="js-modal-login">
         <div class="data__head content">
@@ -791,6 +824,180 @@
             <button class="form__button button button--stroke button--stroke--extra" type="submit">Отправить отзыв</button>
         </form><!-- / .form -->
     </div><!-- / .modal-send-comment .send-comment .modal -->
+
+    <!-- Modal chat -->
+    <div class="modal-chat modal" id="js-modal-chat">
+        <article class="modal-chat__chat chat chat--extra">
+            <ul class="chat__messages messages">
+                <li class="messages__item message-item message-item--replies">
+                    <picture>
+                        <source srcset="img/base/interlocutor-2.webp" type="image/webp">
+                        <img class="messages-item__avatar" src="img/base/interlocutor-2.jpg" width="55" height="55" alt="">
+                    </picture>
+                    <div class="message-item__body message-body">
+                        <div class="message-body__txt content">
+                            <p>Привет, хочешь получить скидку?</p>
+                        </div>
+                    </div><!-- / .message-body -->
+                </li>
+                <li class="messages__item message-item message-item--sent">
+                    <div class="message-item__body message-body">
+                        <div class="message-body__actions actions-message-body">
+                            <div class="actions-message-body__row">
+                                <label class="actions-message-body__label">
+                                    <input class="actions-message-body__field" type="text" name="discount" value="150%">
+                                    <span class="visually-hidden">Скидка</span>
+                                </label>
+                                <button class="actions-message-body__button button" type="button">Хочу такую скидку</button>
+                            </div>
+                        </div><!-- / .actions-message-body -->
+                    </div><!-- / .message-body -->
+                    <picture>
+                        <source srcset="img/base/interlocutor-1.webp" type="image/webp">
+                        <img class="messages-item__avatar" src="img/base/interlocutor-1.jpg" width="55" height="55" alt="">
+                    </picture>
+                </li>
+                <li class="messages__item message-item message-item--sent">
+                    <div class="message-item__body message-body">
+                        <div class="message-body__txt content">
+                            <p>Моя скидка <strong>150%</strong></p>
+                        </div>
+                    </div><!-- / .message-body -->
+                    <picture>
+                        <source srcset="img/base/interlocutor-1.webp" type="image/webp">
+                        <img class="messages-item__avatar" src="img/base/interlocutor-1.jpg" width="55" height="55" alt="">
+                    </picture>
+                </li>
+                <li class="messages__item message-item message-item--replies">
+                    <picture>
+                        <source srcset="img/base/interlocutor-2.webp" type="image/webp">
+                        <img class="messages-item__avatar" src="img/base/interlocutor-2.jpg" width="55" height="55" alt="">
+                    </picture>
+                    <div class="message-item__body message-body">
+                        <div class="message-body__txt content">
+                            <p>Слишком дорого, могу предложить тебе прекрасные <strong>13%</strong></p>
+                        </div>
+                    </div><!-- / .message-body -->
+                </li>
+                <li class="messages__item message-item message-item--sent">
+                    <div class="message-item__body message-body">
+                        <div class="message-body__actions actions-message-body">
+                            <div class="actions-message-body__row">
+                                <p class="actions-message-body__txt">Твоя взяла!</p>
+                                <a class="actions-message-body__button button btn-modal" href="#js-modal-get-discount">Беру 13%</a>
+                            </div>
+                            <button class="actions-message-body__btn-link link link--color--gray" type="button">Нет, поторгуюсь еще</button>
+                        </div><!-- / .actions-message-body -->
+                    </div><!-- / .message-body -->
+                    <picture>
+                        <source srcset="img/base/interlocutor-1.webp" type="image/webp">
+                        <img class="messages-item__avatar" src="img/base/interlocutor-1.jpg" width="55" height="55" alt="">
+                    </picture>
+                </li>
+                <li class="messages__item message-item message-item--sent">
+                    <div class="message-item__body message-body">
+                        <div class="message-body__actions actions-message-body">
+                            <div class="actions-message-body__row">
+                                <label class="actions-message-body__label">
+                                    <input class="actions-message-body__field" type="text" name="discount" value="150%">
+                                    <span class="visually-hidden">Скидка</span>
+                                </label>
+                                <button class="actions-message-body__button button" type="button">Хочу такую скидку</button>
+                            </div>
+                        </div><!-- / .actions-message-body -->
+                    </div><!-- / .message-body -->
+                    <picture>
+                        <source srcset="img/base/interlocutor-1.webp" type="image/webp">
+                        <img class="messages-item__avatar" src="img/base/interlocutor-1.jpg" width="55" height="55" alt="">
+                    </picture>
+                </li>
+                <li class="messages__item message-item message-item--replies">
+                    <picture>
+                        <source srcset="img/base/interlocutor-2.webp" type="image/webp">
+                        <img class="messages-item__avatar" src="img/base/interlocutor-2.jpg" width="55" height="55" alt="">
+                    </picture>
+                    <div class="message-item__body message-body">
+                        <div class="message-body__txt content">
+                            <p>Это очень много для меня, мой максимум: <strong>18%</strong></p>
+                        </div>
+                    </div><!-- / .message-body -->
+                </li>
+                <li class="messages__item message-item message-item--sent">
+                    <div class="message-item__body message-body">
+                        <div class="message-body__actions actions-message-body">
+                            <div class="actions-message-body__row">
+                                <p class="actions-message-body__txt">Твоя взяла!</p>
+                                <a class="actions-message-body__button button btn-modal" href="#js-modal-get-discount">Беру 18%</a>
+                            </div>
+                            <a class="actions-message-body__btn-link link link--color--gray btn-modal" href="#js-modal-another-operator">Позови другого продавца</a>
+                        </div><!-- / .actions-message-body -->
+                    </div><!-- / .message-body -->
+                    <picture>
+                        <source srcset="img/base/interlocutor-1.webp" type="image/webp">
+                        <img class="messages-item__avatar" src="img/base/interlocutor-1.jpg" width="55" height="55" alt="">
+                    </picture>
+                </li>
+            </ul><!-- / .messages -->
+        </article><!-- / .chat -->
+    </div><!-- / .modal-chat .modal -->
+
+    <!-- Modal get discount -->
+    <div class="modal-get-discount modal data" id="js-modal-get-discount">
+        <div class="data__head content">
+            <h3>Понравилась скидка и вы хотите получить её?</h3>
+            <p>Оставьте свои данные и мы подготовим проект для вас с учётом уникальной скидки</p>
+        </div>
+        <form class="data__form form" action="#" method="post">
+            <ul class="form__list fields-list">
+                <li class="fields-list__item field-box">
+                    <input class="field-box__field" id="modal-get-discount-name" type="text" name="name" required>
+                    <label class="field-box__label" for="modal-get-discount-name">Имя (обязательно)</label>
+                </li><!-- / .field-box -->
+                <li class="fields-list__item field-box">
+                    <input class="field-box__field" id="modal-get-discount-phone" type="tel" name="phone" inputmode="tel" required>
+                    <label class="field-box__label" for="modal-get-discount-phone">Номер телефона (обязательно)</label>
+                </li><!-- / .field-box -->
+                <li class="fields-list__item field-box">
+                    <input class="field-box__field" id="modal-get-discount-email" type="email" name="email" inputmode="email" required>
+                    <label class="field-box__label" for="modal-get-discount-email">Ваш E-mail (обязательно)</label>
+                </li><!-- / .field-box -->
+                <li class="fields-list__item field-box">
+                    <textarea class="field-box__field field-box__field--textarea js-auto-size" id="modal-get-discount-message" name="message"></textarea>
+                    <label class="field-box__label" for="modal-get-discount-message">Расскажите про свой проект</label>
+                </li><!-- / .field-box -->
+                <li class="fields-list__item check">
+                    <input class="check__field visually-hidden" id="modal-get-discount-agreement" type="checkbox" name="agreement" required>
+                    <label class="check__label" for="modal-get-discount-agreement">Даю согласие на обработку персональных данных</label>
+                </li><!-- / .check -->
+            </ul><!-- / .fields-list -->
+            <button class="form__button button button--large" type="submit">Заказать звонок</button>
+        </form><!-- / .form -->
+    </div><!-- / .modal-get-discount .modal .data -->
+
+    <!-- Modal another operator -->
+    <div class="modal-another-operator modal data" id="js-modal-another-operator">
+        <div class="data__head content">
+            <h3>Хотите поговорить с другим оператором о скидке?</h3>
+            <p>Оставьте свои данные и мы подберем самое лучшее предложение специально для вас</p>
+        </div>
+        <form class="data__form form" action="#" method="post">
+            <ul class="form__list fields-list">
+                <li class="fields-list__item field-box">
+                    <input class="field-box__field" id="modal-another-operator-name" type="text" name="name" required>
+                    <label class="field-box__label" for="modal-another-operator-name">Ваше имя</label>
+                </li><!-- / .field-box -->
+                <li class="fields-list__item field-box">
+                    <input class="field-box__field" id="modal-another-operator-phone" type="tel" name="phone" inputmode="tel" required>
+                    <label class="field-box__label" for="modal-another-operator-phone">Номер телефона</label>
+                </li><!-- / .field-box -->
+                <li class="fields-list__item check">
+                    <input class="check__field visually-hidden" id="modal-another-operator-agreement" type="checkbox" name="agreement" required>
+                    <label class="check__label" for="modal-another-operator-agreement">Даю согласие на обработку персональных данных</label>
+                </li><!-- / .check -->
+            </ul><!-- / .fields-list -->
+            <button class="form__button button button--large" type="submit">Заказать звонок</button>
+        </form><!-- / .form -->
+    </div><!-- / .modal-another-operator .modal .data -->
 
     <script src="js/app.bundle.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1MIYMrv0deQB1gLkED9d3EnwacqsFleg&callback=initMap"></script>
