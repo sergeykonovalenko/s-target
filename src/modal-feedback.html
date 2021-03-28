@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="format-detection" content="telephone=no">
     <!-- SEO -->
-    <title>Попап / Хотите поговорить с другим оператором о скидке? | S-TARGET</title>
+    <title>Попап / Свяжитесь с нами | S-TARGET</title>
     <meta name="description" content="Описание сайта для поисковиков, рекомендуемый размер от 70 до 140 символов">
     <meta name="keywords" content="ключевые, слова, через, запятую (рекомендованное количество слов в данном теге — 5-10)">
     <!-- Favicon -->
@@ -20,7 +20,7 @@
     <meta name="theme-color" content="#ffffff">
     <!-- OG -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Попап / Хотите поговорить с другим оператором о скидке?">
+    <meta property="og:title" content="Попап / Свяжитесь с нами">
     <meta property="og:description" content="Описание, до 200 символов">
     <meta property="og:image" content="img/og/poster.jpg">
     <meta property="og:url" content="http://www.site-name.com/current-page">
@@ -35,18 +35,26 @@
     <!-- Modal feedback -->
     <div class="modal-feedback modal data" id="js-modal-feedback">
         <div class="data__head content">
-            <h3>Хотите поговорить с другим оператором о скидке?</h3>
-            <p>Оставьте свои данные и мы подберем самое лучшее предложение специально для вас</p>
+            <h3>Свяжитесь с нами</h3>
+            <p>Мы хотим делать крутые продукты для наших клиентов и с удовольствием поможем вам!</p>
         </div>
         <form class="data__form form" action="#" method="post">
             <ul class="form__list fields-list">
                 <li class="fields-list__item field-box">
                     <input class="field-box__field" id="modal-feedback-name" type="text" name="name" required>
-                    <label class="field-box__label" for="modal-feedback-name">Ваше имя</label>
+                    <label class="field-box__label" for="modal-feedback-name">Имя (обязательно)</label>
                 </li><!-- / .field-box -->
                 <li class="fields-list__item field-box">
                     <input class="field-box__field" id="modal-feedback-phone" type="tel" name="phone" inputmode="tel" required>
-                    <label class="field-box__label" for="modal-feedback-phone">Номер телефона</label>
+                    <label class="field-box__label" for="modal-feedback-phone">Номер телефона (обязательно)</label>
+                </li><!-- / .field-box -->
+                <li class="fields-list__item field-box">
+                    <input class="field-box__field" id="modal-feedback-email" type="email" name="email" inputmode="email" required>
+                    <label class="field-box__label" for="modal-feedback-email">Ваш E-mail (обязательно)</label>
+                </li><!-- / .field-box -->
+                <li class="fields-list__item field-box">
+                    <textarea class="field-box__field field-box__field--textarea js-auto-size" id="modal-feedback-message" name="message"></textarea>
+                    <label class="field-box__label" for="modal-feedback-message">Введите текст сообщения</label>
                 </li><!-- / .field-box -->
                 <li class="fields-list__item check">
                     <input class="check__field visually-hidden" id="help-form-agreement" type="checkbox" name="agreement" required>
@@ -55,7 +63,7 @@
             </ul><!-- / .fields-list -->
             <button class="form__button button button--large" type="submit">Заказать звонок</button>
         </form><!-- / .form -->
-    </div><!-- / .modal-login .modal .data -->
+    </div><!-- / .modal-feedback .modal .data -->
 
     <!-- FOR DEMONSTRATION ONLY -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

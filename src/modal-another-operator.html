@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="format-detection" content="telephone=no">
     <!-- SEO -->
-    <title>Попап / Понравилась скидка и вы хотите получить её? | S-TARGET</title>
+    <title>Попап / Хотите поговорить с другим оператором о скидке? | S-TARGET</title>
     <meta name="description" content="Описание сайта для поисковиков, рекомендуемый размер от 70 до 140 символов">
     <meta name="keywords" content="ключевые, слова, через, запятую (рекомендованное количество слов в данном теге — 5-10)">
     <!-- Favicon -->
@@ -20,7 +20,7 @@
     <meta name="theme-color" content="#ffffff">
     <!-- OG -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Попап / Понравилась скидка и вы хотите получить её?">
+    <meta property="og:title" content="Попап / Хотите поговорить с другим оператором о скидке?">
     <meta property="og:description" content="Описание, до 200 символов">
     <meta property="og:image" content="img/og/poster.jpg">
     <meta property="og:url" content="http://www.site-name.com/current-page">
@@ -32,38 +32,30 @@
 </head>
 <body class="page__body">
 
-    <!-- Modal feedback -->
-    <div class="modal-feedback modal data" id="js-modal-feedback">
+    <!-- Modal another operator -->
+    <div class="modal-another-operator modal data" id="js-modal-another-operator">
         <div class="data__head content">
-            <h3>Понравилась скидка и вы хотите получить её?</h3>
-            <p>Оставьте свои данные и мы подготовим проект для вас с учётом уникальной скидки</p>
+            <h3>Хотите поговорить с другим оператором о скидке?</h3>
+            <p>Оставьте свои данные и мы подберем самое лучшее предложение специально для вас</p>
         </div>
         <form class="data__form form" action="#" method="post">
             <ul class="form__list fields-list">
                 <li class="fields-list__item field-box">
-                    <input class="field-box__field" id="modal-feedback-name" type="text" name="name" required>
-                    <label class="field-box__label" for="modal-feedback-name">Имя (обязательно)</label>
+                    <input class="field-box__field" id="modal-another-operator-name" type="text" name="name" required>
+                    <label class="field-box__label" for="modal-another-operator-name">Ваше имя</label>
                 </li><!-- / .field-box -->
                 <li class="fields-list__item field-box">
-                    <input class="field-box__field" id="modal-feedback-phone" type="tel" name="phone" inputmode="tel" required>
-                    <label class="field-box__label" for="modal-feedback-phone">Номер телефона (обязательно)</label>
-                </li><!-- / .field-box -->
-                <li class="fields-list__item field-box">
-                    <input class="field-box__field" id="modal-feedback-email" type="email" name="email" inputmode="email" required>
-                    <label class="field-box__label" for="modal-feedback-email">Ваш E-mail (обязательно)</label>
-                </li><!-- / .field-box -->
-                <li class="fields-list__item field-box">
-                    <textarea class="field-box__field field-box__field--textarea js-auto-size" id="modal-feedback-message" name="message"></textarea>
-                    <label class="field-box__label" for="modal-feedback-message">Расскажите про свой проект</label>
+                    <input class="field-box__field" id="modal-another-operator-phone" type="tel" name="phone" inputmode="tel" required>
+                    <label class="field-box__label" for="modal-another-operator-phone">Номер телефона</label>
                 </li><!-- / .field-box -->
                 <li class="fields-list__item check">
-                    <input class="check__field visually-hidden" id="help-form-agreement" type="checkbox" name="agreement" required>
-                    <label class="check__label" for="help-form-agreement">Даю согласие на обработку персональных данных</label>
+                    <input class="check__field visually-hidden" id="modal-another-operator-agreement" type="checkbox" name="agreement" required>
+                    <label class="check__label" for="modal-another-operator-agreement">Даю согласие на обработку персональных данных</label>
                 </li><!-- / .check -->
             </ul><!-- / .fields-list -->
             <button class="form__button button button--large" type="submit">Заказать звонок</button>
         </form><!-- / .form -->
-    </div><!-- / .modal-login .modal .data -->
+    </div><!-- / .modal-another-operator .modal .data -->
 
     <!-- FOR DEMONSTRATION ONLY -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -77,7 +69,7 @@
             });
 
             $.fancybox.open({
-                src  : '#js-modal-feedback',
+                src  : '#js-modal-another-operator',
                 type : 'inline',
                 touch : false,
                 backFocus : false,

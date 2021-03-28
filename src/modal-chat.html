@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html class="page no-js" lang="ru">
+<head>
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <!-- SEO -->
+    <title>Попап / Чат | S-TARGET</title>
+    <meta name="description" content="Описание сайта для поисковиков, рекомендуемый размер от 70 до 140 символов">
+    <meta name="keywords" content="ключевые, слова, через, запятую (рекомендованное количество слов в данном теге — 5-10)">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#00a300">
+    <meta name="theme-color" content="#ffffff">
+    <!-- OG -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Попап / Чат">
+    <meta property="og:description" content="Описание, до 200 символов">
+    <meta property="og:image" content="img/og/poster.jpg">
+    <meta property="og:url" content="http://www.site-name.com/current-page">
+    <meta property="og:site_name" content="S-TARGET">
+    <!-- Modernizr -->
+    <script src="js/modernizr.custom.bundle.js"></script>
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page__body">
+
+    <!-- Modal chat -->
+    <div class="modal-chat modal" id="js-modal-chat">
+        <article class="modal-chat__chat chat chat--extra">
+            <ul class="chat__messages messages">
+                <li class="messages__item message-item message-item--replies">
+                    <picture>
+                        <source srcset="img/base/interlocutor-2.webp" type="image/webp">
+                        <img class="messages-item__avatar" src="img/base/interlocutor-2.jpg" width="55" height="55" alt="">
+                    </picture>
+                    <div class="message-item__body message-body">
+                        <div class="message-body__txt content">
+                            <p>Привет, хочешь получить скидку?</p>
+                        </div>
+                    </div><!-- / .message-body -->
+                </li>
+                <li class="messages__item message-item message-item--sent">
+                    <div class="message-item__body message-body">
+                        <div class="message-body__actions actions-message-body">
+                            <div class="actions-message-body__row">
+                                <label class="actions-message-body__label">
+                                    <input class="actions-message-body__field" type="text" name="discount" value="150%">
+                                    <span class="visually-hidden">Скидка</span>
+                                </label>
+                                <button class="actions-message-body__button button" type="button">Хочу такую скидку</button>
+                            </div>
+                        </div><!-- / .actions-message-body -->
+                    </div><!-- / .message-body -->
+                    <picture>
+                        <source srcset="img/base/interlocutor-1.webp" type="image/webp">
+                        <img class="messages-item__avatar" src="img/base/interlocutor-1.jpg" width="55" height="55" alt="">
+                    </picture>
+                </li>
+                <li class="messages__item message-item message-item--sent">
+                    <div class="message-item__body message-body">
+                        <div class="message-body__txt content">
+                            <p>Моя скидка <strong>150%</strong></p>
+                        </div>
+                    </div><!-- / .message-body -->
+                    <picture>
+                        <source srcset="img/base/interlocutor-1.webp" type="image/webp">
+                        <img class="messages-item__avatar" src="img/base/interlocutor-1.jpg" width="55" height="55" alt="">
+                    </picture>
+                </li>
+                <li class="messages__item message-item message-item--replies">
+                    <picture>
+                        <source srcset="img/base/interlocutor-2.webp" type="image/webp">
+                        <img class="messages-item__avatar" src="img/base/interlocutor-2.jpg" width="55" height="55" alt="">
+                    </picture>
+                    <div class="message-item__body message-body">
+                        <div class="message-body__txt content">
+                            <p>Слишком дорого, могу предложить тебе прекрасные <strong>13%</strong></p>
+                        </div>
+                    </div><!-- / .message-body -->
+                </li>
+                <li class="messages__item message-item message-item--sent">
+                    <div class="message-item__body message-body">
+                        <div class="message-body__actions actions-message-body">
+                            <div class="actions-message-body__row">
+                                <p class="actions-message-body__txt">Твоя взяла!</p>
+                                <a class="actions-message-body__button button btn-modal" href="#js-modal-get-discount">Беру 13%</a>
+                            </div>
+                            <button class="actions-message-body__btn-link link link--color--gray" type="button">Нет, поторгуюсь еще</button>
+                        </div><!-- / .actions-message-body -->
+                    </div><!-- / .message-body -->
+                    <picture>
+                        <source srcset="img/base/interlocutor-1.webp" type="image/webp">
+                        <img class="messages-item__avatar" src="img/base/interlocutor-1.jpg" width="55" height="55" alt="">
+                    </picture>
+                </li>
+                <li class="messages__item message-item message-item--sent">
+                    <div class="message-item__body message-body">
+                        <div class="message-body__actions actions-message-body">
+                            <div class="actions-message-body__row">
+                                <label class="actions-message-body__label">
+                                    <input class="actions-message-body__field" type="text" name="discount" value="150%">
+                                    <span class="visually-hidden">Скидка</span>
+                                </label>
+                                <button class="actions-message-body__button button" type="button">Хочу такую скидку</button>
+                            </div>
+                        </div><!-- / .actions-message-body -->
+                    </div><!-- / .message-body -->
+                    <picture>
+                        <source srcset="img/base/interlocutor-1.webp" type="image/webp">
+                        <img class="messages-item__avatar" src="img/base/interlocutor-1.jpg" width="55" height="55" alt="">
+                    </picture>
+                </li>
+                <li class="messages__item message-item message-item--replies">
+                    <picture>
+                        <source srcset="img/base/interlocutor-2.webp" type="image/webp">
+                        <img class="messages-item__avatar" src="img/base/interlocutor-2.jpg" width="55" height="55" alt="">
+                    </picture>
+                    <div class="message-item__body message-body">
+                        <div class="message-body__txt content">
+                            <p>Это очень много для меня, мой максимум: <strong>18%</strong></p>
+                        </div>
+                    </div><!-- / .message-body -->
+                </li>
+                <li class="messages__item message-item message-item--sent">
+                    <div class="message-item__body message-body">
+                        <div class="message-body__actions actions-message-body">
+                            <div class="actions-message-body__row">
+                                <p class="actions-message-body__txt">Твоя взяла!</p>
+                                <a class="actions-message-body__button button btn-modal" href="#js-modal-get-discount">Беру 18%</a>
+                            </div>
+                            <a class="actions-message-body__btn-link link link--color--gray btn-modal" href="#js-modal-another-operator">Позови другого продавца</a>
+                        </div><!-- / .actions-message-body -->
+                    </div><!-- / .message-body -->
+                    <picture>
+                        <source srcset="img/base/interlocutor-1.webp" type="image/webp">
+                        <img class="messages-item__avatar" src="img/base/interlocutor-1.jpg" width="55" height="55" alt="">
+                    </picture>
+                </li>
+            </ul><!-- / .messages -->
+        </article><!-- / .chat -->
+    </div><!-- / .modal-chat .modal -->
+
+    <!-- Modal get discount -->
+    <div class="modal-get-discount modal data" id="js-modal-get-discount">
+        <div class="data__head content">
+            <h3>Понравилась скидка и вы хотите получить её?</h3>
+            <p>Оставьте свои данные и мы подготовим проект для вас с учётом уникальной скидки</p>
+        </div>
+        <form class="data__form form" action="#" method="post">
+            <ul class="form__list fields-list">
+                <li class="fields-list__item field-box">
+                    <input class="field-box__field" id="modal-get-discount-name" type="text" name="name" required>
+                    <label class="field-box__label" for="modal-get-discount-name">Имя (обязательно)</label>
+                </li><!-- / .field-box -->
+                <li class="fields-list__item field-box">
+                    <input class="field-box__field" id="modal-get-discount-phone" type="tel" name="phone" inputmode="tel" required>
+                    <label class="field-box__label" for="modal-get-discount-phone">Номер телефона (обязательно)</label>
+                </li><!-- / .field-box -->
+                <li class="fields-list__item field-box">
+                    <input class="field-box__field" id="modal-get-discount-email" type="email" name="email" inputmode="email" required>
+                    <label class="field-box__label" for="modal-get-discount-email">Ваш E-mail (обязательно)</label>
+                </li><!-- / .field-box -->
+                <li class="fields-list__item field-box">
+                    <textarea class="field-box__field field-box__field--textarea js-auto-size" id="modal-get-discount-message" name="message"></textarea>
+                    <label class="field-box__label" for="modal-get-discount-message">Расскажите про свой проект</label>
+                </li><!-- / .field-box -->
+                <li class="fields-list__item check">
+                    <input class="check__field visually-hidden" id="modal-get-discount-agreement" type="checkbox" name="agreement" required>
+                    <label class="check__label" for="modal-get-discount-agreement">Даю согласие на обработку персональных данных</label>
+                </li><!-- / .check -->
+            </ul><!-- / .fields-list -->
+            <button class="form__button button button--large" type="submit">Заказать звонок</button>
+        </form><!-- / .form -->
+    </div><!-- / .modal-get-discount .modal .data -->
+
+    <!-- Modal another operator -->
+    <div class="modal-another-operator modal data" id="js-modal-another-operator">
+        <div class="data__head content">
+            <h3>Хотите поговорить с другим оператором о скидке?</h3>
+            <p>Оставьте свои данные и мы подберем самое лучшее предложение специально для вас</p>
+        </div>
+        <form class="data__form form" action="#" method="post">
+            <ul class="form__list fields-list">
+                <li class="fields-list__item field-box">
+                    <input class="field-box__field" id="modal-another-operator-name" type="text" name="name" required>
+                    <label class="field-box__label" for="modal-another-operator-name">Ваше имя</label>
+                </li><!-- / .field-box -->
+                <li class="fields-list__item field-box">
+                    <input class="field-box__field" id="modal-another-operator-phone" type="tel" name="phone" inputmode="tel" required>
+                    <label class="field-box__label" for="modal-another-operator-phone">Номер телефона</label>
+                </li><!-- / .field-box -->
+                <li class="fields-list__item check">
+                    <input class="check__field visually-hidden" id="modal-another-operator-agreement" type="checkbox" name="agreement" required>
+                    <label class="check__label" for="modal-another-operator-agreement">Даю согласие на обработку персональных данных</label>
+                </li><!-- / .check -->
+            </ul><!-- / .fields-list -->
+            <button class="form__button button button--large" type="submit">Заказать звонок</button>
+        </form><!-- / .form -->
+    </div><!-- / .modal-another-operator .modal .data -->
+
+    <!-- FOR DEMONSTRATION ONLY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(document).on('afterShow.fb', function(e, instance, slide) {
+                // enable autofocus if there is a field
+                let modal = instance.current.$content[0];
+                if (modal.querySelector('input') && !$.fancybox.isMobile) instance.focus();
+            });
+
+            $.fancybox.open({
+                src  : '#js-modal-chat',
+                type : 'inline',
+                touch : false,
+                backFocus : false,
+                autoFocus: false,
+                btnTpl: {
+                    smallBtn: `
+                        <button class="modal__close fancybox-button fancybox-close-small" type="button" data-fancybox-close title="Закрыть">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="#252728" xmlns="http://www.w3.org/2000/svg"><path d="M16.192 6.344l-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242-1.414-1.414z"/></svg>
+                        </button>`
+                },
+            });
+        });
+    </script>
+
+    <script src="js/app.bundle.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1MIYMrv0deQB1gLkED9d3EnwacqsFleg&callback=initMap"></script>
+</body>
+</html>

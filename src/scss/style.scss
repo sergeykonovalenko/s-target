@@ -177,9 +177,8 @@
 @import "modules/send-comment";
 @import "modules/head-send-comment";
 
-/* MODAL SEND COMMENT
+/* MODAL CHAT
    ========================================================================== */
-@import "modules/modal-feedback";
-@import "modules/check";
-
-
+@import "modules/modal-chat";
+@import "modules/actions-message-body";
+@import "modules/link";
