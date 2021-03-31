@@ -7,3 +7,10 @@
     padding: 0;
     list-style: none;
 }
+
+@media screen and (max-width: 768px) {
+    .reviews-list {
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+    }
+}

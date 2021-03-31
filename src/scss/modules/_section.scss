@@ -24,3 +24,18 @@
 .section__head {
     margin-bottom: 60px;
 }
+
+@media screen and (max-width: 576px) {
+    .section {
+        padding: 20px 0;
+    }
+
+    .section__title {
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+
+    .section__head {
+        margin-bottom: 20px;
+    }
+}

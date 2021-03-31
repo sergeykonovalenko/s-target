@@ -25,7 +25,6 @@
 }
 
 .contacts-box__phone {
-
     a {
         @include hover-supported {
             color: $color-main;
@@ -43,9 +42,37 @@
     }
 }
 
-.contacts-box__email a {
-    font-weight: 600;
-    font-size: 30px;
-    line-height: 1.4;
-    border: none;
+.contacts-box__email {
+    a {
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 1.4;
+        border: none;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .contacts-box {
+        padding: 20px 15px;
+    }
+
+    .contacts-box__head {
+        font-size: 14px;
+    }
+
+    .contacts-box__phone {
+        a {
+            font-size: 20px;
+        }
+    }
+
+    .contacts-box__email {
+        a {
+            font-size: 14px;
+        }
+    }
+
+    .contacts-box__other {
+        font-size: 12px;
+    }
 }

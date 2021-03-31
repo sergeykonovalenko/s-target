@@ -5,3 +5,9 @@
 .reviews__list {
     margin: 0 0 60px 0;
 }
+
+@media screen and (max-width: 576px) {
+    .reviews__list {
+        margin-bottom: 20px;
+    }
+}

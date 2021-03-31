@@ -10,12 +10,12 @@ html ::before {
 }
 
 body {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr auto;
-    grid-template-areas: 'header'
-                         'main'
-                         'footer';
+    //display: grid;
+    //grid-template-columns: 1fr;
+    //grid-template-rows: auto 1fr auto;
+    //grid-template-areas: 'header'
+    //                     'main'
+    //                     'footer';
     min-width: 320px;
     min-height: 100vh;
     margin: 0;
@@ -57,6 +57,16 @@ picture {
 input,
 select,
 textarea {
+    @include hover-supported {
+        &:hover {
+            border-color: $gray-1;
+
+            &::placeholder {
+                color: $gray-1;
+            }
+        }
+    }
+
     display: block;
     width: 100%;
     padding: 0;
@@ -69,14 +79,6 @@ textarea {
     border: 1px solid $gray-5;
     transition: border-color .15s ease-in-out,
                 box-shadow .15s ease-in-out;
-
-    &:hover {
-        border-color: $gray-1;
-
-        &::placeholder {
-            color: $gray-1;
-        }
-    }
 
     &:focus {
         border-color: $color-main;
@@ -199,4 +201,10 @@ h6,
 .h6 {
     margin: 2.33em 0;
     font-size: .67em;
+}
+
+@media screen and (max-width: 576px) {
+    body {
+        font-size: 14px;
+    }
 }

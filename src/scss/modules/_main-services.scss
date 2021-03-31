@@ -9,3 +9,9 @@
 .main-services__list {
     margin: 0 0 60px 0;
 }
+
+@media screen and (max-width: 576px) {
+    .main-services__list {
+        margin-bottom: 20px;
+    }
+}

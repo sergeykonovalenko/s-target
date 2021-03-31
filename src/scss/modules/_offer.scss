@@ -34,5 +34,28 @@
 
 .offer__marketing-logos {
     align-self: flex-end;
-    margin: -22px -22px 0 auto;
+    margin: -15px -15px 0 auto;
+}
+
+@media screen and (max-width: 1000px) {
+    .offer__row {
+        display: block;
+    }
+
+    .offer__form {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .offer {
+        padding-top: 40px;
+        padding-bottom: 20px;
+    }
+
+    .offer__title {
+        margin-bottom: 30px;
+        font-size: 25px;
+    }
 }

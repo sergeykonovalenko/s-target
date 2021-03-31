@@ -22,3 +22,32 @@
         margin-top: 20px;
     }
 }
+
+@media screen and (max-width: 1210px) {
+    .fields-list__item {
+        margin-right: 15px;
+
+        &--half {
+            width: calc(50% - 15px);
+        }
+
+        &--third {
+            width: calc((100% / 3) - 15px);
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .fields-list__item {
+        margin-top: 15px;
+        margin-right: 0;
+
+        &--half {
+            width: 100%;
+        }
+
+        .form--line &.check {
+            margin-top: 15px;
+        }
+    }
+}

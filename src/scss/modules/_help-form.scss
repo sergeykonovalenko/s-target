@@ -23,3 +23,24 @@
     max-width: 770px;
     margin: 0 auto;
 }
+
+@media screen and (max-width: 1200px) {
+    .help-form__title br {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .help-form {
+        padding: 20px 0;
+    }
+
+    .help-form__title {
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+
+    .help-form__box {
+        padding: 20px 15px;
+    }
+}

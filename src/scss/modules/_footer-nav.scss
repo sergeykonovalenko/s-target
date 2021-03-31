@@ -1,5 +1,6 @@
 .footer-nav {
     display: flex;
+    flex-wrap: wrap;
     padding: 0;
     list-style: none;
 }
@@ -9,7 +10,7 @@
 }
 
 .footer-nav__column {
-    flex-grow: 1;
+    width: calc((100% - 60px) / 3);
     margin-right: 30px;
 
     &:last-child {
@@ -56,4 +57,24 @@
 
 .footer-nav__column > .sub-menu > li > a {
 
+}
+
+@media screen and (max-width: 768px) {
+    .footer-nav__column {
+        width: calc((100% - 30px) / 3);
+        margin-right: 15px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .footer-nav__column {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 30px;
+        text-align: center;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
 }

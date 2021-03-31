@@ -19,6 +19,7 @@
 
     .form--line & {
         width: calc(61.04% + 20px);
+        margin-bottom: 0;
     }
 }
 
@@ -36,4 +37,49 @@
 
 .form__button-link {
     margin-top: 10px;
+}
+
+@media screen and (max-width: 1210px) {
+    .form__list {
+        margin-right: -15px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .form {
+
+        &--line {
+            display: block;
+        }
+    }
+
+    .form__list {
+
+        .form--line & {
+            width: auto;
+            margin-bottom: 30px;
+        }
+    }
+
+    .form__button {
+
+        .form--line & {
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .form__choice-option {
+        margin-bottom: 15px;
+    }
+
+    .form__list {
+        margin: -15px 0 15px 0;
+
+        .form--line & {
+            margin-bottom: 15px;
+        }
+    }
 }

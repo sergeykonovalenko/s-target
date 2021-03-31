@@ -10,8 +10,14 @@
         }
 
         &--3 {
-            grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
             //grid-template-columns: repeat(3, 1fr);
         }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .posts-list {
+        gap: 20px;
     }
 }

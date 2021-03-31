@@ -1,16 +1,18 @@
 .check {
-    width: fit-content;
+    @include hover-supported {
+        &:hover {
+            .check__label::before {
+                border-color: $gray-1;
+            }
 
-    &:hover {
-        .check__label::before {
-            border-color: $gray-1;
-        }
-
-        .check__field:checked ~ .check__label::before {
-            background-color: $color-main--dark;
-            border-color: $color-main--dark;
+            .check__field:checked ~ .check__label::before {
+                background-color: $color-main--dark;
+                border-color: $color-main--dark;
+            }
         }
     }
+
+    width: fit-content;
 
     &:active {
         .check__field:checked ~ .check__label::before {

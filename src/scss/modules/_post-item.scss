@@ -136,3 +136,37 @@
         margin-top: auto;
     }
 }
+
+@media screen and (max-width: 640px) {
+    .post-item__excerpt {
+        h2,
+        h3 {
+
+            br {
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .post-item {
+        padding: 20px;
+    }
+
+    .posts-list__tag-cloud {
+        margin-top: -15px;
+        margin-bottom: 15px;
+    }
+
+    .post-item__excerpt {
+        h2,
+        h3 {
+            font-size: 20px;
+        }
+    }
+
+    .post-item__button {
+        margin-bottom: 15px;
+    }
+}

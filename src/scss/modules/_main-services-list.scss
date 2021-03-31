@@ -10,3 +10,9 @@
         margin-bottom: 0;
     }
 }
+
+@media screen and (max-width: 576px) {
+    .main-services-list__item {
+        margin-bottom: 20px;
+    }
+}

@@ -66,7 +66,7 @@ module.exports = mode => {
                         context: 'src',
                         force: true,
                         globOptions: {
-                            ignore: ['**/svg-sprite/**',]
+                            ignore: ['**/icons-for-sprite/**',]
                         }
                     },
                     {

@@ -12,6 +12,7 @@
     vertical-align: middle;
     font-weight: 600;
     line-height: 1.25;
+    font-size: 16px;
     text-align: center;
     white-space: normal;
     word-wrap: normal;
@@ -76,5 +77,17 @@
 
     &--has-shadow {
         box-shadow: 0 5px 10px rgba(118, 184, 52, .5);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .button {
+        &--stroke {
+            &--extra {
+                padding-top: 14px;
+                padding-bottom: 14px;
+                font-size: 16px;
+            }
+        }
     }
 }

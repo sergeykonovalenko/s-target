@@ -31,3 +31,13 @@
 .footer-contacts__social-links {
     margin: -10px 0 0 -10px;
 }
+
+@media screen and (max-width: 992px) {
+    .footer-contacts {
+        text-align: center;
+    }
+
+    .footer-contacts__social-links {
+        justify-content: center;
+    }
+}

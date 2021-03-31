@@ -12,3 +12,9 @@
 .posts__more {
 
 }
+
+@media screen and (max-width: 576px) {
+    .posts__list {
+        margin-bottom: 20px;
+    }
+}

@@ -6,10 +6,10 @@ import 'waypoints/lib/noframework.waypoints.min';
 import 'jquery-ui/ui/widgets/tabs';
 import Inputmask from 'inputmask';
 import tippy from 'tippy.js';
+import './icons-for-sprite';
 import 'jquery-validation';
 import 'focus-visible';
 import './google-maps';
-import './svg-sprite';
 
 $(document).ready(function () {
     'use strict';
@@ -30,12 +30,11 @@ $(document).ready(function () {
         autoFocus: false,
         btnTpl: {
             smallBtn: `
-                    <button class="modal__close fancybox-button fancybox-close-small" type="button" data-fancybox-close title="Close">
+                    <button class="modal__close fancybox-button fancybox-close-small" type="button" data-fancybox-close title="Закрыть">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="#252728" xmlns="http://www.w3.org/2000/svg"><path d="M16.192 6.344l-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242-1.414-1.414z"/></svg>
                     </button>`
         },
     });
-
     // END INIT FANCY-BOX
     ////////////////////////////////////////////////////////////////////////////
 
@@ -97,6 +96,55 @@ $(document).ready(function () {
         }, {passive: true});
     }
     // END STICKY HEADER
+    ////////////////////////////////////////////////////////////////////////////
+
+    // START SHOW/HIDE MENU
+    ////////////////////////////////////////////////////////////////////////////
+    let hamburger = document.querySelector('.header__hamburger');
+    let sideNavClose = document.querySelector('.head-side-nav__close');
+
+    if (hamburger) {
+        hamburger.addEventListener('click', () => {
+            if (page.classList.contains('show-menu')) {
+                page.classList.remove('show-menu', 'show-overlay');
+            } else {
+                page.classList.add('show-menu', 'show-overlay');
+            }
+        }, {passive: true});
+    }
+
+    if (sideNavClose) {
+        sideNavClose.addEventListener('click', () => {
+            page.classList.remove('show-overlay', 'show-menu');
+        }, {passive: true});
+    }
+    // END SHOW/HIDE MENU
+    ////////////////////////////////////////////////////////////////////////////
+
+    // START SHOW/HIDE SUB MENU
+    ////////////////////////////////////////////////////////////////////////////
+    let menuTriggers = document.querySelectorAll('.menu__trigger');
+    menuTriggers.forEach(menuTrigger => {
+        menuTrigger.addEventListener('click', function () {
+            let menuItem = this.closest('.menu__item');
+            let subMenu = menuItem.querySelector('.sub-menu');
+
+            menuItem.classList.toggle('menu__item--show-sub-menu');
+            $(subMenu).slideToggle(300);
+        }, {passive: true});
+    });
+    // END SHOW/HIDE SUB MENU
+    ////////////////////////////////////////////////////////////////////////////
+
+    // START OVERLAY CLICK HANDLER
+    ////////////////////////////////////////////////////////////////////////////
+    let overlay = document.querySelector('.overlay');
+    if (overlay) {
+        overlay.addEventListener('click', () => {
+            page.classList.remove('show-overlay', 'show-menu');
+        }, {passive: true});
+    }
+    // END OVERLAY CLICK HANDLER
     ////////////////////////////////////////////////////////////////////////////
 
     // START INIT TIPPY.JS
@@ -306,10 +354,20 @@ $(document).ready(function () {
     // END ACCORDION
     ////////////////////////////////////////////////////////////////////////////
 
-    // PASSING DATA TO CSS
+    // START PASSING DATA TO CSS
     ////////////////////////////////////////////////////////////////////////////
     if (headerWr) page.style.setProperty('--header-wr-height', `${headerWr.clientHeight}px`);
-    // END DATA TO CSS
+
+    // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+    let vh = window.innerHeight * 0.01;
+    // Then we set the value in the --vh custom property to the root of the document
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+    window.addEventListener('resize', () => {
+        vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    }, {passive: true});
+    // END PASSING DATA TO CSS
     ////////////////////////////////////////////////////////////////////////////
 
     // init tabs
