@@ -354,19 +354,19 @@ $(document).ready(function () {
     // END ACCORDION
     ////////////////////////////////////////////////////////////////////////////
 
-    // START PASSING DATA TO CSS
+    // START TRANSFER OF CSS VARIABLES
     ////////////////////////////////////////////////////////////////////////////
-    if (headerWr) page.style.setProperty('--header-wr-height', `${headerWr.clientHeight}px`);
+    function transferOfCssVariables() {
+        if (headerWr) page.style.setProperty('--header-wr-height', `${headerWr.clientHeight}px`);
 
-    // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-    let vh = window.innerHeight * 0.01;
-    // Then we set the value in the --vh custom property to the root of the document
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
-
-    window.addEventListener('resize', () => {
-        vh = window.innerHeight * 0.01;
+        // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+        let vh = window.innerHeight * 0.01;
+        // Then we set the value in the --vh custom property to the root of the document
         document.documentElement.style.setProperty('--vh', `${vh}px`);
-    }, {passive: true});
+    }
+    transferOfCssVariables();
+
+    window.addEventListener('resize', transferOfCssVariables, {passive: true});
     // END PASSING DATA TO CSS
     ////////////////////////////////////////////////////////////////////////////
 

@@ -1,4 +1,6 @@
 .review-item {
+    display: flex;
+    flex-direction: column;
     padding: 30px;
     background-color: $gray-6;
     border-radius: 5px;
@@ -11,6 +13,7 @@
 .review-item__author {
     display: flex;
     align-items: center;
+    margin-top: auto;
 
     picture {
         flex-shrink: 0;

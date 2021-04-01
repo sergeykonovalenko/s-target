@@ -10,12 +10,12 @@ html ::before {
 }
 
 body {
-    //display: grid;
-    //grid-template-columns: 1fr;
-    //grid-template-rows: auto 1fr auto;
-    //grid-template-areas: 'header'
-    //                     'main'
-    //                     'footer';
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 'header'
+                         'main'
+                         'footer';
     min-width: 320px;
     min-height: 100vh;
     margin: 0;
