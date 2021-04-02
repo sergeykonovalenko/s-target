@@ -4,3 +4,9 @@
     box-shadow: 0 4px 20px rgba(0, 0, 0, .1);
     border-radius: 5px;
 }
+
+@media screen and (max-width: 576px) {
+    .data-form {
+        padding: 20px;
+    }
+}

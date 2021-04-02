@@ -166,16 +166,33 @@ $(document).ready(function () {
     Swiper.use([Navigation, Pagination, Thumbs, Autoplay]);
 
     // advantages slider
-    let advantagesSlider = new Swiper('.advantages-slider', {
-        slidesPerView: 4,
-        spaceBetween: 30,
-        speed: 1000,
-        watchOverflow: true,
-        pagination: {
-            el: '.advantages-slider__pagination',
-            clickable: true,
-        },
-    });
+    const breakpoint = window.matchMedia('(max-width:576px)');
+    let advantagesSwiper;
+
+    const breakpointChecker = () => {
+        if (breakpoint.matches === true) {
+            return enableSwiper();
+        } else if (breakpoint.matches === false) {
+            // clean up old instances and inline styles when available
+            if (advantagesSwiper !== undefined) advantagesSwiper.destroy(true, true);
+        }
+    };
+
+    const enableSwiper = () => {
+        advantagesSwiper = new Swiper('.advantages-slider', {
+            slidesPerView: 1,
+            spaceBetween: 15,
+            speed: 1000,
+            watchOverflow: true,
+            pagination: {
+                el: '.advantages-slider__pagination',
+                clickable: true,
+            },
+        });
+    }
+
+    breakpoint.addListener(breakpointChecker);
+    breakpointChecker();
     // END INIT SWIPER
     ////////////////////////////////////////////////////////////////////////////
 
@@ -371,5 +388,17 @@ $(document).ready(function () {
     ////////////////////////////////////////////////////////////////////////////
 
     // init tabs
-    // $('.js-service-tabs').tabs();
+    let $serviceTabs = $('.js-service-tabs');
+    let $serviceTabsInitialized;
+
+    const breakpointCheckerForTabs = () => {
+        if (breakpoint.matches === true) {
+            $serviceTabsInitialized = $serviceTabs.tabs();
+        } else if (breakpoint.matches === false) {
+            if ($serviceTabsInitialized) $serviceTabsInitialized.tabs('destroy');
+        }
+    }
+
+    breakpoint.addListener(breakpointCheckerForTabs);
+    breakpointCheckerForTabs();
 }); // end ready

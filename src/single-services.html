@@ -49,6 +49,17 @@
         .webp .service-offer {
             background-image: url("img/bg/service-offer.webp");
         }
+
+        @media screen and (max-width: 1200px) {
+            .no-js .service-offer,
+            .no-webp .service-offer {
+                background-image: url("img/bg/offer-mobile.jpg");
+            }
+
+            .webp .service-offer {
+                background-image: url("img/bg/offer-mobile.webp");
+            }
+        }
     </style>
 </head>
 <body class="page__body">
@@ -196,8 +207,8 @@
                         Мы умеем это делать в короткие сроки.
                     </p>
                 </div><!-- / .section-head -->
-                <div class="advantages-slider swiper-container">
-                    <div class="swiper-wrapper">
+                <div class="advantages__slider advantages-slider swiper-container">
+                    <div class="advantages-slider__wr swiper-wrapper">
                         <div class="advantages-slider__item item-advantages-slider swiper-slide">
                             <img class="item-advantages-slider__icon" src="img/base/advantages-icon-1.svg" width="60" height="60" alt="">
                             <div class="item-advantages-slider__txt content">
@@ -352,7 +363,7 @@
 
         <section class="info-section section section--bg--gray">
             <div class="container">
-                <ul class="list-info-cards list-info-cards--columns--3">
+                <ul class="info-section__cards list-info-cards list-info-cards--columns--3">
                     <li class="list-info-cards__item info-card content">
                         <h3>Разработка сайта у нас – это</h3>
                         <ul>
@@ -421,7 +432,7 @@
 
         <section class="info-section section section--bg--gray">
             <div class="container">
-                <ul class="list-info-cards list-info-cards--columns--3 service-cost">
+                <ul class="info-section__cards list-info-cards list-info-cards--columns--3 service-cost">
                     <li class="list-info-cards__item service-cost__item info-card content">
                         <p><strong>Минимальная стоимость разработки</strong></p>
                         <p>5 000 ₽ — минимальная стоимость разработки посадочной страницы на базе Яндекс.</p>
@@ -432,12 +443,12 @@
                         <p>25 000 ₽ — минимальная стоимость индивидуальной разработки посадочной страницы.</p>
                         <p>10 дней — срок создания  посадочной страницы</p>
                     </li><!-- / .info-card -->
-                    <li class="list-info-cards__item service-cost__item service-cost__item--call info-card">
-                        <div class="service-cost__item--call-txt content">
+                    <li class="list-info-cards__item service-cost__item service-cost__item--hero info-card">
+                        <div class="service-cost__item--hero-txt content">
                             <p><strong>Хочешь дешевле?</strong></p>
                             <p>Ну давай поторгуемся</p>
                         </div>
-                        <a class="service-cost__item--call-button button button--large button--bg--white btn-modal" href="#js-modal-chat">Вперёд!</a>
+                        <a class="service-cost__item--hero-button button button--large button--bg--white btn-modal" href="#js-modal-chat">Вперёд!</a>
                     </li><!-- / .info-card -->
                 </ul><!-- / .list-info-cards .service-cost -->
             </div>

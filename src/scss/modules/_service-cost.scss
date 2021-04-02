@@ -5,7 +5,7 @@
 .service-cost__item {
     min-height: 350px;
 
-    &--call {
+    &--hero {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -19,7 +19,7 @@
     }
 }
 
-.service-cost__item--call-txt {
+.service-cost__item--hero-txt {
     margin-bottom: 15px;
     color: #fff;
 
@@ -29,6 +29,20 @@
     }
 }
 
-.service-cost__item--call-button {
+.service-cost__item--hero-button {
     width: 100%;
+}
+
+@media screen and (max-width: 992px) {
+    .service-cost__item {
+        min-height: auto;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .service-cost__item--hero-txt {
+        strong {
+            font-size: 25px;
+        }
+    }
 }

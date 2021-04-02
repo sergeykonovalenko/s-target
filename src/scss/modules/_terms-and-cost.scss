@@ -7,10 +7,12 @@
 .terms-and-cost__txt {
     margin-bottom: 30px;
     font-size: 14px;
+    font-weight: 500;
 
     ul {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        //grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        grid-template-columns: repeat(4, 1fr);
         column-gap: 60px;
         row-gap: 30px;
 
@@ -40,4 +42,51 @@
 
 .terms-and-cost__button {
     width: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+    .terms-and-cost__txt {
+        ul {
+            column-gap: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .terms-and-cost__txt {
+        ul {
+            grid-template-columns: 1fr 1fr;
+            column-gap: 60px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .terms-and-cost__txt {
+        ul {
+            column-gap: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .terms-and-cost {
+        padding: 20px;
+    }
+
+    .terms-and-cost__txt {
+        ul {
+            grid-template-columns: 1fr;
+
+            li {
+                h3 {
+                    font-size: 20px;
+                }
+
+                p {
+                    margin: 10px 0;
+                }
+            }
+        }
+    }
 }

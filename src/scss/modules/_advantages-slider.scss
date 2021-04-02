@@ -3,6 +3,34 @@
 }
 
 .advantages-slider__pagination {
+    display: none;
+    flex-wrap: wrap;
+    row-gap: 10px;
     margin-top: 30px;
     text-align: center;
+}
+
+.advantages-slider__pagination .swiper-pagination-bullet {
+    display: block;
+}
+
+@media screen and (min-width: 577px) {
+    .advantages-slider__wr {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+    }
+}
+
+@media screen and (max-width: 992px) and (min-width: 577px) {
+    .advantages-slider__wr {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .advantages-slider__pagination {
+        display: flex;
+        justify-content: center;
+    }
 }

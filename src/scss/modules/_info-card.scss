@@ -3,7 +3,21 @@
     background-color: #fff;
     border-radius: 5px;
 
+    &.content--bg--main {
+        font-weight: 500;
+    }
+
     h3 {
         font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .info-card {
+        padding: 20px;
+
+        h3 {
+            font-size: 20px;
+        }
     }
 }

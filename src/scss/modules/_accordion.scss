@@ -24,22 +24,22 @@
 }
 
 .accordion__head {
+    @include hover-supported {
+        background-color: $color-main--light;
+    }
+
     position: relative;
-    padding: 20px 30px;
+    padding: 20px 65px 20px 30px;
     background-color: $color-main--lighten;
     cursor: pointer;
     transition: all .15s ease-out;
 
     .accordion__item--open & {
-        background-color: $color-main;
-
-        &:hover {
+        @include hover-supported {
             background-color: $color-main;
         }
-    }
-    
-    &:hover {
-        background-color: $color-main--light;
+
+        background-color: $color-main;
     }
 }
 
@@ -72,4 +72,28 @@
     display: none;
     padding: 20px 30px;
     background-color: $gray-6;
+}
+
+@media screen and (max-width: 992px) {
+    .questions__row {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .questions__row {
+        gap: 15px;
+    }
+
+    .accordion__item {
+        margin-bottom: 15px;
+    }
+
+    .accordion__head {
+        padding-left: 20px;
+    }
+
+    .accordion__title {
+        font-size: 14px;
+    }
 }

@@ -1,5 +1,6 @@
 .item-advantages-slider {
     box-sizing: border-box;
+    height: auto;
 }
 
 .item-advantages-slider__icon {
@@ -9,4 +10,18 @@
 
 .item-advantages-slider__txt {
 
+}
+
+@media screen and (max-width: 576px) {
+    .item-advantages-slider {
+        padding: 20px;
+        text-align: center;
+        background-color: $gray-6;
+        border-radius: 5px;
+    }
+
+    .item-advantages-slider__icon {
+        margin-right: auto;
+        margin-left: auto;
+    }
 }

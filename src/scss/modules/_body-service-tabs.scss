@@ -7,3 +7,9 @@
 .body-service-tabs__service-card {
     margin-bottom: 30px;
 }
+
+@media screen and (max-width: 768px) {
+    .body-service-tabs__service-card {
+        margin-bottom: 15px;
+    }
+}
