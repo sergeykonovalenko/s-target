@@ -1,0 +1,11 @@
+.buttons-list {
+    display: grid;
+    row-gap: 20px;
+    padding: 0;
+    list-style: none;
+}
+
+.buttons-list__button {
+    display: block;
+    width: 100%;
+}

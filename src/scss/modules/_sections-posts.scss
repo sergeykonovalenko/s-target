@@ -26,3 +26,23 @@
 .sections-posts__item .section__title {
     margin-bottom: 40px;
 }
+
+@media screen and (max-width: 640px) {
+    .sections-posts__item {
+        border: none;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .sections-posts {
+        padding: 20px 0;
+    }
+
+    .sections-posts__item {
+        padding: 20px 0;
+    }
+
+    .sections-posts__item .section__title {
+        margin-bottom: 20px;
+    }
+}
