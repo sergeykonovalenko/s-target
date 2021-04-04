@@ -1,5 +1,4 @@
 .course-item {
-    display: flex;
     background-color: #fff;
     border-radius: 5px;
     transition: all .15s ease-out;
@@ -18,7 +17,8 @@
 
 .course-item__thumbnail {
     position: relative;
-    flex-shrink: 0;
+    float: left;
+    margin-right: 30px;
     width: 270px;
 }
 
@@ -56,11 +56,6 @@
 
 .course-item__excerpt {
     padding: 30px;
-}
-
-.course-item__excerpt-wr {
-    position: relative;
-    max-height: 190px;
 
     h2,
     h3 {
@@ -80,5 +75,28 @@
                 color: $color-main--dark;
             }
         }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .course-item__thumbnail {
+        width: 230px;
+        margin-right: 20px;
+    }
+
+    .course-item__excerpt {
+        padding: 20px;
+
+        h2,
+        h3 {
+            font-size: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .course-item__thumbnail {
+        float: none;
+        width: 100%;
     }
 }

@@ -6,3 +6,10 @@
     background-color: $color-main--lighten;
     border-radius: 5px;
 }
+
+@media screen and (max-width: 576px) {
+    .section-head-2 {
+        padding: 20px;
+        font-size: 15px;
+    }
+}

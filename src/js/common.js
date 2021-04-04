@@ -1,7 +1,6 @@
 import Swiper, { Navigation, Pagination, Thumbs, Autoplay } from 'swiper/core';
 import '@fancyapps/fancybox/dist/jquery.fancybox.min';
 import autosize from 'autosize/dist/autosize.min';
-import PerfectScrollbar from 'perfect-scrollbar';
 import 'waypoints/lib/noframework.waypoints.min';
 import 'jquery-ui/ui/widgets/tabs';
 import Inputmask from 'inputmask';
@@ -194,26 +193,6 @@ $(document).ready(function () {
     breakpoint.addListener(breakpointChecker);
     breakpointChecker();
     // END INIT SWIPER
-    ////////////////////////////////////////////////////////////////////////////
-
-    // START INIT PERFECT SCROLLBAR
-    ////////////////////////////////////////////////////////////////////////////
-    let perfectScrollbarsContainers = document.querySelectorAll('.js-perfect-scrollbar');
-    let arrayPerfectScrollbars = [];
-
-    perfectScrollbarsContainers.forEach(perfectScrollbar => {
-        let perfectScrollbars = new PerfectScrollbar(perfectScrollbar, {
-            // wheelPropagation: false,
-            // minScrollbarLength: 20,
-        });
-        arrayPerfectScrollbars.push(perfectScrollbars);
-    });
-
-    // update perfect scrollbar
-    function updatePerfectScrollbar() {
-        arrayPerfectScrollbars.forEach(scrollbar => scrollbar.update());
-    }
-    // END INIT PERFECT SCROLLBAR
     ////////////////////////////////////////////////////////////////////////////
 
     // init Autosize

@@ -1,12 +1,16 @@
 .courses-list {
+    display: grid;
+    row-gap: 30px;
     padding: 0;
     list-style: none;
 }
 
 .courses-list__item {
-    margin-bottom: 30px;
 
-    &:last-child {
-        margin-bottom: 0;
+}
+
+@media screen and (max-width: 576px) {
+    .courses-list {
+        row-gap: 20px;
     }
 }
