@@ -81,16 +81,51 @@
 .lesson-item__info {
     display: flex;
     flex-wrap: wrap;
-
-    & > *:last-child {
-        margin-right: 0;
-    }
+    margin-top: -10px;
 
     p {
-        margin: 0 30px 0 0;
+        margin: 10px 30px 0 0;
     }
 
     strong {
         font-weight: 700;
+    }
+
+    & > *:last-child {
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .lesson-item__excerpt {
+        margin-bottom: 20px;
+
+        h3 {
+            font-size: 20px;
+        }
+    }
+
+    .lesson-item__info {
+        display: block;
+
+        p {
+            margin-right: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .lesson-item {
+        padding: 20px;
+    }
+
+    .lesson-item__thumbnail {
+        float: none;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .lesson-item__img-link {
+        //padding-bottom: 50%;
     }
 }
