@@ -14,6 +14,7 @@
 
 .chat__head {
     display: flex;
+    align-items: center;
     margin-bottom: 30px;
 
     & > *:last-child {
@@ -79,5 +80,19 @@
 
     svg {
         transition: all .15s ease-out;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .chat {
+        padding: 20px;
+    }
+
+    .chat__head {
+        margin-bottom: 20px;
+    }
+
+    .chat__title {
+        font-size: 15px;
     }
 }

@@ -1,8 +1,28 @@
 .video-list {
+    display: grid;
+    gap: 30px;
     padding: 0;
     list-style: none;
 }
 
 .video-list__item {
 
+}
+
+@media screen and (max-width: 992px) {
+    .video-list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .video-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .video-list {
+        row-gap: 20px;
+    }
 }

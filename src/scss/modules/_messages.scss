@@ -1,12 +1,16 @@
 .messages {
+    display: grid;
+    row-gap: 30px;
     padding: 0;
     list-style: none;
 }
 
 .messages__item {
-    margin-bottom: 30px;
 
-    &:last-child {
-        margin-bottom: 0;
+}
+
+@media screen and (max-width: 576px) {
+    .messages {
+        row-gap: 20px;
     }
 }

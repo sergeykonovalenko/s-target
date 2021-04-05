@@ -74,3 +74,35 @@
     line-height: 1.4;
     transition: all .15s ease-out;
 }
+
+@media screen and (max-width: 992px) and (min-width: 769px) {
+    .video-item__thumbnail {
+
+        &::before {
+            width: 82px;
+            height: 60px;
+        }
+    }
+
+    .video-item__title {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .video-item {
+        padding: 20px;
+    }
+
+    .video-item__thumbnail {
+
+        &::before {
+            width: 70px;
+            height: 51px;
+        }
+    }
+
+    .video-item__title {
+        font-size: 20px;
+    }
+}

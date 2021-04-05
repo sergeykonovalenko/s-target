@@ -13,3 +13,9 @@
 .files-section__list {
     margin: 0;
 }
+
+@media screen and (max-width: 576px) {
+    .files-section__title {
+        font-size: 15px;
+    }
+}
