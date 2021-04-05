@@ -11,3 +11,32 @@
 .form-2__list {
     margin: -30px -20px 0 0;
 }
+
+@media screen and (max-width: 1210px) {
+    .form-2__list {
+        margin-right: -15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .form-2__list .fields-list__item--third {
+        width: calc(100% - 15px);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .form-2__body {
+        margin-bottom: 15px;
+        padding: 0;
+        background-color: transparent;
+    }
+
+    .form-2__list {
+        margin-top: -15px;
+        margin-right: 0;
+    }
+
+    .form-2__list .fields-list__item--third {
+        width: 100%;
+    }
+}

@@ -6,3 +6,17 @@
     margin-top: 0;
     margin-bottom: 30px;
 }
+
+.personal-info__form {
+
+}
+
+@media screen and (max-width: 576px) {
+    //.personal-info {
+    //    background-color: #fff;
+    //}
+
+    .personal-info__head {
+        margin-bottom: 20px;
+    }
+}

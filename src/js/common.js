@@ -241,10 +241,15 @@ $(document).ready(function () {
         field.addEventListener('paste', function () {
             settingFieldStatus(this);
         } , {passive: true});
+
+        field.onblur = function() {
+            settingFieldStatus(this);
+        };
     });
 
     function settingFieldStatus(input) {
         setTimeout(() => {
+            console.log(input.value);
             if (input.value) {
                 input.classList.add('field-box__field--entered');
             } else {
@@ -350,9 +355,9 @@ $(document).ready(function () {
     // END ACCORDION
     ////////////////////////////////////////////////////////////////////////////
 
-    // START TRANSFER OF CSS VARIABLES
+    // START PASSING DATA TO CSS
     ////////////////////////////////////////////////////////////////////////////
-    function transferOfCssVariables() {
+    function passingOfCssVariables() {
         if (headerWr) page.style.setProperty('--header-wr-height', `${headerWr.clientHeight}px`);
 
         // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
@@ -360,9 +365,9 @@ $(document).ready(function () {
         // Then we set the value in the --vh custom property to the root of the document
         document.documentElement.style.setProperty('--vh', `${vh}px`);
     }
-    transferOfCssVariables();
+    passingOfCssVariables();
 
-    window.addEventListener('resize', transferOfCssVariables, {passive: true});
+    window.addEventListener('resize', passingOfCssVariables, {passive: true});
     // END PASSING DATA TO CSS
     ////////////////////////////////////////////////////////////////////////////
 

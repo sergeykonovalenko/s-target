@@ -58,12 +58,10 @@ input,
 select,
 textarea {
     @include hover-supported {
-        &:hover {
-            border-color: $gray-1;
+        border-color: $gray-1;
 
-            &::placeholder {
-                color: $gray-1;
-            }
+        &::placeholder {
+            color: $gray-1;
         }
     }
 
