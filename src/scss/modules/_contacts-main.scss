@@ -1,0 +1,9 @@
+.contacts-main {
+
+}
+
+@media screen and (max-width: 992px) {
+    .contacts-main .contacts {
+        background-color: $gray-6;
+    }
+}

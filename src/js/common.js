@@ -249,7 +249,6 @@ $(document).ready(function () {
 
     function settingFieldStatus(input) {
         setTimeout(() => {
-            console.log(input.value);
             if (input.value) {
                 input.classList.add('field-box__field--entered');
             } else {

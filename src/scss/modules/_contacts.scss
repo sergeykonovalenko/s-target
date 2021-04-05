@@ -32,7 +32,7 @@
     }
 
     .contacts__box-wr {
-        padding-bottom: 20px;
+        padding-bottom: 40px;
     }
 
     .contacts__box {
@@ -48,6 +48,10 @@
 @media screen and (max-width: 576px) {
     .contacts {
         padding-top: 20px;
+    }
+
+    .contacts__box-wr {
+        padding-bottom: 20px;
     }
 
     .contacts__map {
