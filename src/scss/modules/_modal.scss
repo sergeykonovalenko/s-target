@@ -10,3 +10,10 @@
     opacity: .5;
     transition: all .15s ease-out;
 }
+
+@media screen and (max-width: 576px) {
+    .modal {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}

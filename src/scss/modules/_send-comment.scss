@@ -5,3 +5,9 @@
 .send-comment__head {
     margin-bottom: 30px;
 }
+
+@media screen and (max-width: 576px) {
+    .send-comment__head {
+        margin-bottom: 20px;
+    }
+}
