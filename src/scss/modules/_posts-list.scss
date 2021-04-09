@@ -7,11 +7,23 @@
     &--columns {
         &--2 {
             grid-template-columns: 1fr 1fr;
+            //grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+
         }
 
         &--3 {
             grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
             //grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .posts-list {
+        &--columns {
+            &--2 {
+                grid-template-columns: 1fr;
+            }
         }
     }
 }

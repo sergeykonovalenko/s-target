@@ -155,6 +155,8 @@
         }
 
         &::after,
+        &:nth-child(8n + 4)::after,
+        &:nth-child(8n + 5)::after,
         &:last-child::after {
             display: block;
             top: -10px;
