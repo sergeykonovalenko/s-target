@@ -41,3 +41,22 @@
 .error-404__button {
     display: block;
 }
+
+@media screen and (max-width: 576px) {
+    .error-404 {
+        padding: 78px 0;
+    }
+
+    .error-404__body {
+        padding: 20px;
+    }
+
+    .error-404__title {
+        margin-bottom: 20px;
+        font-size: 50px;
+    }
+    
+    .error-404__txt {
+        margin-bottom: 20px;
+    }
+}
