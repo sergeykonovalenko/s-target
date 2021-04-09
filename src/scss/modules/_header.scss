@@ -18,7 +18,8 @@
 
     &--show {
         transition: transform .5s ease;
-        transform: translateY(0);
+        //transform: translateY(0); // because of this, a horizontal scroll appears in chrome
+        transform: none;
     }
 
     &--hide {
