@@ -10,3 +10,9 @@
 .posts-section__list {
     margin: 0;
 }
+
+@media screen and (max-width: 576px) {
+    .posts-section__title {
+        margin-bottom: 20px;
+    }
+}

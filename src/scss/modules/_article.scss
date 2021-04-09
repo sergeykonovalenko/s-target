@@ -10,8 +10,22 @@
 
 .article__content {
     margin-bottom: 40px;
+
+    img {
+        border-radius: 5px;
+    }
 }
 
 .article__button {
     display: block;
+}
+
+@media screen and (max-width: 576px) {
+    .article {
+        padding-top: 20px;
+    }
+
+    .article__content {
+        margin-bottom: 20px;
+    }
 }

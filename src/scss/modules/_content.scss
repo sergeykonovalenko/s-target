@@ -1,5 +1,4 @@
 .content {
-
     .page &--bg {
 
         &--main {
@@ -23,7 +22,6 @@ h3,
 h4,
 h5,
 h6 {
-
     .content--bg--main & {
         color: #fff;
     }
@@ -32,7 +30,6 @@ h6 {
 p,
 ul,
 ol {
-
     .content & {
         margin: 1em 0;
     }
@@ -95,6 +92,8 @@ ol {
     margin: 40px 0;
 }
 
-.content img {
-    border-radius: 5px;
+@media screen and (max-width: 576px) {
+    .content .wp-block-image {
+        margin: 20px 0;
+    }
 }
