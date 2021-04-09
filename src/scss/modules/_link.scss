@@ -1,38 +1,52 @@
 .link {
     @include hover-supported {
-        color: $color-main--dark;
-        border-color: $color-main--dark;
+        span {
+            color: $color-main--dark;
+            border-color: $color-main--dark;
+        }
     }
 
     display: block;
     width: fit-content;
     padding: 0;
     line-height: 1.5;
-    color: $color-main;
     background: 0 0;
-    border-width: 0 0 1px 0;
-    border-style: solid;
-    border-color: $color-main;
+    border: none;
 
     &:active {
-        color: $color-main--darken;
-        border-color: $color-main--darken;
+        span {
+            color: $color-main--darken;
+            border-color: $color-main--darken;
+        }
+    }
+
+    span {
+        color: $color-main;
+        border-width: 0 0 1px 0;
+        border-style: solid;
+        border-color: $color-main;
+        transition: all .15s ease-out;
     }
 
     &--color {
-
         &--gray {
             @include hover-supported {
-                color: $color-main;
-                border-color: $color-main;
+                span {
+                    color: $color-main;
+                    border-color: $color-main;
+                }
             }
 
-            color: $gray-1;
-            border-color: $gray-1;
+            span {
+                color: $gray-1;
+                border-color: $gray-1;
+            }
 
             &:active {
-                color: $color-main--darken;
-                border-color: $color-main--darken;
+                span {
+                    color: $color-main--darken;
+                    border-color: $color-main--darken;
+                }
             }
         }
     }

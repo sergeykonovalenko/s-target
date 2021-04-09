@@ -1,4 +1,14 @@
 .field-box {
+    @include hover-supported {
+        .field-box__field {
+            border-color: $gray-1;
+
+            &::placeholder {
+                color: $gray-1;
+            }
+        }
+    }
+
     position: relative;
 }
 
@@ -40,6 +50,18 @@
 
         & ~ .field-box__label {
             color: $gray-4;
+        }
+    }
+
+    &:focus {
+        ~ .field-box__button {
+            .button-icon__icon {
+                fill: $color-main;
+            }
+
+            .switcher-password__eye {
+                stroke: $color-main;
+            }
         }
     }
 }

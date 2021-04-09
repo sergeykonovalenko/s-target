@@ -3,3 +3,9 @@
     padding-top: 60px;
     padding-bottom: 60px;
 }
+
+@media screen and (max-width: 576px) {
+    .modal-chat__chat {
+        padding: 0;
+    }
+}

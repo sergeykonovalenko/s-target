@@ -12,6 +12,7 @@
 
 .actions-message-body__label {
     display: flex;
+    flex-shrink: 0;
     width: 80px;
     margin-right: 15px;
 }
@@ -34,4 +35,16 @@
 
 .actions-message-body__btn-link {
     font-weight: 300;
+}
+
+@media screen and (max-width: 400px) {
+    .actions-message-body__row {
+        display: grid;
+        row-gap: 10px;
+    }
+
+    .actions-message-body__label,
+    .actions-message-body__txt {
+        margin-right: 0;
+    }
 }
