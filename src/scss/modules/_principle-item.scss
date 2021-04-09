@@ -7,19 +7,27 @@
     &::before {
         content: "";
         position: absolute;
-        top: -42px;
-        right: -42px;
-        left: -42px;
+        top: -40px;
+        right: -40px;
+        left: -40px;
         height: 5px;
         background-color: white;
         background-image: linear-gradient(90deg,transparent 50%, $color-main 50%);
         background-size: 15px 50px;
     }
 
+    &:first-child::before {
+        left: -20px;
+    }
+
+    &:last-child::before {
+        right: -20px;
+    }
+
     &::after {
         content: "";
         position: absolute;
-        top: -42px;
+        top: -40px;
         bottom: -58px;
         display: none;
         width: 5px;
@@ -30,13 +38,16 @@
 
     &:nth-child(8n + 4)::after {
         display: block;
-        right: -42px;
-
+        right: -40px;
     }
 
     &:nth-child(8n + 5)::after {
         display: block;
-        left: -42px;
+        left: -40px;
+    }
+
+    &:last-child::after {
+        display: none;
     }
 }
 
@@ -54,7 +65,8 @@
         content: "";
         position: absolute;
         left: 50%;
-        top: -62px;
+        top: -57.5px;
+        z-index: 1;
         width: 40px;
         height: 40px;
         background-color: #fff;
@@ -69,7 +81,8 @@
         .principle-item:last-child & {
             content: "";
             position: absolute;
-            top: -62px;
+            top: -57.5px;
+            z-index: 1;
             width: 40px;
             height: 40px;
             background-color: $color-accent;
@@ -77,13 +90,110 @@
         }
 
         .principle-item:first-child & {
-            left: -62px;
-            //left: -43px;
+            //left: -62px;
+            left: -40px;
         }
 
         .principle-item:last-child & {
-            right: -62px;
-            //right: -43px;
+            //right: -62px;
+            right: -40px;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 577px) {
+    .principle-item {
+        &:nth-child(8n + 4)::after,
+        &:nth-child(8n + 5)::after {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 993px) {
+    .principle-item {
+        &:nth-child(6n + 3)::after {
+            display: block;
+            right: -40px;
+        }
+
+        &:nth-child(6n + 4)::after {
+            display: block;
+            left: -40px;
+        }
+
+        &:last-child::after {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) and (min-width: 577px) {
+    .principle-item {
+        &:nth-child(4n + 2)::after {
+            display: block;
+            right: -40px;
+        }
+
+        &:nth-child(4n + 3)::after {
+            display: block;
+            left: -40px;
+        }
+
+        &:last-child::after {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .principle-item {
+        padding: 20px;
+
+        &::before {
+            display: none;
+        }
+
+        &::after,
+        &:last-child::after {
+            display: block;
+            top: -10px;
+            bottom: -10px;
+            left: -42.5px;
+        }
+
+        &:first-child::after {
+            top: 5px;
+        }
+
+        &:last-child::after {
+            bottom: 5px;
+        }
+    }
+
+    .principle-item__txt {
+        margin: 0;
+        font-size: 14px;
+        text-align: center;
+
+        &::before {
+            left: -60px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        &::after {
+            .principle-item:first-child & {
+                top: 0;
+                left: -60px;
+            }
+
+            .principle-item:last-child & {
+                top: auto;
+                right: auto;
+                left: -60px;
+                bottom: 0;
+            }
         }
     }
 }

@@ -44,3 +44,33 @@
     display: block;
     width: 100%;
 }
+
+@media screen and (max-width: 576px) {
+    .info-box-1 {
+        padding: 20px 0;
+    }
+
+    .info-box-1__box {
+        padding: 20px;
+    }
+
+    .info-box-1__title {
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+
+    .info-box-1__txt {
+        margin-bottom: 20px;
+        column-count: 1;
+
+        ul li {
+            margin-bottom: 20px;
+        }
+    }
+
+    .info-box-1__lead {
+        .info-box-1 & {
+            margin-top: 20px;
+        }
+    }
+}

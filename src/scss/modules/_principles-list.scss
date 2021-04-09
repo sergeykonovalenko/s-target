@@ -1,13 +1,34 @@
 .principles-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    //grid-template-columns: repeat(auto-fill, minmax(249px, 1fr));
+    //grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     column-gap: 30px;
     row-gap: 100px;
-    padding: 0;
+    padding: 0 40px 0;
     list-style: none;
 }
 
 .principles-list__item {
 
+}
+
+@media screen and (max-width: 1200px) {
+    .principles-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .principles-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .principles-list {
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+        padding-right: 0;
+        padding-left: 60px;
+    }
 }

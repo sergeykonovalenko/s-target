@@ -12,6 +12,7 @@
 
     .team-list__item:nth-child(even) & {
         order: 2;
+        margin-right: 0;
     }
 }
 
@@ -31,8 +32,38 @@
 .team-item__photo {
     flex-shrink: 0;
     width: 370px;
+    max-width: calc(100vw - 30px);
 
     .team-list__item:nth-child(even) & {
         order: 1;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .team-item {
+        flex-direction: column;
+    }
+
+    .team-item__photo {
+        order: 1;
+        margin: 0 auto;
+    }
+
+    .team-item__info {
+        order: 2;
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .team-item__info {
+        padding: 20px;
+        font-size: 12px;
+    }
+
+    .team-item__txt {
+        h3 {
+            font-size: 20px;
+        }
     }
 }
