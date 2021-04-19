@@ -9,6 +9,10 @@
                 background-color: $color-main--dark;
                 border-color: $color-main--dark;
             }
+
+            .check__field.error ~ .check__label::before {
+                border-color: $color-error;
+            }
         }
     }
 
