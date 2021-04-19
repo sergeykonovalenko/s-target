@@ -10,6 +10,12 @@
     h3 {
         font-size: 30px;
     }
+
+    &--small-title {
+        h2 {
+            font-size: 20px;
+        }
+    }
 }
 
 @media screen and (max-width: 576px) {
