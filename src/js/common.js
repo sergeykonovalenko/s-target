@@ -178,16 +178,19 @@ $(document).ready(function () {
     };
 
     const enableSwiper = () => {
-        advantagesSwiper = new Swiper('.advantages-slider', {
-            slidesPerView: 1,
-            spaceBetween: 15,
-            speed: 1000,
-            watchOverflow: true,
-            pagination: {
-                el: '.advantages-slider__pagination',
-                clickable: true,
-            },
-        });
+        let advantagesSlider = document.querySelector('.advantages-slider');
+        if (advantagesSlider) {
+            advantagesSwiper = new Swiper(advantagesSlider, {
+                slidesPerView: 1,
+                spaceBetween: 15,
+                speed: 1000,
+                watchOverflow: true,
+                pagination: {
+                    el: '.advantages-slider__pagination',
+                    clickable: true,
+                },
+            });
+        }
     }
 
     breakpoint.addListener(breakpointChecker);
