@@ -103,6 +103,12 @@
     .field-box__field.error ~ & {
         color: $color-error;
     }
+
+    sup {
+        top: 0;
+        font-size: 20px;
+        color: $color-error;
+    }
 }
 
 .field-box__button {

@@ -116,11 +116,21 @@ textarea {
     color: $gray-3;
 }
 
-/* Remove shadow from fields for WebKit browsers */
+// Remove shadow from fields for WebKit browsers
 input:not([type=checkbox]):not([type=radio]),
 textarea,
 select {
     appearance: none;
+}
+
+// Remove arrows in input type = "number"
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type='number'] {
+    -moz-appearance: textfield !important;
 }
 
 select {

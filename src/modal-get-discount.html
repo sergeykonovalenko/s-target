@@ -32,8 +32,8 @@
 </head>
 <body class="page__body">
 
-    <!-- Modal get discount -->
-    <div class="modal-get-discount modal data" id="js-modal-get-discount">
+    <!-- Modal take discount -->
+    <div class="modal-take-discount modal data" id="js-modal-take-discount">
         <div class="data__head content">
             <h3>Понравилась скидка и вы хотите получить её?</h3>
             <p>Оставьте свои данные и мы подготовим проект для вас с учётом уникальной скидки</p>
@@ -41,29 +41,29 @@
         <form class="data__form form" action="#" method="post">
             <ul class="form__list fields-list">
                 <li class="fields-list__item field-box">
-                    <input class="field-box__field" id="modal-get-discount-name" type="text" name="name" required>
-                    <label class="field-box__label" for="modal-get-discount-name">Имя (обязательно)</label>
+                    <input class="field-box__field" id="modal-take-discount-name" type="text" name="name" required>
+                    <label class="field-box__label" for="modal-take-discount-name">Имя (обязательно)</label>
                 </li><!-- / .field-box -->
                 <li class="fields-list__item field-box">
-                    <input class="field-box__field" id="modal-get-discount-phone" type="tel" name="phone" inputmode="tel" required>
-                    <label class="field-box__label" for="modal-get-discount-phone">Номер телефона (обязательно)</label>
+                    <input class="field-box__field" id="modal-take-discount-phone" type="tel" name="phone" inputmode="tel" required>
+                    <label class="field-box__label" for="modal-take-discount-phone">Номер телефона (обязательно)</label>
                 </li><!-- / .field-box -->
                 <li class="fields-list__item field-box">
-                    <input class="field-box__field" id="modal-get-discount-email" type="email" name="email" inputmode="email" required>
-                    <label class="field-box__label" for="modal-get-discount-email">Ваш E-mail (обязательно)</label>
+                    <input class="field-box__field" id="modal-take-discount-email" type="email" name="email" inputmode="email" required>
+                    <label class="field-box__label" for="modal-take-discount-email">Ваш E-mail (обязательно)</label>
                 </li><!-- / .field-box -->
                 <li class="fields-list__item field-box">
-                    <textarea class="field-box__field field-box__field--textarea js-auto-size" id="modal-get-discount-message" name="message"></textarea>
-                    <label class="field-box__label" for="modal-get-discount-message">Расскажите про свой проект</label>
+                    <textarea class="field-box__field field-box__field--textarea js-auto-size" id="modal-take-discount-message" name="message"></textarea>
+                    <label class="field-box__label" for="modal-take-discount-message">Расскажите про свой проект</label>
                 </li><!-- / .field-box -->
                 <li class="fields-list__item check">
-                    <input class="check__field visually-hidden" id="modal-get-discount-agreement" type="checkbox" name="agreement" checked required>
-                    <label class="check__label" for="modal-get-discount-agreement">Даю согласие на обработку персональных данных</label>
+                    <input class="check__field visually-hidden" id="modal-take-discount-agreement" type="checkbox" name="agreement" checked required>
+                    <label class="check__label" for="modal-take-discount-agreement">Даю согласие на обработку персональных данных</label>
                 </li><!-- / .check -->
             </ul><!-- / .fields-list -->
             <button class="form__button button button--large" type="submit">Заказать звонок</button>
         </form><!-- / .form -->
-    </div><!-- / .modal-get-discount .modal .data -->
+    </div><!-- / .modal-take-discount .modal .data -->
 
     <!-- FOR DEMONSTRATION ONLY -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -77,7 +77,7 @@
             });
 
             $.fancybox.open({
-                src  : '#js-modal-get-discount',
+                src  : '#js-modal-take-discount',
                 type : 'inline',
                 touch : false,
                 backFocus : false,
@@ -92,6 +92,7 @@
         });
     </script>
 
+    <script src="js/jquery.bundle.js"></script>
     <script src="js/app.bundle.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1MIYMrv0deQB1gLkED9d3EnwacqsFleg&callback=initMap"></script>
 </body>

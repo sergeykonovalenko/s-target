@@ -83,6 +83,15 @@
     }
 }
 
+.chat__btn-show-rules {
+    font-size: 12px;
+}
+
+.chat__rules {
+    display: none;
+    margin-top: 15px;
+}
+
 @media screen and (max-width: 576px) {
     .chat {
         padding: 20px;

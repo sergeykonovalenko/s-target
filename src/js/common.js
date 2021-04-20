@@ -20,7 +20,11 @@ $(document).ready(function () {
     $(document).on('afterShow.fb', function(e, instance, slide) {
         // enable autofocus if there is a field
         let modal = instance.current.$content[0];
-        if (modal.querySelector('input' && !$.fancybox.isMobile)) instance.focus();
+        let input = modal.querySelector('input:not([type=hidden])');
+
+        if (input && !$.fancybox.isMobile) {
+            input.focus();
+        }
     });
 
     $('.btn-modal').fancybox({
@@ -33,6 +37,24 @@ $(document).ready(function () {
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="#252728" xmlns="http://www.w3.org/2000/svg"><path d="M16.192 6.344l-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242-1.414-1.414z"/></svg>
                     </button>`
         },
+    });
+
+    $(document).on('click', '.btn-modal-call', function () {
+        let src = $(this).attr('href');
+
+        $.fancybox.open({
+            src  : src,
+            type : 'inline',
+            touch : false,
+            backFocus : false,
+            autoFocus: false,
+            btnTpl: {
+                smallBtn: `
+                    <button class="modal__close fancybox-button fancybox-close-small" type="button" data-fancybox-close title="Закрыть">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#252728" xmlns="http://www.w3.org/2000/svg"><path d="M16.192 6.344l-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242-1.414-1.414z"/></svg>
+                    </button>`
+            },
+        });
     });
     // END INIT FANCY-BOX
     ////////////////////////////////////////////////////////////////////////////
@@ -333,6 +355,11 @@ $(document).ready(function () {
         max: $.validator.format( "Пожалуйста, введите число, меньшее или равное {0}." ),
         min: $.validator.format( "Пожалуйста, введите число, большее или равное {0}." )
     } );
+
+    // only numbers
+    $(document).on('keypress', '.js-only-numbers', function (e) {
+        if (isNaN(e.key)) e.preventDefault();
+    });
     // END FORM VALIDATION
     ////////////////////////////////////////////////////////////////////////////
 

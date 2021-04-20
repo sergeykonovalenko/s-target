@@ -11,16 +11,31 @@
 }
 
 .actions-message-body__label {
+    position: relative;
     display: flex;
     flex-shrink: 0;
     width: 80px;
     margin-right: 15px;
+
+    &::after {
+        content: '%';
+        position: absolute;
+        top: 50%;
+        right: 12px;
+        color: $gray-3;
+        transform: translateY(-50%);
+        pointer-events: none;
+    }
 }
 
 .actions-message-body__field {
-    padding: 8px 12px;
+    padding: 8px 24px 8px 12px;
     text-align: center;
     color: $gray-3;
+
+    &.error {
+        background-color: $color-error--lighten;
+    }
 }
 
 .actions-message-body__txt {
