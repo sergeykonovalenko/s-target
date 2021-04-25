@@ -59,23 +59,20 @@ $(document).ready(function () {
         if (discount <= maxDiscount) {
             dialogClient += `
                         <div class="actions-message-body__row">
-                            <p class="actions-message-body__txt">По рукам!</p>
-                            <a class="actions-message-body__button button btn-modal-call js-take-discount" href="#js-modal-take-discount">Беру <strong>${maxDiscount}%</strong></a>
+                            <a class="actions-message-body__button button btn-modal-call js-take-discount" href="#js-modal-take-discount" data-current-discount="${maxDiscount}">Договорились</strong></a>
                         </div>`;
         }
         if (discount > maxDiscount && reMore === 1) {
             dialogClient += `
                         <div class="actions-message-body__row">
-                            <p class="actions-message-body__txt">Твоя взяла!</p>
-                            <a class="actions-message-body__button button btn-modal-call js-take-discount" href="#js-modal-take-discount">Беру <strong>${maxDiscount - 4}%</strong></a>
+                            <a class="actions-message-body__button button btn-modal-call js-take-discount" href="#js-modal-take-discount" data-current-discount="${maxDiscount - 4}">Договорились</a>
                         </div>
                         <button class="actions-message-body__btn-link link link--color--gray js-continue-auction" type="button"><span>Нет, поторгуюсь еще</span></button>`;
         }
         if (discount > maxDiscount && reMore === 2) {
             dialogClient += `
                         <div class="actions-message-body__row">
-                            <p class="actions-message-body__txt">Твоя взяла!</p>
-                            <a class="actions-message-body__button button btn-modal-call js-take-discount" href="#js-modal-take-discount">Беру <strong>${maxDiscount}%</strong></a>
+                            <a class="actions-message-body__button button btn-modal-call js-take-discount" href="#js-modal-take-discount" data-current-discount="${maxDiscount}">Договорились</a>
                         </div>
                         <a class="actions-message-body__btn-link link link--color--gray btn-modal-call js-wants-more" href="#js-modal-wants-more"><span>Хочу больше</span></a>`;
         }
@@ -159,7 +156,7 @@ $(document).ready(function () {
     // substitution of quiz data into the form
     $(document).on('click', '.js-take-discount', function () {
         let $modalTakeDiscount = $('.modal-take-discount');
-        let currentDiscount = parseInt($(this).find('strong').text());
+        let currentDiscount = parseInt($(this).data('current-discount'));
 
         $modalTakeDiscount.find('input[name=max-discount]').val(maxDiscount);
         $modalTakeDiscount.find('input[name=current-discount]').val(currentDiscount);
