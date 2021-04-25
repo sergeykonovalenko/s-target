@@ -1,10 +1,8 @@
 function initMap() {
-
     let myMap;
     let element = document.querySelector('.contacts__map');
 
     if (element) {
-
         let options = {
             zoom: 15,
             center: {lat:59.986265, lng:30.205034},
@@ -380,16 +378,14 @@ function initMap() {
         myMap = new google.maps.Map(element, options);
 
         let marker = new google.maps.Marker({
-            position: {lat:59.986265, lng:30.205034},
+            position: {lat:map.lat, lng:map.lng},
             // icon: '../img/base/marker.svg',
             map: myMap,
             animation: google.maps.Animation.DROP,
         });
 
         let InfoWindow = new google.maps.InfoWindow({
-            content: `<div class="info-window">
-                          <img class="info-window__img" src="img/base/logo.svg" width="92" height="71" alt="S-TARGET">
-                      </div>`
+            content: map.infoWindow
         });
 
         marker.addListener('click', function () {
