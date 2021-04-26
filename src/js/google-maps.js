@@ -5,7 +5,7 @@ function initMap() {
     if (element) {
         let options = {
             zoom: 15,
-            center: {lat:59.986265, lng:30.205034},
+            center: {lat:map.lat, lng:map.lng},
             scrollwheel: false,
             styles: [
                 {
