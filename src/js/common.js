@@ -187,13 +187,13 @@ $(document).ready(function () {
     Swiper.use([Navigation, Pagination, Thumbs, Autoplay]);
 
     // advantages slider
-    const breakpoint = window.matchMedia('(max-width:576px)');
+    const breakpointLessXS = window.matchMedia('(max-width:576px)');
     let advantagesSwiper;
 
     const breakpointChecker = () => {
-        if (breakpoint.matches === true) {
+        if (breakpointLessXS.matches === true) {
             return enableSwiper();
-        } else if (breakpoint.matches === false) {
+        } else if (breakpointLessXS.matches === false) {
             // clean up old instances and inline styles when available
             if (advantagesSwiper !== undefined) advantagesSwiper.destroy(true, true);
         }
@@ -215,7 +215,7 @@ $(document).ready(function () {
         }
     }
 
-    breakpoint.addListener(breakpointChecker);
+    breakpointLessXS.addEventListener('change', breakpointChecker);
     breakpointChecker();
     // END INIT SWIPER
     ////////////////////////////////////////////////////////////////////////////
@@ -405,13 +405,13 @@ $(document).ready(function () {
     let $serviceTabsInitialized;
 
     const breakpointCheckerForTabs = () => {
-        if (breakpoint.matches === true) {
+        if (breakpointLessXS.matches === true) {
             $serviceTabsInitialized = $serviceTabs.tabs();
-        } else if (breakpoint.matches === false) {
+        } else if (breakpointLessXS.matches === false) {
             if ($serviceTabsInitialized) $serviceTabsInitialized.tabs('destroy');
         }
     }
 
-    breakpoint.addListener(breakpointCheckerForTabs);
+    breakpointLessXS.addEventListener('change', breakpointChecker);
     breakpointCheckerForTabs();
 }); // end ready
