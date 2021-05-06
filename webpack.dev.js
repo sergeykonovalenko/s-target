@@ -2,6 +2,7 @@ const { merge } = require('webpack-merge');
 const common = require('./webpack.common.js');
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const chokidar = require('chokidar');
 const webpack = require('webpack');
 
 // Get local IP address in Node.js
@@ -24,6 +25,13 @@ module.exports = (env, argv) => {
         target: 'web',
         devtool: 'eval-cheap-module-source-map',
         devServer: {
+            before(app, server) {
+                chokidar.watch([
+                    './src/**/*.html'
+                ]).on('all', () => {
+                    server.sockWrite(server.sockets, 'content-changed');
+                });
+            },
             // contentBase: './dist',
             contentBase: path.join(__dirname, 'dist'),
             overlay: {
